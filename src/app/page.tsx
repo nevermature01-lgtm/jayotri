@@ -6,7 +6,20 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import Newsletter from '@/components/Newsletter';
 import { Button } from '@/components/ui/button';
-import { School, Award, ArrowRight, ExternalLink, GraduationCap, Brain, Lightbulb, Trophy, Users, History } from 'lucide-react';
+import { 
+  School, 
+  Award, 
+  ArrowRight, 
+  ExternalLink, 
+  GraduationCap, 
+  Brain, 
+  Lightbulb, 
+  Trophy, 
+  Users, 
+  History,
+  BookOpen,
+  Target
+} from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Autoplay from 'embla-carousel-autoplay';
 import {
@@ -233,6 +246,74 @@ export default function Home() {
                 <div>
                   <div className="text-white text-5xl font-headline font-bold">15+</div>
                   <div className="text-white/60 text-[10px] font-bold uppercase tracking-[0.2em] mt-1">Years of Legacy</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Quality Education Section */}
+        <section className="py-24 bg-white">
+          <div className="max-w-screen-2xl mx-auto px-6 md:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="font-headline text-4xl md:text-5xl font-bold text-slate-800 mb-6 leading-tight">
+                Shaping Young Minds Through Quality Education
+              </h2>
+              <p className="text-slate-500 text-lg leading-relaxed">
+                At Academia Horizon, we provide strong primary instruction and higher education through structured classroom learning, experienced faculty, and a supportive academic environment focused on student success.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Card 1 */}
+              <div className="flex items-start gap-6 p-8 rounded-xl bg-[#f0f9f9]">
+                <div className="shrink-0 w-16 h-16 rounded-full bg-[#00b2a9] flex items-center justify-center text-white shadow-lg">
+                  <BookOpen className="h-8 w-8" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-slate-800 mb-3">Experienced & Dedicated Faculty</h3>
+                  <p className="text-slate-500 leading-relaxed text-sm">
+                    Our qualified teachers provide clear guidance, individual attention, and strong academic support at every stage of learning.
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 2 */}
+              <div className="flex items-start gap-6 p-8 rounded-xl bg-[#f0f9f9]">
+                <div className="shrink-0 w-16 h-16 rounded-full bg-[#00b2a9] flex items-center justify-center text-white shadow-lg">
+                  <School className="h-8 w-8" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-slate-800 mb-3">Structured Classroom Learning</h3>
+                  <p className="text-slate-500 leading-relaxed text-sm">
+                    We follow a well-planned curriculum that builds strong fundamentals, discipline, and conceptual clarity through offline classes.
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 3 */}
+              <div className="flex items-start gap-6 p-8 rounded-xl bg-[#f0f9f9]">
+                <div className="shrink-0 w-16 h-16 rounded-full bg-[#00b2a9] flex items-center justify-center text-white shadow-lg">
+                  <Brain className="h-8 w-8" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-slate-800 mb-3">Focus on Conceptual Understanding</h3>
+                  <p className="text-slate-500 leading-relaxed text-sm">
+                    We emphasize deep understanding, critical thinking, and problem-solving skills instead of rote learning.
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 4 */}
+              <div className="flex items-start gap-6 p-8 rounded-xl bg-[#f0f9f9]">
+                <div className="shrink-0 w-16 h-16 rounded-full bg-[#00b2a9] flex items-center justify-center text-white shadow-lg">
+                  <Target className="h-8 w-8" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-slate-800 mb-3">Student Growth & Career Guidance</h3>
+                  <p className="text-slate-500 leading-relaxed text-sm">
+                    We support students with continuous assessment, mentoring, and guidance to prepare them for higher education and future goals.
+                  </p>
                 </div>
               </div>
             </div>
