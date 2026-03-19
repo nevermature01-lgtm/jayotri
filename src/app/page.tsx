@@ -129,7 +129,8 @@ export default function Home() {
         {/* Pillars Section */}
         <section className="relative py-24 bg-slate-50">
           <div className="max-w-screen-2xl mx-auto px-6 md:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 lg:gap-4 -mt-32 relative z-30">
+            {/* Removed -mt-32 to prevent cards from touching/overlapping the hero section */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 lg:gap-4 relative z-30">
               {featureCards.map((card, idx) => (
                 <div 
                   key={idx}
