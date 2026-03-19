@@ -8,63 +8,41 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { BookOpen, Shield, School, Target, Globe } from 'lucide-react';
 
 export default function OurSchoolPage() {
-  const bannerImg = PlaceHolderImages.find(img => img.id === 'hero-campus');
   const classroomImg = PlaceHolderImages.find(img => img.id === 'classroom-hero');
 
   return (
-    <div className="min-h-screen bg-[#FCF9F4]">
+    <div className="min-h-screen bg-white">
       <Navigation />
       
       <main>
-        {/* Banner Section */}
-        <section className="relative h-[40vh] md:h-[50vh] w-full flex items-center justify-center">
-          {bannerImg && (
-            <Image
-              src={bannerImg.imageUrl}
-              alt="About Jayotri Academy"
-              fill
-              className="object-cover"
-              priority
-              data-ai-hint="university building campus"
-            />
-          )}
-          <div className="absolute inset-0 bg-primary/60" />
-          <div className="relative z-10 text-center px-6">
-            <h1 className="font-headline text-4xl md:text-6xl text-white font-bold mb-4">
+        {/* Simple Simple Banner Section */}
+        <section className="relative py-24 md:py-32 bg-[#FCF9F4] overflow-hidden">
+          {/* Decorative Dotted Circles */}
+          <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-64 h-64 border-2 border-dashed border-[#00b2a9]/20 rounded-full hidden lg:block" />
+          <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-80 h-80 border border-[#00b2a9]/10 rounded-full hidden lg:block" />
+          
+          <div className="relative z-10 max-w-screen-xl mx-auto px-6 text-center">
+            <h1 className="font-headline text-5xl md:text-6xl text-slate-800 font-bold mb-4">
               Our School
             </h1>
-            <div className="w-20 h-1 bg-accent mx-auto" />
+            <p className="text-xl text-slate-500 font-medium">
+              Welcome to Jayotri Academy
+            </p>
           </div>
         </section>
 
-        {/* Affiliation & Identity Section */}
-        <section className="py-16 md:py-24 max-w-screen-xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-100 flex flex-col items-center text-center">
-              <Shield className="h-10 w-10 text-primary mb-4" />
-              <h3 className="font-bold text-slate-800 uppercase tracking-widest text-xs mb-2">Affiliation No.</h3>
-              <p className="font-headline text-2xl font-bold text-primary">2132244</p>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-100 flex flex-col items-center text-center">
-              <School className="h-10 w-10 text-primary mb-4" />
-              <h3 className="font-bold text-slate-800 uppercase tracking-widest text-xs mb-2">School No.</h3>
-              <p className="font-headline text-2xl font-bold text-primary">70358</p>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-100 flex flex-col items-center text-center">
-              <BookOpen className="h-10 w-10 text-primary mb-4" />
-              <h3 className="font-bold text-slate-800 uppercase tracking-widest text-xs mb-2">Society Reg. No.</h3>
-              <p className="font-headline text-2xl font-bold text-primary">1313 / 2014-15</p>
-            </div>
-          </div>
-
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
+        {/* Affiliation & Details Section */}
+        <section className="py-20 max-w-screen-xl mx-auto px-6">
+          <div className="flex flex-col lg:flex-row gap-16 items-start">
             <div className="lg:w-1/2">
-              <span className="text-[10px] font-bold tracking-[0.3em] text-[#00b2a9] uppercase mb-4 block">About Our Institution</span>
-              <h2 className="font-headline text-3xl md:text-5xl font-bold text-primary mb-8 leading-tight">
-                About Our <br />
-                <span className="italic font-light">Jayotri Academy</span>
+              <span className="text-[10px] font-bold tracking-[0.3em] text-[#00b2a9] uppercase mb-4 block">About Our Jayotri Academy</span>
+              <h2 className="font-headline text-3xl md:text-4xl font-bold text-slate-800 mb-6 leading-tight">
+                Affiliation No.: 2132244 <br />
+                School No.: 70358 <br />
+                Society Registration No.: 1313/ 2014-15
               </h2>
-              <div className="space-y-6 text-slate-600 leading-relaxed">
+              
+              <div className="space-y-6 text-slate-600 leading-relaxed text-lg">
                 <p>
                   The school is situated in a sprawling green oasis of 20 acres and within easy reach to all the amenities of the cities. Drawing inspiration from the gurukul style of learning combined with modern tools of 21st century’s education, it is a co-educational school promoting healthy relationship.
                 </p>
@@ -73,8 +51,9 @@ export default function OurSchoolPage() {
                 </p>
               </div>
             </div>
-            <div className="lg:w-1/2 relative">
-              <div className="aspect-square relative rounded-2xl overflow-hidden shadow-2xl">
+
+            <div className="lg:w-1/2 relative mt-12 lg:mt-0">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-8 border-[#00b2a9]/10">
                 {classroomImg && (
                   <Image
                     src={classroomImg.imageUrl}
@@ -85,9 +64,11 @@ export default function OurSchoolPage() {
                   />
                 )}
               </div>
-              <div className="absolute -bottom-8 -left-8 bg-[#00b2a9] text-white p-8 rounded-xl shadow-xl hidden md:block max-w-[280px]">
-                <p className="text-2xl font-headline font-bold mb-2 italic">20 Acres</p>
-                <p className="text-xs uppercase tracking-widest font-bold opacity-80">Sprawling Green Campus</p>
+              
+              {/* Floating Stat Badge */}
+              <div className="absolute -top-10 -left-10 w-40 h-40 bg-white rounded-full shadow-2xl flex flex-col items-center justify-center p-4 border border-slate-100 hidden md:flex">
+                <p className="text-[#00b2a9] text-4xl font-headline font-bold">15+</p>
+                <p className="text-[10px] uppercase tracking-widest font-bold text-slate-400 text-center">Years of Experience</p>
               </div>
             </div>
           </div>
