@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Academia Horizon | Excellence in Tradition',
-  description: 'Join a community where tradition meets the vanguard of research. Academia Horizon - Shaping the thinkers of tomorrow.',
+  title: 'Jayotri Academy | Excellence in Tradition',
+  description: 'Join a community where tradition meets the vanguard of research. Jayotri Academy - Shaping the thinkers of tomorrow.',
 };
 
 export default function RootLayout({

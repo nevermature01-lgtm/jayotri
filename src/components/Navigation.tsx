@@ -104,7 +104,7 @@ export default function Navigation() {
         {/* Left: Logo */}
         <div className="flex items-center">
           <Link href="/" className="font-headline text-xl md:text-2xl font-black text-primary dark:text-white tracking-tighter">
-            Academia Horizon
+            Jayotri Academy
           </Link>
         </div>
 
@@ -144,7 +144,7 @@ export default function Navigation() {
             <Search className="h-5 w-5" strokeWidth={1.5} />
           </button>
           
-          <Button className="hidden sm:flex bg-primary text-white px-6 py-2 rounded-md font-bold text-sm tracking-wide hover:opacity-90 transition-opacity">
+          <Button className="hidden sm:flex bg-[#00b2a9] text-white px-6 py-2 rounded-md font-bold text-sm tracking-wide hover:opacity-90 transition-opacity">
             Apply Now
           </Button>
 
@@ -158,7 +158,7 @@ export default function Navigation() {
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <SheetHeader className="text-left mb-8">
                 <SheetTitle className="font-headline text-2xl font-black text-primary tracking-tighter">
-                  Academia Horizon
+                  Jayotri Academy
                 </SheetTitle>
               </SheetHeader>
               <div className="flex flex-col gap-4 overflow-y-auto max-h-[80vh] pr-2">
@@ -193,7 +193,7 @@ export default function Navigation() {
                   ))}
                 </Accordion>
                 <div className="pt-6 border-t">
-                  <Button className="w-full bg-primary text-white font-bold tracking-wide py-6">
+                  <Button className="w-full bg-[#00b2a9] text-white font-bold tracking-wide py-6">
                     Apply Now
                   </Button>
                 </div>

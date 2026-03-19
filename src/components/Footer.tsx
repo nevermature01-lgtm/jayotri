@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 max-w-screen-2xl mx-auto">
         <div className="md:col-span-1">
           <div className="font-headline text-xl font-bold text-primary dark:text-white mb-6">
-            Academia Horizon
+            Jayotri Academy
           </div>
           <p className="text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
             Dedicated to the meticulous curation of knowledge and the fostering of academic integrity since 1892.
@@ -61,7 +61,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="mt-16 pt-8 border-t border-slate-200 dark:border-slate-800 text-center">
-        <p className="text-sm text-slate-500">© 2024 Academia Horizon. Excellence in Tradition.</p>
+        <p className="text-sm text-slate-500">© 2024 Jayotri Academy. Excellence in Tradition.</p>
       </div>
     </footer>
   );

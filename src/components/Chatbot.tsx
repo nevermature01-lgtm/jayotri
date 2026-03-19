@@ -12,7 +12,7 @@ export default function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState<{ role: 'user' | 'bot'; content: string }[]>([
-    { role: 'bot', content: 'Hello! I am Academia Horizon, your campus guide. How can I help you today?' }
+    { role: 'bot', content: 'Hello! I am Jayotri Academy, your campus guide. How can I help you today?' }
   ]);
   const [isLoading, setIsLoading] = useState(false);
 

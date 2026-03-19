@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -184,7 +183,7 @@ export default function Home() {
                   <span className="italic font-light">Intellectual Pioneerism</span>
                 </h2>
                 <p className="text-lg text-slate-600 mb-8 leading-relaxed max-w-xl">
-                  Founded on the principles of rigorous inquiry and social responsibility, Academia Horizon has been a sanctuary for thinkers and creators since 1892. We bridge the gap between historical wisdom and future innovation, fostering a community where every student is empowered to lead with integrity and vision.
+                  Founded on the principles of rigorous inquiry and social responsibility, Jayotri Academy has been a sanctuary for thinkers and creators since 1892. We bridge the gap between historical wisdom and future innovation, fostering a community where every student is empowered to lead with integrity and vision.
                 </p>
                 <div className="grid grid-cols-2 gap-8 mb-10">
                   <div>
@@ -259,7 +258,7 @@ export default function Home() {
                 Shaping Young Minds Through Quality Education
               </h2>
               <p className="text-slate-500 text-lg leading-relaxed">
-                At Academia Horizon, we provide strong primary instruction and higher education through structured classroom learning, experienced faculty, and a supportive academic environment focused on student success.
+                At Jayotri Academy, we provide strong primary instruction and higher education through structured classroom learning, experienced faculty, and a supportive academic environment focused on student success.
               </p>
             </div>
 
@@ -339,7 +338,7 @@ export default function Home() {
                   Join Our Academy and Shape a Successful Future
                 </h2>
                 <p className="text-lg md:text-xl text-white/90 font-body max-w-2xl mb-10 leading-relaxed">
-                  At Academia Horizon, we provide quality primary instruction and higher education through expert guidance, structured classroom learning, and a supportive academic environment.
+                  At Jayotri Academy, we provide quality primary instruction and higher education through expert guidance, structured classroom learning, and a supportive academic environment.
                 </p>
                 <Button size="lg" className="bg-[#00b2a9] text-white hover:bg-[#00968f] font-bold uppercase tracking-widest text-xs px-10 h-14 rounded-none transition-all">
                   Explore Our Programs
