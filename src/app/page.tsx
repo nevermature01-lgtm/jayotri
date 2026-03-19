@@ -6,7 +6,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import Newsletter from '@/components/Newsletter';
 import { Button } from '@/components/ui/button';
-import { School, Award, ArrowRight, ExternalLink } from 'lucide-react';
+import { School, Award, ArrowRight, ExternalLink, GraduationCap, Brain, Lightbulb, Trophy } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Autoplay from 'embla-carousel-autoplay';
 import {
@@ -28,6 +28,33 @@ export default function Home() {
   const studentLifeImg = PlaceHolderImages.find(img => img.id === 'student-life');
   const researchImg = PlaceHolderImages.find(img => img.id === 'research-lab');
   const graduationImg = PlaceHolderImages.find(img => img.id === 'graduation');
+
+  const featureCards = [
+    {
+      icon: <GraduationCap className="h-8 w-8 text-white" />,
+      title: "Taking care of confident I & we side",
+      description: "We build confident individuals and strong collaborators by nurturing self-belief, communication, and teamwork for lifelong success.",
+      isDark: false,
+    },
+    {
+      icon: <Brain className="h-8 w-8 text-[#00b2a9]" />,
+      title: "Taking care of 'intellectual' side",
+      description: "We strengthen the intellectual side by developing critical thinking, creativity, and problem-solving skills for lifelong learning and academic excellence.",
+      isDark: true,
+    },
+    {
+      icon: <Lightbulb className="h-8 w-8 text-white" />,
+      title: "Taking care of the 'inventive' side",
+      description: "We nurture the inventive side by encouraging creativity, innovation, and original thinking to turn ideas into impactful solutions.",
+      isDark: false,
+    },
+    {
+      icon: <Trophy className="h-8 w-8 text-[#00b2a9]" />,
+      title: "Taking care of the 'sporty' side",
+      description: "We support the sporty side by promoting physical fitness, discipline, teamwork, and a healthy competitive spirit.",
+      isDark: true,
+    },
+  ];
 
   return (
     <div className="relative min-h-screen">
@@ -97,6 +124,40 @@ export default function Home() {
               <CarouselNext className="relative right-0 translate-y-0 bg-white/10 border-white/30 text-white backdrop-blur-md hover:bg-white/20 hover:text-white" />
             </div>
           </Carousel>
+        </section>
+
+        {/* Pillars Section */}
+        <section className="relative py-24 bg-slate-50">
+          <div className="max-w-screen-2xl mx-auto px-6 md:px-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 lg:gap-4 -mt-32 relative z-30">
+              {featureCards.map((card, idx) => (
+                <div 
+                  key={idx}
+                  className={`flex flex-col items-center text-center p-8 md:p-12 transition-all duration-300 shadow-xl ${
+                    card.isDark 
+                      ? "bg-[#00b2a9] text-white" 
+                      : "bg-white text-slate-800"
+                  }`}
+                >
+                  <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-8 ${
+                    card.isDark ? "bg-white" : "bg-[#00b2a9]"
+                  }`}>
+                    {card.icon}
+                  </div>
+                  <h3 className={`font-headline text-2xl font-bold mb-6 leading-tight ${
+                    card.isDark ? "text-white" : "text-[#00b2a9]"
+                  }`}>
+                    {card.title}
+                  </h3>
+                  <p className={`text-sm leading-relaxed ${
+                    card.isDark ? "text-white/90" : "text-slate-500"
+                  }`}>
+                    {card.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
         </section>
 
         {/* Quick Links / Bento Grid */}
