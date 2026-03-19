@@ -49,7 +49,7 @@ export default function Home() {
                 <Button size="lg" className="bg-white text-primary hover:bg-slate-100 font-bold uppercase tracking-widest text-xs px-8 h-14">
                   Discover Programs
                 </Button>
-                <Button variant="outline" size="lg" className="border-white/30 text-white backdrop-blur-md hover:bg-white/10 font-bold uppercase tracking-widest text-xs px-8 h-14">
+                <Button variant="outline" size="lg" className="bg-white/10 border-white/30 text-white backdrop-blur-lg hover:bg-white/20 font-bold uppercase tracking-widest text-xs px-8 h-14 transition-all shadow-xl">
                   Visit Campus
                 </Button>
               </div>
