@@ -29,6 +29,12 @@
       "description": "Simplified map view of campus",
       "imageUrl": "https://picsum.photos/seed/univ5/600/400",
       "imageHint": "campus map"
+    },
+    {
+      "id": "classroom-hero",
+      "description": "Students studying in a large, well-lit classroom",
+      "imageUrl": "https://picsum.photos/seed/univ6/1920/1080",
+      "imageHint": "classroom library"
     }
   ]
 }

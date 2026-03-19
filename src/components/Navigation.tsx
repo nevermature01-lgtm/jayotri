@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -15,7 +16,7 @@ export default function Navigation() {
   const navItems = ['Admissions', 'Academics', 'Athletics', 'Arts', 'Student Life', 'Giving'];
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-[0_12px_40px_rgba(28,28,25,0.06)] border-b border-black/5">
+    <nav className="sticky top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-[0_12px_40px_rgba(28,28,25,0.06)] border-b border-black/5">
       <div className="flex justify-between items-center px-4 md:px-8 py-4 max-w-screen-2xl mx-auto">
         {/* Left: Logo */}
         <div className="flex items-center">
