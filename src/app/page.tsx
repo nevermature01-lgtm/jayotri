@@ -39,7 +39,6 @@ export default function Home() {
   ].filter(Boolean);
 
   const heroCampusImg = PlaceHolderImages.find(img => img.id === 'hero-campus');
-  const studentLifeImg = PlaceHolderImages.find(img => img.id === 'student-life');
   const researchImg = PlaceHolderImages.find(img => img.id === 'research-lab');
   const graduationImg = PlaceHolderImages.find(img => img.id === 'graduation');
 
@@ -315,79 +314,6 @@ export default function Home() {
                     We support students with continuous assessment, mentoring, and guidance to prepare them for higher education and future goals.
                   </p>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* News & Announcements */}
-        <section className="py-16 md:py-24 bg-muted/20">
-          <div className="max-w-screen-2xl mx-auto px-6 md:px-8">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:after:mb-16">
-              <div className="mb-6 md:mb-0">
-                <span className="text-[10px] font-bold tracking-[0.3em] text-muted-foreground uppercase mb-4 block">Institutional Updates</span>
-                <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary">Campus Dispatches</h2>
-              </div>
-              <Button variant="link" className="flex items-center gap-2 text-primary font-bold border-b-2 border-primary rounded-none px-0 pb-1 h-auto">
-                View All News <ArrowRight className="h-4 w-4" />
-              </Button>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-              {/* News Card 1 */}
-              <article className="flex flex-col group cursor-pointer">
-                <div className="aspect-video mb-6 overflow-hidden rounded-lg bg-white relative">
-                  {researchImg && (
-                    <Image
-                      src={researchImg.imageUrl}
-                      alt={researchImg.description}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
-                      data-ai-hint={researchImg.imageHint}
-                    />
-                  )}
-                </div>
-                <span className="text-primary font-bold text-[10px] tracking-widest uppercase mb-3">Research</span>
-                <h3 className="font-headline text-2xl font-bold mb-4 leading-snug group-hover:text-primary/70 transition-colors">Breakthrough in Neural Engineering Published in Nature</h3>
-                <p className="text-muted-foreground line-clamp-3 mb-6">Our Department of Biomedical Sciences has unveiled a new methodology for interface synchronization that could redefine prosthetic mobility.</p>
-                <time className="text-xs text-muted-foreground/60 font-medium">October 24, 2024</time>
-              </article>
-              
-              {/* News Card 2 */}
-              <article className="flex flex-col group cursor-pointer">
-                <div className="aspect-video mb-6 overflow-hidden rounded-lg bg-white relative">
-                  {graduationImg && (
-                    <Image
-                      src={graduationImg.imageUrl}
-                      alt={graduationImg.description}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
-                      data-ai-hint={graduationImg.imageHint}
-                    />
-                  )}
-                </div>
-                <span className="text-primary font-bold text-[10px] tracking-widest uppercase mb-3">Campus News</span>
-                <h3 className="font-headline text-2xl font-bold mb-4 leading-snug group-hover:text-primary/70 transition-colors">Global Leaders Convene for Annual Sustainability Summit</h3>
-                <p className="text-muted-foreground line-clamp-3 mb-6">Next month, the university will host delegates from 40 nations to discuss the role of higher education in climate resilience.</p>
-                <time className="text-xs text-muted-foreground/60 font-medium">October 20, 2024</time>
-              </article>
-
-              {/* Announcements Sidebar */}
-              <div className="space-y-10">
-                <div className="border-l-4 border-accent pl-6">
-                  <h4 className="font-bold text-sm tracking-widest uppercase text-primary/70 mb-2">Important Notice</h4>
-                  <p className="font-headline text-lg italic leading-tight">Spring 2025 registration is now open for all continuing education students.</p>
-                </div>
-                <div className="border-l-4 border-muted pl-6">
-                  <h4 className="font-bold text-sm tracking-widest uppercase text-muted-foreground mb-2">Upcoming Event</h4>
-                  <p className="font-headline text-lg leading-tight text-primary">President's Gala for the Arts — November 12, 7:00 PM</p>
-                </div>
-                <div className="border-l-4 border-muted pl-6">
-                  <h4 className="font-bold text-sm tracking-widest uppercase text-muted-foreground mb-2">Athletics</h4>
-                  <p className="font-headline text-lg leading-tight text-primary">Varsity Homecoming: The Annual Rivalry Match kicks off this Saturday.</p>
-                </div>
-                <Button variant="ghost" className="w-full py-6 text-center border-t border-muted rounded-none font-bold text-xs uppercase tracking-widest hover:bg-white transition-colors">
-                  More Announcements
-                </Button>
               </div>
             </div>
           </div>
