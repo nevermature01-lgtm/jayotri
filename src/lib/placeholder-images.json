@@ -35,6 +35,12 @@
       "description": "Students studying in a large, well-lit classroom",
       "imageUrl": "https://picsum.photos/seed/univ6/1920/1080",
       "imageHint": "classroom library"
+    },
+    {
+      "id": "principal-portrait",
+      "description": "Professional portrait of a school principal",
+      "imageUrl": "https://picsum.photos/seed/principal/600/800",
+      "imageHint": "professional portrait"
     }
   ]
 }
