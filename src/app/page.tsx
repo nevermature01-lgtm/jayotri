@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import Chatbot from '@/components/Chatbot';
 import Newsletter from '@/components/Newsletter';
 import { Button } from '@/components/ui/button';
 import { School, Award, ArrowRight, ExternalLink } from 'lucide-react';
@@ -225,7 +224,6 @@ export default function Home() {
       </main>
 
       <Footer />
-      <Chatbot />
     </div>
   );
 }
