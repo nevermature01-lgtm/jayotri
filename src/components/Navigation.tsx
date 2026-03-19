@@ -72,7 +72,21 @@ export default function Navigation() {
         { name: 'Result', href: '/academics/result' },
       ]
     },
-    { name: 'The School', href: '/the-school' },
+    { 
+      name: 'The School', 
+      href: '/the-school',
+      subItems: [
+        { name: 'Building Safety Certificate', href: '/the-school/building-safety-certificate' },
+        { name: 'Recognition Certificate', href: '/the-school/recognition-certificate' },
+        { name: 'No Objection Certificate', href: '/the-school/no-objection-certificate' },
+        { name: 'Society Renewal Certificate', href: '/the-school/society-renewal-certificate' },
+        { name: 'Safe Water & Sanitation Certificate', href: '/the-school/safe-water-and-sanitation-certificate' },
+        { name: 'Fire Safty Certificate', href: '/the-school/fire-safty-certificate' },
+        { name: 'Self Clarification', href: '/the-school/self-clarification' },
+        { name: 'Parents Teachers Asossiation', href: '/the-school/parents-teachers-asossiation' },
+        { name: 'School Management Committee', href: '/the-school/school-management-committee' },
+      ]
+    },
     { name: 'Gallery', href: '/gallery' },
     { name: 'contact us', href: '/contact-us' },
   ];
@@ -95,10 +109,10 @@ export default function Navigation() {
                 <DropdownMenuTrigger className="flex items-center gap-1 text-slate-700 dark:text-slate-400 font-medium hover:text-primary dark:hover:text-blue-200 transition-colors text-xs uppercase tracking-wide outline-none">
                   {item.name} <ChevronDown className="h-3 w-3" />
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="start" className="w-56 p-2 bg-white/95 backdrop-blur-md">
+                <DropdownMenuContent align="start" className="max-h-[70vh] overflow-y-auto w-64 p-2 bg-white/95 backdrop-blur-md">
                   {item.subItems.map((sub) => (
                     <DropdownMenuItem key={sub.name} asChild>
-                      <Link href={sub.href} className="w-full text-xs uppercase tracking-wide py-2 cursor-pointer">
+                      <Link href={sub.href} className="w-full text-[10px] uppercase tracking-wide py-2 cursor-pointer">
                         {sub.name}
                       </Link>
                     </DropdownMenuItem>
@@ -140,12 +154,12 @@ export default function Navigation() {
                   Academia Horizon
                 </SheetTitle>
               </SheetHeader>
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-4 overflow-y-auto max-h-[80vh] pr-2">
                 <Accordion type="single" collapsible className="w-full">
                   {navItems.map((item) => (
                     item.subItems ? (
                       <AccordionItem key={item.name} value={item.name} className="border-none">
-                        <AccordionTrigger className="text-lg font-medium text-slate-700 hover:text-primary transition-colors uppercase tracking-wider py-2">
+                        <AccordionTrigger className="text-sm font-medium text-slate-700 hover:text-primary transition-colors uppercase tracking-wider py-2">
                           {item.name}
                         </AccordionTrigger>
                         <AccordionContent className="flex flex-col gap-3 pl-4 pt-2 pb-4">
@@ -153,7 +167,7 @@ export default function Navigation() {
                             <Link
                               key={sub.name}
                               href={sub.href}
-                              className="text-sm font-medium text-slate-500 hover:text-primary transition-colors uppercase tracking-widest"
+                              className="text-[11px] font-medium text-slate-500 hover:text-primary transition-colors uppercase tracking-widest"
                             >
                               {sub.name}
                             </Link>
@@ -164,7 +178,7 @@ export default function Navigation() {
                       <Link
                         key={item.name}
                         href={item.href}
-                        className="text-lg font-medium text-slate-700 hover:text-primary transition-colors uppercase tracking-wider py-4 block"
+                        className="text-sm font-medium text-slate-700 hover:text-primary transition-colors uppercase tracking-wider py-4 block"
                       >
                         {item.name}
                       </Link>
