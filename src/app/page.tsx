@@ -20,7 +20,7 @@ export default function Home() {
       
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-[85vh] flex items-center overflow-hidden pt-20">
+        <section className="relative min-h-[90vh] md:min-h-[85vh] flex items-center overflow-hidden pt-20">
           <div className="absolute inset-0 z-0">
             {heroImg && (
               <Image
@@ -34,22 +34,22 @@ export default function Home() {
             )}
             <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/40 to-transparent"></div>
           </div>
-          <div className="relative z-10 max-w-screen-2xl mx-auto px-8 md:px-12 w-full">
+          <div className="relative z-10 max-w-screen-2xl mx-auto px-6 md:px-12 w-full">
             <div className="max-w-3xl">
               <span className="inline-block px-4 py-1 bg-accent text-primary text-[10px] font-bold tracking-[0.2em] mb-6 rounded-sm">
                 ESTABLISHED 1892
               </span>
-              <h1 className="font-headline text-6xl md:text-8xl text-white font-black tracking-tighter leading-[0.9] mb-8 text-balance">
-                The Pursuit of <br/><span className="italic font-light">Enduring Excellence</span>
+              <h1 className="font-headline text-5xl sm:text-7xl md:text-8xl text-white font-black tracking-tighter leading-[0.95] md:leading-[0.9] mb-8 text-balance">
+                The Pursuit of <br className="hidden sm:block"/><span className="italic font-light">Enduring Excellence</span>
               </h1>
               <p className="text-lg md:text-xl text-white/80 font-body max-w-xl mb-10 leading-relaxed">
                 Join a community where tradition meets the vanguard of research. We shape thinkers who rewrite the future of global society.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-white text-primary hover:bg-slate-100 font-bold uppercase tracking-widest text-xs px-8 h-14">
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto bg-white text-primary hover:bg-slate-100 font-bold uppercase tracking-widest text-xs px-8 h-14">
                   Discover Programs
                 </Button>
-                <Button variant="outline" size="lg" className="bg-white/10 border-white/30 text-white backdrop-blur-lg hover:bg-white/20 font-bold uppercase tracking-widest text-xs px-8 h-14 transition-all shadow-xl">
+                <Button variant="outline" size="lg" className="w-full sm:w-auto bg-white/10 border-white/30 text-white backdrop-blur-lg hover:bg-white/20 font-bold uppercase tracking-widest text-xs px-8 h-14 transition-all shadow-xl">
                   Visit Campus
                 </Button>
               </div>
@@ -58,11 +58,11 @@ export default function Home() {
         </section>
 
         {/* Quick Links / Bento Grid */}
-        <section className="py-24 bg-background">
-          <div className="max-w-screen-2xl mx-auto px-8">
+        <section className="py-16 md:py-24 bg-background">
+          <div className="max-w-screen-2xl mx-auto px-6 md:px-8">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
               {/* Featured Link */}
-              <div className="md:col-span-8 group relative overflow-hidden aspect-[16/9] md:aspect-auto rounded-xl bg-white shadow-[0_12px_40px_rgba(28,28,25,0.06)]">
+              <div className="md:col-span-8 group relative overflow-hidden aspect-[16/9] md:aspect-auto rounded-xl bg-white shadow-[0_12px_40px_rgba(28,28,25,0.06)] min-h-[400px]">
                 {studentLifeImg && (
                   <Image
                     src={studentLifeImg.imageUrl}
@@ -73,9 +73,9 @@ export default function Home() {
                   />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 p-10">
-                  <h3 className="font-headline text-4xl text-white mb-2">Student Life</h3>
-                  <p className="text-white/70 max-w-md mb-6">Beyond the lecture hall, find your community in over 200 student-led organizations.</p>
+                <div className="absolute bottom-0 left-0 p-6 md:p-10">
+                  <h3 className="font-headline text-3xl md:text-4xl text-white mb-2">Student Life</h3>
+                  <p className="text-white/70 max-w-md mb-6 text-sm md:text-base">Beyond the lecture hall, find your community in over 200 student-led organizations.</p>
                   <span className="text-white font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all">
                     Explore the Campus <ArrowRight className="h-4 w-4" />
                   </span>
@@ -106,14 +106,14 @@ export default function Home() {
         </section>
 
         {/* News & Announcements */}
-        <section className="py-24 bg-muted/20">
-          <div className="max-w-screen-2xl mx-auto px-8">
-            <div className="flex justify-between items-end mb-16">
-              <div>
+        <section className="py-16 md:py-24 bg-muted/20">
+          <div className="max-w-screen-2xl mx-auto px-6 md:px-8">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:after:mb-16">
+              <div className="mb-6 md:mb-0">
                 <span className="text-[10px] font-bold tracking-[0.3em] text-muted-foreground uppercase mb-4 block">Institutional Updates</span>
-                <h2 className="font-headline text-5xl font-bold text-primary">Campus Dispatches</h2>
+                <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary">Campus Dispatches</h2>
               </div>
-              <Button variant="link" className="hidden md:flex items-center gap-2 text-primary font-bold border-b-2 border-primary rounded-none px-0 pb-1 h-auto">
+              <Button variant="link" className="flex items-center gap-2 text-primary font-bold border-b-2 border-primary rounded-none px-0 pb-1 h-auto">
                 View All News <ArrowRight className="h-4 w-4" />
               </Button>
             </div>
