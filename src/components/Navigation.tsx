@@ -3,7 +3,7 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Search, Menu } from 'lucide-react';
+import { Search, Menu, ChevronDown } from 'lucide-react';
 import {
   Sheet,
   SheetContent,
@@ -11,9 +11,49 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+interface NavItem {
+  name: string;
+  href: string;
+  subItems?: { name: string; href: string }[];
+}
 
 export default function Navigation() {
-  const navItems = ['Home', 'About us', 'Admissions', 'Academics', 'The School', 'Gallery', 'contact us'];
+  const navItems: NavItem[] = [
+    { name: 'Home', href: '/' },
+    { 
+      name: 'About us', 
+      href: '/about-us',
+      subItems: [
+        { name: 'Our School', href: '/about-us/our-school' },
+        { name: 'Vision', href: '/about-us/vision' },
+        { name: 'Values', href: '/about-us/values' },
+        { name: 'Principal Message', href: '/about-us/principal-message' },
+        { name: 'Managing Director Message', href: '/about-us/managing-director-message' },
+        { name: 'Secretary Message', href: '/about-us/secretary-message' },
+        { name: 'Our Academic Advisor', href: '/about-us/our-academic-advisor' },
+        { name: 'Infrastructure', href: '/about-us/infrastructure' },
+        { name: 'School Facilities', href: '/about-us/school-facilities' },
+      ]
+    },
+    { name: 'Admissions', href: '/admissions' },
+    { name: 'Academics', href: '/academics' },
+    { name: 'The School', href: '/the-school' },
+    { name: 'Gallery', href: '/gallery' },
+    { name: 'contact us', href: '/contact-us' },
+  ];
 
   return (
     <nav className="sticky top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-[0_12px_40px_rgba(28,28,25,0.06)] border-b border-black/5">
@@ -26,15 +66,32 @@ export default function Navigation() {
         </div>
 
         {/* Center: Desktop Nav */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-6">
           {navItems.map((item) => (
-            <Link
-              key={item}
-              href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(/\s+/g, '-')}`}
-              className="text-slate-700 dark:text-slate-400 font-medium hover:text-primary dark:hover:text-blue-200 transition-colors text-sm uppercase tracking-wide"
-            >
-              {item}
-            </Link>
+            item.subItems ? (
+              <DropdownMenu key={item.name}>
+                <DropdownMenuTrigger className="flex items-center gap-1 text-slate-700 dark:text-slate-400 font-medium hover:text-primary dark:hover:text-blue-200 transition-colors text-xs uppercase tracking-wide outline-none">
+                  {item.name} <ChevronDown className="h-3 w-3" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="w-56 p-2 bg-white/95 backdrop-blur-md">
+                  {item.subItems.map((sub) => (
+                    <DropdownMenuItem key={sub.name} asChild>
+                      <Link href={sub.href} className="w-full text-xs uppercase tracking-wide py-2 cursor-pointer">
+                        {sub.name}
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-slate-700 dark:text-slate-400 font-medium hover:text-primary dark:hover:text-blue-200 transition-colors text-xs uppercase tracking-wide"
+              >
+                {item.name}
+              </Link>
+            )
           ))}
         </div>
 
@@ -61,16 +118,37 @@ export default function Navigation() {
                   Academia Horizon
                 </SheetTitle>
               </SheetHeader>
-              <div className="flex flex-col gap-6">
-                {navItems.map((item) => (
-                  <Link
-                    key={item}
-                    href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="text-lg font-medium text-slate-700 hover:text-primary transition-colors uppercase tracking-wider"
-                  >
-                    {item}
-                  </Link>
-                ))}
+              <div className="flex flex-col gap-4">
+                <Accordion type="single" collapsible className="w-full">
+                  {navItems.map((item) => (
+                    item.subItems ? (
+                      <AccordionItem key={item.name} value={item.name} className="border-none">
+                        <AccordionTrigger className="text-lg font-medium text-slate-700 hover:text-primary transition-colors uppercase tracking-wider py-2">
+                          {item.name}
+                        </AccordionTrigger>
+                        <AccordionContent className="flex flex-col gap-3 pl-4 pt-2 pb-4">
+                          {item.subItems.map((sub) => (
+                            <Link
+                              key={sub.name}
+                              href={sub.href}
+                              className="text-sm font-medium text-slate-500 hover:text-primary transition-colors uppercase tracking-widest"
+                            >
+                              {sub.name}
+                            </Link>
+                          ))}
+                        </AccordionContent>
+                      </AccordionItem>
+                    ) : (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="text-lg font-medium text-slate-700 hover:text-primary transition-colors uppercase tracking-wider py-4 block"
+                      >
+                        {item.name}
+                      </Link>
+                    )
+                  ))}
+                </Accordion>
                 <div className="pt-6 border-t">
                   <Button className="w-full bg-primary text-white font-bold tracking-wide py-6">
                     Apply Now
