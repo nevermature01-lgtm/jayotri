@@ -87,7 +87,14 @@ export default function Navigation() {
         { name: 'School Management Committee', href: '/the-school/school-management-committee' },
       ]
     },
-    { name: 'Gallery', href: '/gallery' },
+    { 
+      name: 'Gallery', 
+      href: '/gallery',
+      subItems: [
+        { name: 'Media', href: '/gallery/media' },
+        { name: 'Video Gallery', href: '/gallery/video-gallery' },
+      ]
+    },
     { name: 'contact us', href: '/contact-us' },
   ];
 
