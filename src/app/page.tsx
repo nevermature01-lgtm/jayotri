@@ -7,9 +7,22 @@ import Newsletter from '@/components/Newsletter';
 import { Button } from '@/components/ui/button';
 import { School, Award, ArrowRight, ExternalLink } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export default function Home() {
-  const heroImg = PlaceHolderImages.find(img => img.id === 'hero-campus');
+  const heroSlides = [
+    PlaceHolderImages.find(img => img.id === 'hero-campus'),
+    PlaceHolderImages.find(img => img.id === 'student-life'),
+    PlaceHolderImages.find(img => img.id === 'research-lab'),
+    PlaceHolderImages.find(img => img.id === 'graduation'),
+  ].filter(Boolean);
+
   const studentLifeImg = PlaceHolderImages.find(img => img.id === 'student-life');
   const researchImg = PlaceHolderImages.find(img => img.id === 'research-lab');
   const graduationImg = PlaceHolderImages.find(img => img.id === 'graduation');
@@ -19,42 +32,60 @@ export default function Home() {
       <Navigation />
       
       <main>
-        {/* Hero Section */}
-        <section className="relative min-h-[90vh] md:min-h-[85vh] flex items-center overflow-hidden pt-20">
-          <div className="absolute inset-0 z-0">
-            {heroImg && (
-              <Image
-                src={heroImg.imageUrl}
-                alt={heroImg.description}
-                fill
-                className="object-cover"
-                priority
-                data-ai-hint={heroImg.imageHint}
-              />
-            )}
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/40 to-transparent"></div>
-          </div>
-          <div className="relative z-10 max-w-screen-2xl mx-auto px-6 md:px-12 w-full">
-            <div className="max-w-3xl">
-              <span className="inline-block px-4 py-1 bg-accent text-primary text-[10px] font-bold tracking-[0.2em] mb-6 rounded-sm">
-                ESTABLISHED 1892
-              </span>
-              <h1 className="font-headline text-5xl sm:text-7xl md:text-8xl text-white font-black tracking-tighter leading-[0.95] md:leading-[0.9] mb-8 text-balance">
-                The Pursuit of <br className="hidden sm:block"/><span className="italic font-light">Enduring Excellence</span>
-              </h1>
-              <p className="text-lg md:text-xl text-white/80 font-body max-w-xl mb-10 leading-relaxed">
-                Join a community where tradition meets the vanguard of research. We shape thinkers who rewrite the future of global society.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                <Button size="lg" className="w-full sm:w-auto bg-white text-primary hover:bg-slate-100 font-bold uppercase tracking-widest text-xs px-8 h-14">
-                  Discover Programs
-                </Button>
-                <Button variant="outline" size="lg" className="w-full sm:w-auto bg-white/10 border-white/30 text-white backdrop-blur-lg hover:bg-white/20 font-bold uppercase tracking-widest text-xs px-8 h-14 transition-all shadow-xl">
-                  Visit Campus
-                </Button>
-              </div>
+        {/* Hero Slider Section */}
+        <section className="relative h-[90vh] md:h-[85vh] w-full overflow-hidden">
+          <Carousel className="w-full h-full" opts={{ loop: true }}>
+            <CarouselContent className="h-[90vh] md:h-[85vh]">
+              {heroSlides.map((slide, index) => (
+                <CarouselItem key={index} className="relative h-full w-full">
+                  <div className="absolute inset-0 z-0">
+                    {slide && (
+                      <Image
+                        src={slide.imageUrl}
+                        alt={slide.description}
+                        fill
+                        className="object-cover"
+                        priority={index === 0}
+                        data-ai-hint={slide.imageHint}
+                      />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/40 to-transparent"></div>
+                  </div>
+                  
+                  <div className="relative z-10 h-full flex items-center">
+                    <div className="max-w-screen-2xl mx-auto px-6 md:px-12 w-full">
+                      <div className="max-w-3xl">
+                        <span className="inline-block px-4 py-1 bg-accent text-primary text-[10px] font-bold tracking-[0.2em] mb-6 rounded-sm">
+                          ESTABLISHED 1892
+                        </span>
+                        <h1 className="font-headline text-5xl sm:text-7xl md:text-8xl text-white font-black tracking-tighter leading-[0.95] md:leading-[0.9] mb-8 text-balance">
+                          {index === 0 && <>The Pursuit of <br className="hidden sm:block"/><span className="italic font-light">Enduring Excellence</span></>}
+                          {index === 1 && <>Community & <br className="hidden sm:block"/><span className="italic font-light">Vibrant Growth</span></>}
+                          {index === 2 && <>Innovation at <br className="hidden sm:block"/><span className="italic font-light">The Vanguard</span></>}
+                          {index === 3 && <>Legacy of <br className="hidden sm:block"/><span className="italic font-light">Global Impact</span></>}
+                        </h1>
+                        <p className="text-lg md:text-xl text-white/80 font-body max-w-xl mb-10 leading-relaxed">
+                          Join a community where tradition meets the vanguard of research. We shape thinkers who rewrite the future of global society.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                          <Button size="lg" className="w-full sm:w-auto bg-white text-primary hover:bg-slate-100 font-bold uppercase tracking-widest text-xs px-8 h-14">
+                            Discover Programs
+                          </Button>
+                          <Button variant="outline" size="lg" className="w-full sm:w-auto bg-white/10 border-white/30 text-white backdrop-blur-xl hover:bg-white/20 font-bold uppercase tracking-widest text-xs px-8 h-14 transition-all shadow-2xl">
+                            Visit Campus
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="absolute bottom-12 right-12 flex gap-4 z-20">
+              <CarouselPrevious className="relative left-0 translate-y-0 bg-white/10 border-white/30 text-white backdrop-blur-md hover:bg-white/20 hover:text-white" />
+              <CarouselNext className="relative right-0 translate-y-0 bg-white/10 border-white/30 text-white backdrop-blur-md hover:bg-white/20 hover:text-white" />
             </div>
-          </div>
+          </Carousel>
         </section>
 
         {/* Quick Links / Bento Grid */}
