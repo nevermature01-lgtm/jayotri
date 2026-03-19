@@ -36,7 +36,7 @@ export default function Home() {
       
       <main>
         {/* Hero Slider Section */}
-        <section className="relative h-[90vh] md:h-[85vh] w-full overflow-hidden">
+        <section className="relative h-[90vh] md:h-[85vh] md:mt-20 w-full overflow-hidden">
           <Carousel 
             className="w-full h-full" 
             opts={{ loop: true }}
