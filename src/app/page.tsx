@@ -25,6 +25,7 @@ export default function Home() {
     PlaceHolderImages.find(img => img.id === 'graduation'),
   ].filter(Boolean);
 
+  const heroCampusImg = PlaceHolderImages.find(img => img.id === 'hero-campus');
   const studentLifeImg = PlaceHolderImages.find(img => img.id === 'student-life');
   const researchImg = PlaceHolderImages.find(img => img.id === 'research-lab');
   const graduationImg = PlaceHolderImages.find(img => img.id === 'graduation');
@@ -129,7 +130,6 @@ export default function Home() {
         {/* Pillars Section */}
         <section className="relative py-24 bg-slate-50">
           <div className="max-w-screen-2xl mx-auto px-6 md:px-8">
-            {/* Removed -mt-32 to prevent cards from touching/overlapping the hero section */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 lg:gap-4 relative z-30">
               {featureCards.map((card, idx) => (
                 <div 
@@ -157,6 +157,52 @@ export default function Home() {
                   </p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Who We Are Section */}
+        <section className="py-24 bg-white overflow-hidden">
+          <div className="max-w-screen-2xl mx-auto px-6 md:px-8">
+            <div className="flex flex-col lg:flex-row items-center gap-16">
+              <div className="lg:w-1/2">
+                <span className="text-[10px] font-bold tracking-[0.3em] text-[#00b2a9] uppercase mb-4 block">Our Identity</span>
+                <h2 className="font-headline text-4xl md:text-6xl font-bold text-primary mb-8 leading-tight">
+                  A Legacy of <br />
+                  <span className="italic font-light">Intellectual Pioneerism</span>
+                </h2>
+                <p className="text-lg text-slate-600 mb-8 leading-relaxed max-w-xl">
+                  Founded on the principles of rigorous inquiry and social responsibility, Academia Horizon has been a sanctuary for thinkers and creators since 1892. We bridge the gap between historical wisdom and future innovation, fostering a community where every student is empowered to lead with integrity and vision.
+                </p>
+                <div className="grid grid-cols-2 gap-8 mb-10">
+                  <div>
+                    <p className="text-4xl font-headline font-bold text-primary mb-2">12:1</p>
+                    <p className="text-xs uppercase tracking-widest text-slate-400 font-bold">Student-Faculty Ratio</p>
+                  </div>
+                  <div>
+                    <p className="text-4xl font-headline font-bold text-primary mb-2">98%</p>
+                    <p className="text-xs uppercase tracking-widest text-slate-400 font-bold">Graduate Success</p>
+                  </div>
+                </div>
+                <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-bold uppercase tracking-widest text-xs px-8 h-12 transition-all duration-300">
+                  Our Mission & Values
+                </Button>
+              </div>
+              <div className="lg:w-1/2 relative">
+                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+                  {heroCampusImg && (
+                    <Image
+                      src={heroCampusImg.imageUrl}
+                      alt="Our Campus Heritage"
+                      fill
+                      className="object-cover"
+                      data-ai-hint="university building"
+                    />
+                  )}
+                </div>
+                {/* Decorative element */}
+                <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-accent rounded-full -z-10 opacity-50"></div>
+              </div>
             </div>
           </div>
         </section>
