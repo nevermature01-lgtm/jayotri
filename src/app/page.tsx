@@ -320,54 +320,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Quick Links / Bento Grid */}
-        <section className="py-16 md:py-24 bg-background">
-          <div className="max-w-screen-2xl mx-auto px-6 md:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-              {/* Featured Link */}
-              <div className="md:col-span-8 group relative overflow-hidden aspect-[16/9] md:aspect-auto rounded-xl bg-white shadow-[0_12px_40px_rgba(28,28,25,0.06)] min-h-[400px]">
-                {studentLifeImg && (
-                  <Image
-                    src={studentLifeImg.imageUrl}
-                    alt={studentLifeImg.description}
-                    fill
-                    className="absolute inset-0 object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
-                    data-ai-hint={studentLifeImg.imageHint}
-                  />
-                )}
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 p-6 md:p-10">
-                  <h3 className="font-headline text-3xl md:text-4xl text-white mb-2">Student Life</h3>
-                  <p className="text-white/70 max-w-md mb-6 text-sm md:text-base">Beyond the lecture hall, find your community in over 200 student-led organizations.</p>
-                  <span className="text-white font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all">
-                    Explore the Campus <ArrowRight className="h-4 w-4" />
-                  </span>
-                </div>
-              </div>
-
-              {/* Side Links Stack */}
-              <div className="md:col-span-4 flex flex-col gap-6">
-                <div className="flex-1 p-8 bg-muted/30 rounded-xl group hover:bg-primary transition-colors duration-500 cursor-pointer">
-                  <School className="h-10 w-10 text-primary group-hover:text-accent mb-6 transition-colors" />
-                  <h4 className="font-headline text-2xl mb-2 group-hover:text-white">Graduate Studies</h4>
-                  <p className="text-muted-foreground group-hover:text-white/70 mb-4">Advanced research opportunities in over 40 disciplines.</p>
-                  <Link href="#" className="text-primary font-bold group-hover:text-white flex items-center gap-2">
-                    Learn more <ExternalLink className="h-3 w-3" />
-                  </Link>
-                </div>
-                <div className="flex-1 p-8 bg-muted/30 rounded-xl group hover:bg-accent transition-colors duration-500 cursor-pointer">
-                  <Award className="h-10 w-10 text-primary group-hover:text-primary mb-6 transition-colors" />
-                  <h4 className="font-headline text-2xl mb-2 group-hover:text-primary">Financial Aid</h4>
-                  <p className="text-muted-foreground group-hover:text-primary/70 mb-4">92% of students receive institutional support.</p>
-                  <Link href="#" className="text-primary font-bold group-hover:text-primary flex items-center gap-2">
-                    View scholarships <ExternalLink className="h-3 w-3" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* News & Announcements */}
         <section className="py-16 md:py-24 bg-muted/20">
           <div className="max-w-screen-2xl mx-auto px-6 md:px-8">
