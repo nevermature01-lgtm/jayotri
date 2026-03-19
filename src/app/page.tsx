@@ -6,7 +6,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import Newsletter from '@/components/Newsletter';
 import { Button } from '@/components/ui/button';
-import { School, Award, ArrowRight, ExternalLink, GraduationCap, Brain, Lightbulb, Trophy } from 'lucide-react';
+import { School, Award, ArrowRight, ExternalLink, GraduationCap, Brain, Lightbulb, Trophy, Users, History } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Autoplay from 'embla-carousel-autoplay';
 import {
@@ -202,6 +202,38 @@ export default function Home() {
                 </div>
                 {/* Decorative element */}
                 <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-accent rounded-full -z-10 opacity-50"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Stats Strip Section */}
+        <section className="bg-[#1c1c1c] py-16">
+          <div className="max-w-screen-2xl mx-auto px-6 md:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0">
+              {/* Stat 1 */}
+              <div className="flex items-center justify-center gap-8 md:border-r border-white/10 px-4">
+                <Users className="h-14 w-14 text-[#00b2a9]" />
+                <div>
+                  <div className="text-white text-5xl font-headline font-bold">500+</div>
+                  <div className="text-white/60 text-[10px] font-bold uppercase tracking-[0.2em] mt-1">Students Active</div>
+                </div>
+              </div>
+              {/* Stat 2 */}
+              <div className="flex items-center justify-center gap-8 md:border-r border-white/10 px-4">
+                <GraduationCap className="h-14 w-14 text-[#00b2a9]" />
+                <div>
+                  <div className="text-white text-5xl font-headline font-bold">30+</div>
+                  <div className="text-white/60 text-[10px] font-bold uppercase tracking-[0.2em] mt-1">Experienced Teachers</div>
+                </div>
+              </div>
+              {/* Stat 3 */}
+              <div className="flex items-center justify-center gap-8 px-4">
+                <History className="h-14 w-14 text-[#00b2a9]" />
+                <div>
+                  <div className="text-white text-5xl font-headline font-bold">15+</div>
+                  <div className="text-white/60 text-[10px] font-bold uppercase tracking-[0.2em] mt-1">Years of Legacy</div>
+                </div>
               </div>
             </div>
           </div>
