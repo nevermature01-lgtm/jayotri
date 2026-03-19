@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/sheet";
 
 export default function Navigation() {
-  const navItems = ['Admissions', 'Academics', 'Athletics', 'Arts', 'Student Life', 'Giving'];
+  const navItems = ['Home', 'About us', 'Admissions', 'Academics', 'The School', 'Gallery', 'contact us'];
 
   return (
     <nav className="sticky top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-[0_12px_40px_rgba(28,28,25,0.06)] border-b border-black/5">
@@ -30,7 +30,7 @@ export default function Navigation() {
           {navItems.map((item) => (
             <Link
               key={item}
-              href={`/${item.toLowerCase().replace(' ', '-')}`}
+              href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(/\s+/g, '-')}`}
               className="text-slate-700 dark:text-slate-400 font-medium hover:text-primary dark:hover:text-blue-200 transition-colors text-sm uppercase tracking-wide"
             >
               {item}
@@ -65,7 +65,7 @@ export default function Navigation() {
                 {navItems.map((item) => (
                   <Link
                     key={item}
-                    href={`/${item.toLowerCase().replace(' ', '-')}`}
+                    href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(/\s+/g, '-')}`}
                     className="text-lg font-medium text-slate-700 hover:text-primary transition-colors uppercase tracking-wider"
                   >
                     {item}
