@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from 'next/link';
@@ -62,7 +61,17 @@ export default function Navigation() {
         { name: 'Affiliation Letter', href: '/admissions/affiliation-letter' },
       ]
     },
-    { name: 'Academics', href: '/academics' },
+    { 
+      name: 'Academics', 
+      href: '/academics',
+      subItems: [
+        { name: 'Booklist', href: '/academics/booklist' },
+        { name: 'Datesheet', href: '/academics/datesheet' },
+        { name: 'Syllabus', href: '/academics/syllabus' },
+        { name: 'Holiday Homework', href: '/academics/holiday-homework' },
+        { name: 'Result', href: '/academics/result' },
+      ]
+    },
     { name: 'The School', href: '/the-school' },
     { name: 'Gallery', href: '/gallery' },
     { name: 'contact us', href: '/contact-us' },
