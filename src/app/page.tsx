@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
@@ -7,6 +9,7 @@ import Newsletter from '@/components/Newsletter';
 import { Button } from '@/components/ui/button';
 import { School, Award, ArrowRight, ExternalLink } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import Autoplay from 'embla-carousel-autoplay';
 import {
   Carousel,
   CarouselContent,
@@ -34,7 +37,16 @@ export default function Home() {
       <main>
         {/* Hero Slider Section */}
         <section className="relative h-[90vh] md:h-[85vh] w-full overflow-hidden">
-          <Carousel className="w-full h-full" opts={{ loop: true }}>
+          <Carousel 
+            className="w-full h-full" 
+            opts={{ loop: true }}
+            plugins={[
+              Autoplay({
+                delay: 2000,
+                stopOnInteraction: false,
+              }),
+            ]}
+          >
             <CarouselContent className="h-[90vh] md:h-[85vh]">
               {heroSlides.map((slide, index) => (
                 <CarouselItem key={index} className="relative h-full w-full">
@@ -71,7 +83,7 @@ export default function Home() {
                           <Button size="lg" className="w-full sm:w-auto bg-white text-primary hover:bg-slate-100 font-bold uppercase tracking-widest text-xs px-8 h-14">
                             Discover Programs
                           </Button>
-                          <Button variant="outline" size="lg" className="w-full sm:w-auto bg-white/10 border-white/30 text-white backdrop-blur-xl hover:bg-white/20 font-bold uppercase tracking-widest text-xs px-8 h-14 transition-all shadow-2xl">
+                          <Button variant="outline" size="lg" className="w-full sm:w-auto border-white/30 text-white backdrop-blur-md hover:bg-white/10 font-bold uppercase tracking-widest text-xs px-8 h-14 shadow-2xl">
                             Visit Campus
                           </Button>
                         </div>
