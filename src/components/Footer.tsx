@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-3 mb-6">
               <img
-                src="/jayotri_logo.png"
+                src="/jayotri_logo_upscaled.png"
                 alt="Jayotri Academy Logo"
                 className="site-logo brightness-0 invert"
               />
