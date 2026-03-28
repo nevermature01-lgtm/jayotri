@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
@@ -29,8 +30,31 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { cn } from '@/lib/utils';
 
 export default function Home() {
+  const [isPillarsVisible, setIsPillarsVisible] = useState(false);
+  const pillarsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsPillarsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -100px 0px' }
+    );
+
+    if (pillarsRef.current) {
+      observer.observe(pillarsRef.current);
+    }
+
+    return () => {
+      if (pillarsRef.current) {
+        observer.unobserve(pillarsRef.current);
+      }
+    };
+  }, []);
+
   const heroSlides = [
     PlaceHolderImages.find(img => img.id === 'hero-campus'),
     PlaceHolderImages.find(img => img.id === 'student-life'),
@@ -80,7 +104,7 @@ export default function Home() {
             opts={{ loop: true }}
             plugins={[
               Autoplay({
-                delay: 2000,
+                delay: 4000,
                 stopOnInteraction: false,
               }),
             ]}
@@ -106,7 +130,7 @@ export default function Home() {
                     <div className="max-w-screen-2xl mx-auto px-6 md:px-12 w-full">
                       <div className="max-w-3xl">
                         <span className="inline-block px-4 py-1 bg-accent text-primary text-[10px] font-bold tracking-[0.2em] mb-6 rounded-sm">
-                          ESTABLISHED 1892
+                          SINCE 2008
                         </span>
                         <h1 className="font-headline text-5xl sm:text-7xl md:text-8xl text-white font-black tracking-tighter leading-[0.95] md:leading-[0.9] mb-8 text-balance">
                           Jayotri Academy
@@ -136,32 +160,39 @@ export default function Home() {
         </section>
 
         {/* Pillars Section */}
-        <section className="relative py-24 bg-slate-50 overflow-hidden">
+        <section ref={pillarsRef} className="relative py-24 bg-slate-50 overflow-hidden">
           <div className="max-w-screen-2xl mx-auto px-6 md:px-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 lg:gap-4 relative z-30">
               {featureCards.map((card, idx) => (
                 <div 
                   key={idx}
-                  className={`flex flex-col items-center text-center p-8 md:p-12 transition-all duration-500 shadow-xl hover:-translate-y-2 hover:shadow-2xl animate-in fade-in slide-in-from-bottom-12 fill-mode-both ${
+                  className={cn(
+                    "flex flex-col items-center text-center p-8 md:p-12 transition-all duration-1000 shadow-xl hover:-translate-y-2 hover:shadow-2xl",
+                    isPillarsVisible 
+                      ? "opacity-100 translate-y-0" 
+                      : "opacity-0 translate-y-24",
                     card.isDark 
                       ? "bg-[#00b2a9] text-white" 
                       : "bg-white text-slate-800"
-                  }`}
-                  style={{ animationDelay: `${idx * 150}ms`, animationFillMode: 'both' }}
+                  )}
+                  style={{ transitionDelay: `${idx * 150}ms` }}
                 >
-                  <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-8 ${
+                  <div className={cn(
+                    "w-16 h-16 rounded-full flex items-center justify-center mb-8",
                     card.isDark ? "bg-white" : "bg-[#00b2a9]"
-                  }`}>
+                  )}>
                     {card.icon}
                   </div>
-                  <h3 className={`font-headline text-2xl font-bold mb-6 leading-tight ${
+                  <h3 className={cn(
+                    "font-headline text-2xl font-bold mb-6 leading-tight",
                     card.isDark ? "text-white" : "text-[#00b2a9]"
-                  }`}>
+                  )}>
                     {card.title}
                   </h3>
-                  <p className={`text-sm leading-relaxed ${
+                  <p className={cn(
+                    "text-sm leading-relaxed",
                     card.isDark ? "text-white/90" : "text-slate-500"
-                  }`}>
+                  )}>
                     {card.description}
                   </p>
                 </div>
@@ -181,7 +212,7 @@ export default function Home() {
                   <span className="italic font-light">Intellectual Pioneerism</span>
                 </h2>
                 <p className="text-lg text-slate-600 mb-8 leading-relaxed max-w-xl">
-                  Founded on the principles of rigorous inquiry and social responsibility, Jayotri Academy has been a sanctuary for thinkers and creators since 1892. We bridge the gap between historical wisdom and future innovation, fostering a community where every student is empowered to lead with integrity and vision.
+                  Founded on the principles of rigorous inquiry and social responsibility, Jayotri Academy has been a sanctuary for thinkers and creators. We bridge the gap between historical wisdom and future innovation, fostering a community where every student is empowered to lead with integrity and vision.
                 </p>
                 <div className="grid grid-cols-2 gap-8 mb-10">
                   <div>
