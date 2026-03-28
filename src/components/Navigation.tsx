@@ -104,7 +104,7 @@ export default function Navigation() {
         <div className="flex items-center">
           <Link href="/" className="flex items-center gap-3">
             <img
-              src="/jayotri_logo_transparent.png"
+              src="/jayotri_logo.png"
               alt="Jayotri Academy Logo"
               className="site-logo"
             />
@@ -162,7 +162,7 @@ export default function Navigation() {
               <SheetHeader className="text-left mb-8">
                 <SheetTitle className="flex items-center gap-2">
                   <img
-                    src="/jayotri_logo_transparent.png"
+                    src="/jayotri_logo.png"
                     alt="Jayotri Academy Logo"
                     className="site-logo h-8"
                   />

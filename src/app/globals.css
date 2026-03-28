@@ -62,16 +62,8 @@
 
 @layer utilities {
   .site-logo {
-    height: 48px;
+    height: 50px;
     width: auto;
     object-fit: contain;
-    image-rendering: auto;
-  }
-
-  /* Retina optimization */
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .site-logo {
-      height: 52px;
-    }
   }
 }
