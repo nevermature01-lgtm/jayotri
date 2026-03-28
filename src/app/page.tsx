@@ -110,7 +110,7 @@ export default function Home() {
                         </span>
                         <h1 className="font-headline text-5xl sm:text-7xl md:text-8xl text-white font-black tracking-tighter leading-[0.95] md:leading-[0.9] mb-8 text-balance">
                           {index === 0 && <>The Pursuit of <br className="hidden sm:block"/><span className="italic font-light">Enduring Excellence</span></>}
-                          {index === 1 && <>Community & <br className="hidden sm:block"/><span className="italic font-light">Vibrant Growth</span></>}
+                          {index === 1 && <>Jayotri <br className="hidden sm:block"/><span className="italic font-light">Academy</span></>}
                           {index === 2 && <>Innovation at <br className="hidden sm:block"/><span className="italic font-light">The Vanguard</span></>}
                           {index === 3 && <>Legacy of <br className="hidden sm:block"/><span className="italic font-light">Global Impact</span></>}
                         </h1>
@@ -121,7 +121,7 @@ export default function Home() {
                           <Button size="lg" className="w-full sm:w-auto bg-white text-primary hover:bg-slate-100 font-bold uppercase tracking-widest text-xs px-8 h-14">
                             Discover Programs
                           </Button>
-                          <Button variant="outline" size="lg" className="w-full sm:w-auto bg-white/10 border-white/20 text-white backdrop-blur-md hover:bg-white/20 font-bold uppercase tracking-widest text-xs px-8 h-14 shadow-2xl transition-all duration-300">
+                          <Button variant="outline" size="lg" className="w-full sm:w-auto border-white/30 text-white backdrop-blur-md hover:bg-white/10 font-bold uppercase tracking-widest text-xs px-8 h-14 shadow-2xl">
                             Visit Campus
                           </Button>
                         </div>
