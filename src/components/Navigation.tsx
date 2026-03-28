@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Search, Menu, ChevronDown, X } from 'lucide-react';
+import { Search, Menu, ChevronDown } from 'lucide-react';
 import {
   Sheet,
   SheetContent,
@@ -37,14 +37,14 @@ export default function Navigation() {
       href: '/about-us',
       subItems: [
         { name: 'Our School', href: '/about-us/our-school' },
-        { name: 'Vision', href: '/about-us/vision' },
+        { name: 'Vision & Mission', href: '/about-us/vision' },
         { name: 'Values', href: '/about-us/values' },
         { name: 'Principal Message', href: '/about-us/principal-message' },
-        { name: 'Managing Director Message', href: '/about-us/managing-director-message' },
+        { name: 'MD Message', href: '/about-us/managing-director-message' },
         { name: 'Secretary Message', href: '/about-us/secretary-message' },
-        { name: 'Our Academic Advisor', href: '/about-us/our-academic-advisor' },
+        { name: 'Academic Advisor', href: '/about-us/our-academic-advisor' },
         { name: 'Infrastructure', href: '/about-us/infrastructure' },
-        { name: 'School Facilities', href: '/about-us/school-facilities' },
+        { name: 'Facilities', href: '/about-us/school-facilities' },
       ]
     },
     { 
@@ -53,12 +53,12 @@ export default function Navigation() {
       subItems: [
         { name: 'Fee Structure', href: '/admissions/fee-structure' },
         { name: 'Admission Procedure', href: '/admissions/admission-procedure' },
-        { name: 'Withdrawal Procedure', href: '/admissions/withdrawal-procedure' },
+        { name: 'Withdrawal', href: '/admissions/withdrawal-procedure' },
         { name: 'Transport Fee', href: '/admissions/transport-fee' },
-        { name: 'Cancellation and Refund Policy', href: '/admissions/cancellation-and-refund-policy' },
-        { name: 'School Prospectus', href: '/admissions/school-prospectus' },
-        { name: 'School Information', href: '/admissions/school-information' },
-        { name: 'Affiliation Letter', href: '/admissions/affiliation-letter' },
+        { name: 'Refund Policy', href: '/admissions/cancellation-and-refund-policy' },
+        { name: 'Prospectus', href: '/admissions/school-prospectus' },
+        { name: 'Information', href: '/admissions/school-information' },
+        { name: 'Affiliation', href: '/admissions/affiliation-letter' },
       ]
     },
     { 
@@ -68,7 +68,7 @@ export default function Navigation() {
         { name: 'Booklist', href: '/academics/booklist' },
         { name: 'Datesheet', href: '/academics/datesheet' },
         { name: 'Syllabus', href: '/academics/syllabus' },
-        { name: 'Holiday Homework', href: '/academics/holiday-homework' },
+        { name: 'Holiday HW', href: '/academics/holiday-homework' },
         { name: 'Result', href: '/academics/result' },
       ]
     },
@@ -76,15 +76,15 @@ export default function Navigation() {
       name: 'The School', 
       href: '/the-school',
       subItems: [
-        { name: 'Building Safety Certificate', href: '/the-school/building-safety-certificate' },
-        { name: 'Recognition Certificate', href: '/the-school/recognition-certificate' },
-        { name: 'No Objection Certificate', href: '/the-school/no-objection-certificate' },
-        { name: 'Society Renewal Certificate', href: '/the-school/society-renewal-certificate' },
-        { name: 'Safe Water & Sanitation Certificate', href: '/the-school/safe-water-and-sanitation-certificate' },
-        { name: 'Fire Safety Certificate', href: '/the-school/fire-safety-certificate' },
+        { name: 'Safety Certificates', href: '/the-school/building-safety-certificate' },
+        { name: 'Recognition', href: '/the-school/recognition-certificate' },
+        { name: 'NOC', href: '/the-school/no-objection-certificate' },
+        { name: 'Society Renewal', href: '/the-school/society-renewal-certificate' },
+        { name: 'Water & Sanitation', href: '/the-school/safe-water-and-sanitation-certificate' },
+        { name: 'Fire Safety', href: '/the-school/fire-safety-certificate' },
         { name: 'Self Clarification', href: '/the-school/self-clarification' },
-        { name: 'Parents Teachers Association', href: '/the-school/parents-teachers-association' },
-        { name: 'School Management Committee', href: '/the-school/school-management-committee' },
+        { name: 'PTA', href: '/the-school/parents-teachers-association' },
+        { name: 'Management', href: '/the-school/school-management-committee' },
       ]
     },
     { 
@@ -95,45 +95,46 @@ export default function Navigation() {
         { name: 'Video Gallery', href: '/gallery/video-gallery' },
       ]
     },
-    { name: 'Contact Us', href: '/contact-us' },
+    { name: 'Contact', href: '/contact-us' },
   ];
 
   return (
-    <nav className="sticky top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-[0_12px_40px_rgba(28,28,25,0.06)] border-b border-black/5">
-      <div className="relative flex justify-between items-center px-4 md:px-8 py-4 max-w-screen-2xl mx-auto">
+    <nav className="sticky top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+      <div className="relative max-w-screen-2xl mx-auto px-4 md:px-8 h-20 flex items-center">
         
-        {/* Left Side: Mobile Menu Trigger (hidden on desktop) */}
-        <div className="md:hidden flex-1">
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="hover:bg-slate-100/50">
-                <Menu className="h-6 w-6" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="left" className="w-[300px] sm:w-[400px]">
-              <SheetHeader className="text-left mb-8">
-                <SheetTitle className="flex items-center gap-2">
-                  <img
-                    src="/jayotri_logo_upscaled.png"
-                    alt="Jayotri Academy Logo"
-                    className="site-logo h-8"
-                  />
-                </SheetTitle>
-              </SheetHeader>
-              <div className="flex flex-col gap-4 overflow-y-auto max-h-[80vh] pr-2">
+        {/* Left Section: Desktop Logo / Mobile Menu */}
+        <div className="flex-1 flex items-center">
+          {/* Mobile Menu Trigger */}
+          <div className="md:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="hover:bg-slate-100/50">
+                  <Menu className="h-6 w-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="left" className="w-[300px] overflow-y-auto">
+                <SheetHeader className="text-left mb-8">
+                  <SheetTitle>
+                    <img
+                      src="/jayotri_logo_upscaled.png"
+                      alt="Jayotri Academy Logo"
+                      className="h-10 w-auto"
+                    />
+                  </SheetTitle>
+                </SheetHeader>
                 <Accordion type="single" collapsible className="w-full">
                   {navItems.map((item) => (
                     item.subItems ? (
                       <AccordionItem key={item.name} value={item.name} className="border-none">
-                        <AccordionTrigger className="text-sm font-medium text-slate-700 hover:text-primary transition-colors uppercase tracking-wider py-2">
+                        <AccordionTrigger className="text-[11px] font-bold text-slate-700 uppercase tracking-[0.2em] py-4 hover:no-underline">
                           {item.name}
                         </AccordionTrigger>
-                        <AccordionContent className="flex flex-col gap-3 pl-4 pt-2 pb-4">
+                        <AccordionContent className="flex flex-col gap-3 pl-4 pt-1 pb-4">
                           {item.subItems.map((sub) => (
                             <Link
                               key={sub.name}
                               href={sub.href}
-                              className="text-[11px] font-medium text-slate-500 hover:text-primary transition-colors uppercase tracking-widest"
+                              className="text-[10px] font-medium text-slate-500 hover:text-primary transition-colors uppercase tracking-widest"
                             >
                               {sub.name}
                             </Link>
@@ -144,26 +145,19 @@ export default function Navigation() {
                       <Link
                         key={item.name}
                         href={item.href}
-                        className="text-sm font-medium text-slate-700 hover:text-primary transition-colors uppercase tracking-wider py-4 block"
+                        className="text-[11px] font-bold text-slate-700 uppercase tracking-[0.2em] py-4 block"
                       >
                         {item.name}
                       </Link>
                     )
                   ))}
                 </Accordion>
-                <div className="pt-6 border-t">
-                  <Button className="w-full bg-[#00b2a9] text-white font-bold tracking-wide py-6">
-                    Apply Now
-                  </Button>
-                </div>
-              </div>
-            </SheetContent>
-          </Sheet>
-        </div>
+              </SheetContent>
+            </Sheet>
+          </div>
 
-        {/* Logo Container: centered on mobile, flex-1 to balance desktop */}
-        <div className="flex-1 flex items-center md:static absolute left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto">
-          <Link href="/" className="flex items-center gap-3">
+          {/* Desktop Logo */}
+          <Link href="/" className="hidden md:flex items-center">
             <img
               src="/jayotri_logo_upscaled.png"
               alt="Jayotri Academy Logo"
@@ -172,43 +166,54 @@ export default function Navigation() {
           </Link>
         </div>
 
-        {/* Center: Desktop Nav (hidden on mobile) */}
-        <div className="hidden md:flex flex-1 justify-center items-center space-x-6">
-          {navItems.map((item) => (
-            item.subItems ? (
-              <DropdownMenu key={item.name}>
-                <DropdownMenuTrigger className="flex items-center gap-1 text-slate-700 dark:text-slate-400 font-medium hover:text-primary dark:hover:text-blue-200 transition-colors text-xs uppercase tracking-wide outline-none">
-                  {item.name} <ChevronDown className="h-3 w-3" />
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="start" className="max-h-[70vh] overflow-y-auto w-64 p-2 bg-white/95 backdrop-blur-md">
-                  {item.subItems.map((sub) => (
-                    <DropdownMenuItem key={sub.name} asChild>
-                      <Link href={sub.href} className="w-full text-[10px] uppercase tracking-wide py-2 cursor-pointer">
-                        {sub.name}
-                      </Link>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
-            ) : (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-slate-700 dark:text-slate-400 font-medium hover:text-primary dark:hover:text-blue-200 transition-colors text-xs uppercase tracking-wide"
-              >
-                {item.name}
-              </Link>
-            )
-          ))}
+        {/* Center Section: Desktop Nav / Mobile Logo */}
+        <div className="flex-1 flex justify-center items-center">
+          {/* Mobile Logo (Centered) */}
+          <Link href="/" className="md:hidden">
+            <img
+              src="/jayotri_logo_upscaled.png"
+              alt="Jayotri Academy Logo"
+              className="h-10 w-auto"
+            />
+          </Link>
+
+          {/* Desktop Nav (Centered) */}
+          <div className="hidden md:flex items-center space-x-6">
+            {navItems.map((item) => (
+              item.subItems ? (
+                <DropdownMenu key={item.name}>
+                  <DropdownMenuTrigger className="flex items-center gap-1 text-slate-600 font-bold hover:text-primary transition-colors text-[10px] uppercase tracking-[0.2em] outline-none">
+                    {item.name} <ChevronDown className="h-3 w-3" />
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="center" className="min-w-[200px] p-2 bg-white/95 backdrop-blur-md">
+                    {item.subItems.map((sub) => (
+                      <DropdownMenuItem key={sub.name} asChild>
+                        <Link href={sub.href} className="w-full text-[9px] font-bold uppercase tracking-widest py-2.5 cursor-pointer">
+                          {sub.name}
+                        </Link>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              ) : (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="text-slate-600 font-bold hover:text-primary transition-colors text-[10px] uppercase tracking-[0.2em]"
+                >
+                  {item.name}
+                </Link>
+              )
+            ))}
+          </div>
         </div>
 
-        {/* Right Side: Search & Apply Button */}
-        <div className="flex-1 flex items-center justify-end gap-2 md:gap-6">
-          <button className="text-muted-foreground hover:bg-slate-100/50 p-2 rounded-full transition-all duration-300">
-            <Search className="h-5 w-5" strokeWidth={1.5} />
-          </button>
-          
-          <Button className="hidden sm:flex bg-[#00b2a9] text-white px-6 py-2 rounded-md font-bold text-sm tracking-wide hover:opacity-90 transition-opacity">
+        {/* Right Section: Action Buttons */}
+        <div className="flex-1 flex items-center justify-end gap-2 md:gap-4">
+          <Button variant="ghost" size="icon" className="text-slate-500 hover:bg-slate-100">
+            <Search className="h-5 w-5" />
+          </Button>
+          <Button className="hidden sm:flex bg-[#00b2a9] text-white px-6 font-bold text-[10px] uppercase tracking-[0.2em] rounded-none h-11">
             Apply Now
           </Button>
         </div>
