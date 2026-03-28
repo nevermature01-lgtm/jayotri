@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Facebook, Instagram, Twitter, MapPin, Mail, Phone } from 'lucide-react';
@@ -12,8 +13,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand & Mission */}
           <div className="space-y-6">
-            <Link href="/" className="font-body text-2xl font-black tracking-widest uppercase inline-block">
-              Jayotri Academy
+            <Link href="/" className="flex items-center gap-3 mb-6">
+              <Image 
+                src="/logo.webp" 
+                alt="Jayotri Academy Logo" 
+                width={48} 
+                height={48} 
+                className="h-12 w-auto brightness-0 invert"
+              />
+              <span className="font-body text-2xl font-black tracking-widest uppercase inline-block">
+                Jayotri Academy
+              </span>
             </Link>
             <p className="text-white/70 text-sm leading-relaxed max-w-xs">
               Nurturing young minds through quality education, character building, and holistic development since 2008. We believe in excellence through tradition and innovation.

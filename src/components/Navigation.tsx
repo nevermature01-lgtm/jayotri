@@ -2,6 +2,7 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Search, Menu, ChevronDown } from 'lucide-react';
 import {
@@ -103,8 +104,17 @@ export default function Navigation() {
     <nav className="sticky top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-[0_12px_40px_rgba(28,28,25,0.06)] border-b border-black/5">
       <div className="flex justify-between items-center px-4 md:px-8 py-4 max-w-screen-2xl mx-auto">
         <div className="flex items-center">
-          <Link href="/" className="font-body text-lg md:text-xl font-extrabold text-primary dark:text-white tracking-widest uppercase">
-            Jayotri Academy
+          <Link href="/" className="flex items-center gap-3">
+            <Image 
+              src="/logo.webp" 
+              alt="Jayotri Academy Logo" 
+              width={40} 
+              height={40} 
+              className="h-10 w-auto"
+            />
+            <span className="font-body text-lg md:text-xl font-extrabold text-primary dark:text-white tracking-widest uppercase">
+              Jayotri Academy
+            </span>
           </Link>
         </div>
 
@@ -154,8 +164,17 @@ export default function Navigation() {
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <SheetHeader className="text-left mb-8">
-                <SheetTitle className="font-body text-xl font-black text-primary tracking-widest uppercase">
-                  Jayotri Academy
+                <SheetTitle className="flex items-center gap-2">
+                  <Image 
+                    src="/logo.webp" 
+                    alt="Jayotri Academy Logo" 
+                    width={32} 
+                    height={32} 
+                    className="h-8 w-auto"
+                  />
+                  <span className="font-body text-xl font-black text-primary tracking-widest uppercase">
+                    Jayotri Academy
+                  </span>
                 </SheetTitle>
               </SheetHeader>
               <div className="flex flex-col gap-4 overflow-y-auto max-h-[80vh] pr-2">
