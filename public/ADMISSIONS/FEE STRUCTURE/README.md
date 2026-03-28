@@ -1,0 +1,1 @@
+Assets for the Fee Structure section.

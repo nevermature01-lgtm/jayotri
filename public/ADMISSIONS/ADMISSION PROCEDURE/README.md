@@ -1,0 +1,1 @@
+Assets for the Admission Procedure section.

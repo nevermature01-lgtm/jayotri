@@ -1,0 +1,1 @@
+Assets for the Cancellation and Refund Policy section.
