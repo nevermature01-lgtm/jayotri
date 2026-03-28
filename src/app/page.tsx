@@ -118,7 +118,7 @@ export default function Home() {
                           <Button size="lg" className="w-full sm:w-auto bg-white text-primary hover:bg-slate-100 font-bold uppercase tracking-widest text-xs px-8 h-14">
                             Discover Programs
                           </Button>
-                          <Button variant="outline" size="lg" className="w-full sm:w-auto border-white/30 text-white backdrop-blur-md hover:bg-white/10 font-bold uppercase tracking-widest text-xs px-8 h-14 shadow-2xl">
+                          <Button variant="outline" size="lg" className="w-full sm:w-auto border-white/30 text-white backdrop-blur-md hover:bg-white/10 font-bold uppercase tracking-widest text-xs px-8 h-14 shadow-2xl transition-all duration-300">
                             Visit Campus
                           </Button>
                         </div>
@@ -136,17 +136,18 @@ export default function Home() {
         </section>
 
         {/* Pillars Section */}
-        <section className="relative py-24 bg-slate-50">
+        <section className="relative py-24 bg-slate-50 overflow-hidden">
           <div className="max-w-screen-2xl mx-auto px-6 md:px-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 lg:gap-4 relative z-30">
               {featureCards.map((card, idx) => (
                 <div 
                   key={idx}
-                  className={`flex flex-col items-center text-center p-8 md:p-12 transition-all duration-300 shadow-xl ${
+                  className={`flex flex-col items-center text-center p-8 md:p-12 transition-all duration-500 shadow-xl hover:-translate-y-2 hover:shadow-2xl animate-in fade-in slide-in-from-bottom-12 fill-mode-both ${
                     card.isDark 
                       ? "bg-[#00b2a9] text-white" 
                       : "bg-white text-slate-800"
                   }`}
+                  style={{ animationDelay: `${idx * 150}ms`, animationFillMode: 'both' }}
                 >
                   <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-8 ${
                     card.isDark ? "bg-white" : "bg-[#00b2a9]"
