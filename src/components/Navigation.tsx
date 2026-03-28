@@ -161,8 +161,8 @@ export default function Navigation() {
           </Sheet>
         </div>
 
-        {/* Center/Left Logo: Centered on mobile, Left on desktop */}
-        <div className="flex items-center md:static absolute left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto">
+        {/* Logo Container: centered on mobile, flex-1 to balance desktop */}
+        <div className="flex-1 flex items-center md:static absolute left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto">
           <Link href="/" className="flex items-center gap-3">
             <img
               src="/jayotri_logo_upscaled.png"
