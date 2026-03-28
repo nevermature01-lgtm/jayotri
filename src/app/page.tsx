@@ -109,10 +109,7 @@ export default function Home() {
                           ESTABLISHED 1892
                         </span>
                         <h1 className="font-headline text-5xl sm:text-7xl md:text-8xl text-white font-black tracking-tighter leading-[0.95] md:leading-[0.9] mb-8 text-balance">
-                          {index === 0 && <>The Pursuit of <br className="hidden sm:block"/><span className="italic font-light">Enduring Excellence</span></>}
-                          {index === 1 && <>Jayotri <br className="hidden sm:block"/><span className="italic font-light">Academy</span></>}
-                          {index === 2 && <>Innovation at <br className="hidden sm:block"/><span className="italic font-light">The Vanguard</span></>}
-                          {index === 3 && <>Legacy of <br className="hidden sm:block"/><span className="italic font-light">Global Impact</span></>}
+                          Jayotri <br className="hidden sm:block"/><span className="italic font-light">Academy</span>
                         </h1>
                         <p className="text-lg md:text-xl text-white/80 font-body max-w-xl mb-10 leading-relaxed">
                           Join a community where tradition meets the vanguard of research. We shape thinkers who rewrite the future of global society.
