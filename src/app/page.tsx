@@ -19,7 +19,8 @@ import {
   Users, 
   History,
   BookOpen,
-  Target
+  Target,
+  CheckCircle2
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Autoplay from 'embla-carousel-autoplay';
@@ -206,26 +207,29 @@ export default function Home() {
           <div className="max-w-screen-2xl mx-auto px-6 md:px-8">
             <div className="flex flex-col lg:flex-row items-center gap-16">
               <div className="lg:w-1/2">
-                <span className="text-[10px] font-bold tracking-[0.3em] text-[#00b2a9] uppercase mb-4 block">Our Identity</span>
-                <h2 className="font-headline text-4xl md:text-6xl font-bold text-primary mb-8 leading-tight">
-                  A Legacy of <br />
-                  <span className="italic font-light">Intellectual Pioneerism</span>
+                <span className="text-[10px] font-bold tracking-[0.3em] text-[#00b2a9] uppercase mb-4 block">WHO WE ARE</span>
+                <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary mb-8 leading-tight">
+                  Building strong foundations and shaping future-ready learners.
                 </h2>
-                <p className="text-lg text-slate-600 mb-8 leading-relaxed max-w-xl">
-                  Founded on the principles of rigorous inquiry and social responsibility, Jayotri Academy has been a sanctuary for thinkers and creators. We bridge the gap between historical wisdom and future innovation, fostering a community where every student is empowered to lead with integrity and vision.
+                <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-xl">
+                  We are an educational academy dedicated to nurturing young minds through strong primary instruction and advanced higher education. Our focus is on building academic excellence, critical thinking, and well-rounded development in a supportive learning environment.
                 </p>
-                <div className="grid grid-cols-2 gap-8 mb-10">
-                  <div>
-                    <p className="text-4xl font-headline font-bold text-primary mb-2">12:1</p>
-                    <p className="text-xs uppercase tracking-widest text-slate-400 font-bold">Student-Faculty Ratio</p>
-                  </div>
-                  <div>
-                    <p className="text-4xl font-headline font-bold text-primary mb-2">98%</p>
-                    <p className="text-xs uppercase tracking-widest text-slate-400 font-bold">Graduate Success</p>
-                  </div>
+                <div className="space-y-4 mb-10">
+                  {[
+                    "Strong Primary Instruction",
+                    "Advanced Higher Education Programs",
+                    "Experienced & Dedicated Faculty"
+                  ].map((feature, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <div className="w-6 h-6 rounded-full bg-[#00b2a9]/10 flex items-center justify-center text-[#00b2a9]">
+                        <CheckCircle2 className="h-4 w-4" />
+                      </div>
+                      <span className="font-bold text-slate-700 text-sm">{feature}</span>
+                    </div>
+                  ))}
                 </div>
                 <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-bold uppercase tracking-widest text-xs px-8 h-12 transition-all duration-300">
-                  Our Mission & Values
+                  Discover More
                 </Button>
               </div>
               <div className="lg:w-1/2 relative">
