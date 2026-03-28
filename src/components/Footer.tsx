@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-3 mb-6">
               <Image 
-                src="/logo.webp" 
+                src="/logo-1-1.webp" 
                 alt="Jayotri Academy Logo" 
                 width={48} 
                 height={48} 

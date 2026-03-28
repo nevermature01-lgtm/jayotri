@@ -106,7 +106,7 @@ export default function Navigation() {
         <div className="flex items-center">
           <Link href="/" className="flex items-center gap-3">
             <Image 
-              src="/logo.webp" 
+              src="/logo-1-1.webp" 
               alt="Jayotri Academy Logo" 
               width={40} 
               height={40} 
@@ -166,7 +166,7 @@ export default function Navigation() {
               <SheetHeader className="text-left mb-8">
                 <SheetTitle className="flex items-center gap-2">
                   <Image 
-                    src="/logo.webp" 
+                    src="/logo-1-1.webp" 
                     alt="Jayotri Academy Logo" 
                     width={32} 
                     height={32} 
