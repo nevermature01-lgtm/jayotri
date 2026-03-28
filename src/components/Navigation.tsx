@@ -100,9 +100,9 @@ export default function Navigation() {
 
   return (
     <nav className="sticky top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
-      <div className="relative max-w-screen-2xl mx-auto px-4 md:px-8 h-20 flex items-center">
+      <div className="relative max-w-screen-2xl mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
         
-        {/* Left Section: Desktop Logo / Mobile Menu */}
+        {/* Left Section: Desktop Logo & Mobile Menu Trigger */}
         <div className="flex-1 flex items-center">
           {/* Mobile Menu Trigger */}
           <div className="md:hidden">
@@ -156,7 +156,7 @@ export default function Navigation() {
             </Sheet>
           </div>
 
-          {/* Desktop Logo */}
+          {/* Desktop Logo (Left Aligned) */}
           <Link href="/" className="hidden md:flex items-center">
             <img
               src="/jayotri_logo_upscaled.png"
@@ -167,9 +167,9 @@ export default function Navigation() {
         </div>
 
         {/* Center Section: Desktop Nav / Mobile Logo */}
-        <div className="flex-1 flex justify-center items-center">
+        <div className="flex-[2] flex justify-center items-center">
           {/* Mobile Logo (Centered) */}
-          <Link href="/" className="md:hidden">
+          <Link href="/" className="md:hidden absolute left-1/2 -translate-x-1/2">
             <img
               src="/jayotri_logo_upscaled.png"
               alt="Jayotri Academy Logo"
@@ -177,13 +177,13 @@ export default function Navigation() {
             />
           </Link>
 
-          {/* Desktop Nav (Centered) */}
-          <div className="hidden md:flex items-center space-x-6">
+          {/* Desktop Nav (Strictly Centered and Aligned) */}
+          <div className="hidden md:flex items-center space-x-6 whitespace-nowrap">
             {navItems.map((item) => (
               item.subItems ? (
                 <DropdownMenu key={item.name}>
-                  <DropdownMenuTrigger className="flex items-center gap-1 text-slate-600 font-bold hover:text-primary transition-colors text-[10px] uppercase tracking-[0.2em] outline-none">
-                    {item.name} <ChevronDown className="h-3 w-3" />
+                  <DropdownMenuTrigger className="flex items-center gap-1.5 text-slate-600 font-bold hover:text-primary transition-colors text-[10px] uppercase tracking-[0.2em] outline-none h-20">
+                    {item.name} <ChevronDown className="h-3.5 w-3.5 opacity-50" />
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="center" className="min-w-[200px] p-2 bg-white/95 backdrop-blur-md">
                     {item.subItems.map((sub) => (
@@ -199,7 +199,7 @@ export default function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-slate-600 font-bold hover:text-primary transition-colors text-[10px] uppercase tracking-[0.2em]"
+                  className="flex items-center text-slate-600 font-bold hover:text-primary transition-colors text-[10px] uppercase tracking-[0.2em] h-20"
                 >
                   {item.name}
                 </Link>
@@ -208,7 +208,7 @@ export default function Navigation() {
           </div>
         </div>
 
-        {/* Right Section: Action Buttons */}
+        {/* Right Section: Actions */}
         <div className="flex-1 flex items-center justify-end gap-2 md:gap-4">
           <Button variant="ghost" size="icon" className="text-slate-500 hover:bg-slate-100">
             <Search className="h-5 w-5" />
