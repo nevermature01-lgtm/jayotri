@@ -1,8 +1,6 @@
-
 "use client";
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Search, Menu, ChevronDown } from 'lucide-react';
 import {
@@ -105,12 +103,10 @@ export default function Navigation() {
       <div className="flex justify-between items-center px-4 md:px-8 py-4 max-w-screen-2xl mx-auto">
         <div className="flex items-center">
           <Link href="/" className="flex items-center gap-3">
-            <Image 
-              src="/jayotri_logo_upscaled.png" 
-              alt="Jayotri Academy Logo" 
-              width={40} 
-              height={40} 
-              className="h-10 w-auto"
+            <img
+              src="/jayotri_logo_transparent.png"
+              alt="Jayotri Academy Logo"
+              className="site-logo"
             />
             <span className="font-body text-lg md:text-xl font-extrabold text-primary dark:text-white tracking-widest uppercase">
               Jayotri Academy
@@ -165,12 +161,10 @@ export default function Navigation() {
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <SheetHeader className="text-left mb-8">
                 <SheetTitle className="flex items-center gap-2">
-                  <Image 
-                    src="/jayotri_logo_upscaled.png" 
-                    alt="Jayotri Academy Logo" 
-                    width={32} 
-                    height={32} 
-                    className="h-8 w-auto"
+                  <img
+                    src="/jayotri_logo_transparent.png"
+                    alt="Jayotri Academy Logo"
+                    className="site-logo h-8"
                   />
                   <span className="font-body text-xl font-black text-primary tracking-widest uppercase">
                     Jayotri Academy

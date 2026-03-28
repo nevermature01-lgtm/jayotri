@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import Image from 'next/image';
 import { Facebook, Instagram, Twitter, MapPin, Mail, Phone } from 'lucide-react';
@@ -14,12 +13,10 @@ export default function Footer() {
           {/* Brand & Mission */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-3 mb-6">
-              <Image 
-                src="/jayotri_logo_upscaled.png" 
-                alt="Jayotri Academy Logo" 
-                width={48} 
-                height={48} 
-                className="h-12 w-auto brightness-0 invert"
+              <img
+                src="/jayotri_logo_transparent.png"
+                alt="Jayotri Academy Logo"
+                className="site-logo brightness-0 invert"
               />
               <span className="font-body text-2xl font-black tracking-widest uppercase inline-block">
                 Jayotri Academy
