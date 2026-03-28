@@ -18,9 +18,6 @@ export default function Footer() {
                 alt="Jayotri Academy Logo"
                 className="site-logo brightness-0 invert"
               />
-              <span className="font-body text-2xl font-black tracking-widest uppercase inline-block">
-                Jayotri Academy
-              </span>
             </Link>
             <p className="text-white/70 text-sm leading-relaxed max-w-xs">
               Nurturing young minds through quality education, character building, and holistic development since 2008. We believe in excellence through tradition and innovation.
@@ -56,6 +53,7 @@ export default function Footer() {
             <ul className="space-y-4 text-sm">
               <li><Link href="/admissions/fee-structure" className="text-white/60 hover:text-accent transition-colors">Fee Structure</Link></li>
               <li><Link href="/admissions/admission-procedure" className="text-white/60 hover:text-accent transition-colors">Admission Procedure</Link></li>
+              <li><Link href="/admissions/withdrawal-procedure" className="text-white/60 hover:text-accent transition-colors">Withdrawal Procedure</Link></li>
               <li><Link href="/admissions/transport-fee" className="text-white/60 hover:text-accent transition-colors">Transport Fee</Link></li>
               <li><Link href="/admissions/cancellation-and-refund-policy" className="text-white/60 hover:text-accent transition-colors">Refund Policy</Link></li>
               <li><Link href="/admissions/school-information" className="text-white/60 hover:text-accent transition-colors">School Information</Link></li>

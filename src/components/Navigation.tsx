@@ -108,9 +108,6 @@ export default function Navigation() {
               alt="Jayotri Academy Logo"
               className="site-logo"
             />
-            <span className="font-body text-lg md:text-xl font-extrabold text-primary dark:text-white tracking-widest uppercase">
-              Jayotri Academy
-            </span>
           </Link>
         </div>
 
@@ -166,9 +163,6 @@ export default function Navigation() {
                     alt="Jayotri Academy Logo"
                     className="site-logo h-8"
                   />
-                  <span className="font-body text-xl font-black text-primary tracking-widest uppercase">
-                    Jayotri Academy
-                  </span>
                 </SheetTitle>
               </SheetHeader>
               <div className="flex flex-col gap-4 overflow-y-auto max-h-[80vh] pr-2">
