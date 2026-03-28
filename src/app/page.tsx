@@ -109,10 +109,10 @@ export default function Home() {
                           ESTABLISHED 1892
                         </span>
                         <h1 className="font-headline text-5xl sm:text-7xl md:text-8xl text-white font-black tracking-tighter leading-[0.95] md:leading-[0.9] mb-8 text-balance">
-                          Jayotri <br className="hidden sm:block"/><span className="italic font-light">Academy</span>
+                          Jayotri Academy
                         </h1>
                         <p className="text-lg md:text-xl text-white/80 font-body max-w-xl mb-10 leading-relaxed">
-                          Join a community where tradition meets the vanguard of research. We shape thinkers who rewrite the future of global society.
+                          Jayotri Academy is an English medium school believing in the all-round development of a child with in a coeducational, compassionate welcoming and broadminded community. It is based on the central board of secondary Education (CBSE) curriculum.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                           <Button size="lg" className="w-full sm:w-auto bg-white text-primary hover:bg-slate-100 font-bold uppercase tracking-widest text-xs px-8 h-14">
