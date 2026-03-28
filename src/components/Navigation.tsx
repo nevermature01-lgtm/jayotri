@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Search, Menu, ChevronDown } from 'lucide-react';
+import { Search, Menu, ChevronDown, X } from 'lucide-react';
 import {
   Sheet,
   SheetContent,
@@ -100,62 +100,17 @@ export default function Navigation() {
 
   return (
     <nav className="sticky top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-[0_12px_40px_rgba(28,28,25,0.06)] border-b border-black/5">
-      <div className="flex justify-between items-center px-4 md:px-8 py-4 max-w-screen-2xl mx-auto">
-        <div className="flex items-center">
-          <Link href="/" className="flex items-center gap-3">
-            <img
-              src="/jayotri_logo_upscaled.png"
-              alt="Jayotri Academy Logo"
-              className="site-logo"
-            />
-          </Link>
-        </div>
-
-        <div className="hidden md:flex items-center space-x-6">
-          {navItems.map((item) => (
-            item.subItems ? (
-              <DropdownMenu key={item.name}>
-                <DropdownMenuTrigger className="flex items-center gap-1 text-slate-700 dark:text-slate-400 font-medium hover:text-primary dark:hover:text-blue-200 transition-colors text-xs uppercase tracking-wide outline-none">
-                  {item.name} <ChevronDown className="h-3 w-3" />
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="start" className="max-h-[70vh] overflow-y-auto w-64 p-2 bg-white/95 backdrop-blur-md">
-                  {item.subItems.map((sub) => (
-                    <DropdownMenuItem key={sub.name} asChild>
-                      <Link href={sub.href} className="w-full text-[10px] uppercase tracking-wide py-2 cursor-pointer">
-                        {sub.name}
-                      </Link>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
-            ) : (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-slate-700 dark:text-slate-400 font-medium hover:text-primary dark:hover:text-blue-200 transition-colors text-xs uppercase tracking-wide"
-              >
-                {item.name}
-              </Link>
-            )
-          ))}
-        </div>
-
-        <div className="flex items-center gap-2 md:gap-6">
-          <button className="text-muted-foreground hover:bg-slate-100/50 p-2 rounded-full transition-all duration-300">
-            <Search className="h-5 w-5" strokeWidth={1.5} />
-          </button>
-          
-          <Button className="hidden sm:flex bg-[#00b2a9] text-white px-6 py-2 rounded-md font-bold text-sm tracking-wide hover:opacity-90 transition-opacity">
-            Apply Now
-          </Button>
-
+      <div className="relative flex justify-between items-center px-4 md:px-8 py-4 max-w-screen-2xl mx-auto">
+        
+        {/* Left Side: Mobile Menu Trigger (hidden on desktop) */}
+        <div className="md:hidden flex-1">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
+              <Button variant="ghost" size="icon" className="hover:bg-slate-100/50">
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+            <SheetContent side="left" className="w-[300px] sm:w-[400px]">
               <SheetHeader className="text-left mb-8">
                 <SheetTitle className="flex items-center gap-2">
                   <img
@@ -205,6 +160,59 @@ export default function Navigation() {
             </SheetContent>
           </Sheet>
         </div>
+
+        {/* Center/Left Logo: Centered on mobile, Left on desktop */}
+        <div className="flex items-center md:static absolute left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto">
+          <Link href="/" className="flex items-center gap-3">
+            <img
+              src="/jayotri_logo_upscaled.png"
+              alt="Jayotri Academy Logo"
+              className="site-logo"
+            />
+          </Link>
+        </div>
+
+        {/* Center: Desktop Nav (hidden on mobile) */}
+        <div className="hidden md:flex flex-1 justify-center items-center space-x-6">
+          {navItems.map((item) => (
+            item.subItems ? (
+              <DropdownMenu key={item.name}>
+                <DropdownMenuTrigger className="flex items-center gap-1 text-slate-700 dark:text-slate-400 font-medium hover:text-primary dark:hover:text-blue-200 transition-colors text-xs uppercase tracking-wide outline-none">
+                  {item.name} <ChevronDown className="h-3 w-3" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="max-h-[70vh] overflow-y-auto w-64 p-2 bg-white/95 backdrop-blur-md">
+                  {item.subItems.map((sub) => (
+                    <DropdownMenuItem key={sub.name} asChild>
+                      <Link href={sub.href} className="w-full text-[10px] uppercase tracking-wide py-2 cursor-pointer">
+                        {sub.name}
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-slate-700 dark:text-slate-400 font-medium hover:text-primary dark:hover:text-blue-200 transition-colors text-xs uppercase tracking-wide"
+              >
+                {item.name}
+              </Link>
+            )
+          ))}
+        </div>
+
+        {/* Right Side: Search & Apply Button */}
+        <div className="flex-1 flex items-center justify-end gap-2 md:gap-6">
+          <button className="text-muted-foreground hover:bg-slate-100/50 p-2 rounded-full transition-all duration-300">
+            <Search className="h-5 w-5" strokeWidth={1.5} />
+          </button>
+          
+          <Button className="hidden sm:flex bg-[#00b2a9] text-white px-6 py-2 rounded-md font-bold text-sm tracking-wide hover:opacity-90 transition-opacity">
+            Apply Now
+          </Button>
+        </div>
+
       </div>
     </nav>
   );
