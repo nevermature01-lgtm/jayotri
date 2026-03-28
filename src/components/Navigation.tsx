@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -33,7 +34,7 @@ export default function Navigation() {
   const navItems: NavItem[] = [
     { name: 'Home', href: '/' },
     { 
-      name: 'About us', 
+      name: 'About Us', 
       href: '/about-us',
       subItems: [
         { name: 'Our School', href: '/about-us/our-school' },
@@ -81,9 +82,9 @@ export default function Navigation() {
         { name: 'No Objection Certificate', href: '/the-school/no-objection-certificate' },
         { name: 'Society Renewal Certificate', href: '/the-school/society-renewal-certificate' },
         { name: 'Safe Water & Sanitation Certificate', href: '/the-school/safe-water-and-sanitation-certificate' },
-        { name: 'Fire Safty Certificate', href: '/the-school/fire-safty-certificate' },
+        { name: 'Fire Safety Certificate', href: '/the-school/fire-safety-certificate' },
         { name: 'Self Clarification', href: '/the-school/self-clarification' },
-        { name: 'Parents Teachers Asossiation', href: '/the-school/parents-teachers-asossiation' },
+        { name: 'Parents Teachers Association', href: '/the-school/parents-teachers-association' },
         { name: 'School Management Committee', href: '/the-school/school-management-committee' },
       ]
     },
@@ -95,20 +96,18 @@ export default function Navigation() {
         { name: 'Video Gallery', href: '/gallery/video-gallery' },
       ]
     },
-    { name: 'contact us', href: '/contact-us' },
+    { name: 'Contact Us', href: '/contact-us' },
   ];
 
   return (
     <nav className="sticky top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-[0_12px_40px_rgba(28,28,25,0.06)] border-b border-black/5">
       <div className="flex justify-between items-center px-4 md:px-8 py-4 max-w-screen-2xl mx-auto">
-        {/* Left: Logo */}
         <div className="flex items-center">
           <Link href="/" className="font-headline text-xl md:text-2xl font-black text-primary dark:text-white tracking-tighter">
             Jayotri Academy
           </Link>
         </div>
 
-        {/* Center: Desktop Nav */}
         <div className="hidden md:flex items-center space-x-6">
           {navItems.map((item) => (
             item.subItems ? (
@@ -138,7 +137,6 @@ export default function Navigation() {
           ))}
         </div>
 
-        {/* Right: Actions and Mobile Menu */}
         <div className="flex items-center gap-2 md:gap-6">
           <button className="text-muted-foreground hover:bg-slate-100/50 p-2 rounded-full transition-all duration-300">
             <Search className="h-5 w-5" strokeWidth={1.5} />
@@ -148,7 +146,6 @@ export default function Navigation() {
             Apply Now
           </Button>
 
-          {/* Hamburger Menu shifted to the right for mobile */}
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="md:hidden">
