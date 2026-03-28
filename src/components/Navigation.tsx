@@ -103,7 +103,7 @@ export default function Navigation() {
     <nav className="sticky top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-[0_12px_40px_rgba(28,28,25,0.06)] border-b border-black/5">
       <div className="flex justify-between items-center px-4 md:px-8 py-4 max-w-screen-2xl mx-auto">
         <div className="flex items-center">
-          <Link href="/" className="font-headline text-xl md:text-2xl font-black text-primary dark:text-white tracking-tighter">
+          <Link href="/" className="font-body text-lg md:text-xl font-extrabold text-primary dark:text-white tracking-widest uppercase">
             Jayotri Academy
           </Link>
         </div>
@@ -154,7 +154,7 @@ export default function Navigation() {
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <SheetHeader className="text-left mb-8">
-                <SheetTitle className="font-headline text-2xl font-black text-primary tracking-tighter">
+                <SheetTitle className="font-body text-xl font-black text-primary tracking-widest uppercase">
                   Jayotri Academy
                 </SheetTitle>
               </SheetHeader>
