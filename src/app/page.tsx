@@ -353,8 +353,8 @@ export default function Home() {
 
         <Newsletter />
 
-        {/* Academy Promotion Section - Moved to bottom */}
-        <section className="relative h-[60vh] md:h-[70vh] w-full overflow-hidden">
+        {/* Academy Promotion Section - Optimized sizes */}
+        <section className="relative h-[50vh] md:h-[60vh] w-full overflow-hidden">
           {classroomHeroImg && (
             <Image
               src={classroomHeroImg.imageUrl}
@@ -366,14 +366,14 @@ export default function Home() {
           )}
           <div className="absolute inset-0 bg-black/50 flex items-center">
             <div className="max-w-screen-2xl mx-auto px-6 md:px-12 w-full">
-              <div className="max-w-3xl">
-                <h2 className="font-headline text-4xl sm:text-6xl md:text-7xl text-white font-bold leading-[1.1] mb-6">
+              <div className="max-w-2xl">
+                <h2 className="font-headline text-3xl sm:text-5xl md:text-6xl text-white font-bold leading-[1.15] mb-4">
                   Join Our Academy and Shape a Successful Future
                 </h2>
-                <p className="text-lg md:text-xl text-white/90 font-body max-w-2xl mb-10 leading-relaxed">
+                <p className="text-base md:text-lg text-white/90 font-body max-w-xl mb-8 leading-relaxed">
                   At Jayotri Academy, we provide quality primary instruction and higher education through expert guidance, structured classroom learning, and a supportive academic environment.
                 </p>
-                <Button size="lg" className="bg-[#00b2a9] text-white hover:bg-[#00968f] font-bold uppercase tracking-widest text-xs px-10 h-14 rounded-none transition-all">
+                <Button size="lg" className="bg-[#00b2a9] text-white hover:bg-[#00968f] font-bold uppercase tracking-widest text-[11px] px-8 h-12 rounded-none transition-all">
                   Explore Our Programs
                 </Button>
               </div>
