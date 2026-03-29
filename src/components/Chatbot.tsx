@@ -47,8 +47,8 @@ export default function Chatbot() {
         <Card className="w-[350px] sm:w-[400px] h-[500px] shadow-2xl flex flex-col border-none overflow-hidden">
           <CardHeader className="bg-primary text-white flex flex-row items-center justify-between p-4 space-y-0">
             <CardTitle className="text-lg font-headline">Campus Guide</CardTitle>
-            <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} className="h-8 w-8 hover:bg-white/20 text-white">
-              <X className="h-4 w-4" />
+            <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} className="h-10 w-10 hover:bg-white/20 text-white">
+              <X className="h-6 w-6" />
             </Button>
           </CardHeader>
           <CardContent className="flex-1 p-0 flex flex-col bg-background">
