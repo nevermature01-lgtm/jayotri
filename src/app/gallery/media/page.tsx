@@ -52,6 +52,8 @@ export default function MediaGalleryPage() {
       src = `/GALLERY/MEDIA/19-768x1024.webp`;
     } else if (id === 20) {
       src = `/GALLERY/MEDIA/20-1024x576.webp`;
+    } else if (id === 21) {
+      src = `/GALLERY/MEDIA/21-1024x683.webp`;
     } else if (id === 22) {
       src = `/GALLERY/MEDIA/22-768x1024.webp`;
     } else if (id === 23) {
