@@ -160,8 +160,10 @@ export default function Home() {
                               Explore more
                             </Link>
                           </Button>
-                          <Button variant="outline" size="lg" className="w-full sm:w-auto bg-white/10 border-white/30 text-white backdrop-blur-xl hover:bg-white/20 font-bold uppercase tracking-widest text-xs px-8 h-14 shadow-2xl transition-all duration-300">
-                            Visit Campus
+                          <Button asChild variant="outline" size="lg" className="w-full sm:w-auto bg-white/10 border-white/30 text-white backdrop-blur-xl hover:bg-white/20 font-bold uppercase tracking-widest text-xs px-8 h-14 shadow-2xl transition-all duration-300">
+                            <Link href="/contact-us">
+                              Contact us
+                            </Link>
                           </Button>
                         </div>
                         
