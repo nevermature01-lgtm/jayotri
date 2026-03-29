@@ -39,7 +39,7 @@ export default function Navigation() {
         { name: 'Our School', href: '/about-us/our-school' },
         { name: 'Vision & Values', href: '/about-us/vision-values' },
         { name: 'Principal Message', href: '/about-us/principal-message' },
-        { name: 'MD Message', href: '/about-us/managing-director-message' },
+        { name: 'Managing Director Message', href: '/about-us/managing-director-message' },
         { name: 'Secretary Message', href: '/about-us/secretary-message' },
         { name: 'Academic Advisor', href: '/about-us/our-academic-advisor' },
         { name: 'Infrastructure', href: '/about-us/infrastructure' },
