@@ -151,7 +151,7 @@ export default function Home() {
                         <h1 className="font-headline text-5xl sm:text-7xl md:text-8xl text-white font-black tracking-tighter lineage-[0.95] md:leading-[0.9] mb-8 text-balance">
                           Jayotri Academy
                         </h1>
-                        <p className="hidden md:block text-lg md:text-xl text-white/80 font-body max-w-xl mb-10 leading-relaxed">
+                        <p className="text-lg md:text-xl text-white/80 font-body max-w-xl mb-10 leading-relaxed">
                           Jayotri Academy is an English medium school believing in the all-round development of a child with in a coeducational, compassionate welcoming and broadminded community. It is based on the central board of secondary Education (CBSE) curriculum.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
