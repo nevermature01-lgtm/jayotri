@@ -3,7 +3,7 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
-import { ImageIcon, Maximize2 } from 'lucide-react';
+import { ImageIcon } from 'lucide-react';
 
 export default function MediaGalleryPage() {
   // Mapping for images with non-standard resolutions in filenames to ensure they load correctly
@@ -134,13 +134,6 @@ export default function MediaGalleryPage() {
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                 />
-                
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="bg-white/20 backdrop-blur-md p-3 rounded-full border border-white/30 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <Maximize2 className="h-6 w-6 text-white" />
-                  </div>
-                </div>
                 
                 {/* Image Label */}
                 <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-gradient-to-t from-black/60 to-transparent">
