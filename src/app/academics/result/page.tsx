@@ -63,6 +63,7 @@ export default function ResultPage() {
               alt="Examination Results"
               width={1200}
               height={1600}
+              unoptimized={true}
               className="w-full h-auto block"
               priority
               sizes="(max-width: 1024px) 100vw, 1024px"

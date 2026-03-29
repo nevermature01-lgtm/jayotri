@@ -7,6 +7,7 @@ import { ImageIcon, Maximize2 } from 'lucide-react';
 
 export default function MediaGalleryPage() {
   // Generate 35 image paths based on the provided pattern
+  // Added unoptimized={true} to ensure reliable loading of local assets
   const galleryImages = Array.from({ length: 35 }, (_, i) => ({
     id: i + 1,
     src: `/GALLERY/MEDIA/${i + 1}-683x1024.webp`,
@@ -50,6 +51,7 @@ export default function MediaGalleryPage() {
                   src={image.src}
                   alt={image.alt}
                   fill
+                  unoptimized={true}
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                 />
@@ -61,7 +63,7 @@ export default function MediaGalleryPage() {
                   </div>
                 </div>
                 
-                {/* Image Label (Optional/Subtle) */}
+                {/* Image Label */}
                 <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-gradient-to-t from-black/60 to-transparent">
                   <p className="text-white text-xs font-bold uppercase tracking-widest opacity-80">
                     Jayotri Academy Highlights
