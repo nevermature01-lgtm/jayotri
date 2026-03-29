@@ -3,7 +3,6 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { 
   Building2, 
   Beaker, 
@@ -17,8 +16,6 @@ import {
 } from 'lucide-react';
 
 export default function InfrastructurePage() {
-  const campusImg = PlaceHolderImages.find(img => img.id === 'hero-campus');
-
   const highlights = [
     { icon: <Building2 className="h-6 w-6" />, text: "Multi-storey School Building" },
     { icon: <Beaker className="h-6 w-6" />, text: "Physics, Chemistry & Biology Labs" },
@@ -88,15 +85,12 @@ export default function InfrastructurePage() {
               ))}
               
               <div className="sm:col-span-2 relative aspect-video rounded-2xl overflow-hidden shadow-2xl mt-4">
-                {campusImg && (
-                  <Image
-                    src={campusImg.imageUrl}
-                    alt="Jayotri Academy Campus"
-                    fill
-                    className="object-cover"
-                    data-ai-hint="university building"
-                  />
-                )}
+                <Image
+                  src="/ABOUT US/INFRASTRUCTURE/infrastructure.webp"
+                  alt="Jayotri Academy Campus"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
