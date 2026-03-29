@@ -66,9 +66,11 @@ export default function Footer() {
             </div>
             <div className="flex gap-4">
               <Phone className="h-5 w-5 text-accent shrink-0" />
-              <div className="text-sm text-white/70">
-                <p>9557558008 (Principal)</p>
-                <p>8650332851 (Director)</p>
+              <div className="text-sm text-white/70 space-y-1">
+                <p><span className="font-bold">Principal:</span> 9557558008</p>
+                <p><span className="font-bold">Director:</span> 8650332851</p>
+                <p><span className="font-bold">Account Office:</span> 9837221611</p>
+                <p><span className="font-bold">Transport:</span> 9536438621</p>
               </div>
             </div>
             <div className="flex gap-4">
