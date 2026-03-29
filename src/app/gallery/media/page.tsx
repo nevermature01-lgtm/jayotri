@@ -36,6 +36,22 @@ export default function MediaGalleryPage() {
       src = `/GALLERY/MEDIA/11-768x1024.webp`;
     } else if (id === 12) {
       src = `/GALLERY/MEDIA/12.webp`;
+    } else if (id === 13) {
+      src = `/GALLERY/MEDIA/13.webp`;
+    } else if (id === 14) {
+      src = `/GALLERY/MEDIA/14.webp`;
+    } else if (id === 15) {
+      src = `/GALLERY/MEDIA/15-683x1024.webp`;
+    } else if (id === 16) {
+      src = `/GALLERY/MEDIA/16-768x1024.webp`;
+    } else if (id === 17) {
+      src = `/GALLERY/MEDIA/17-1024x683.webp`;
+    } else if (id === 18) {
+      src = `/GALLERY/MEDIA/18-1024x768.webp`;
+    } else if (id === 19) {
+      src = `/GALLERY/MEDIA/19-768x1024.webp`;
+    } else if (id === 20) {
+      src = `/GALLERY/MEDIA/20-1024x576.webp`;
     } else {
       // Default pattern for the rest of the images
       src = `/GALLERY/MEDIA/${id}-683x1024.webp`;
