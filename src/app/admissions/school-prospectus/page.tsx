@@ -33,18 +33,22 @@ export default function SchoolProspectusPage() {
         </section>
 
         {/* Prospectus Images Vertical List - One image per line */}
-        <section className="max-w-4xl mx-auto px-4 md:px-6">
-          <div className="flex flex-col gap-8 md:gap-12">
+        <section className="max-w-5xl mx-auto px-4 md:px-6">
+          <div className="flex flex-col gap-6 md:gap-10">
             {prospectusImages.map((src, index) => (
-              <div key={index} className="relative w-full shadow-2xl rounded-sm overflow-hidden bg-white border border-slate-200">
-                {/* Maintain a standard document aspect ratio */}
-                <div className="relative aspect-[1/1.41] w-full">
+              <div key={index} className="relative w-full shadow-xl rounded-sm overflow-hidden bg-white border border-slate-200">
+                {/* 
+                  Maintain a standard document aspect ratio. 
+                  Using object-contain ensures the image is NEVER cut off,
+                  even if the aspect ratio of the actual file differs slightly.
+                */}
+                <div className="relative aspect-[1/1.414] w-full bg-white">
                   <Image
                     src={src}
                     alt={`Prospectus Page ${index + 1}`}
                     fill
-                    className="object-contain md:object-cover"
-                    sizes="(max-width: 896px) 100vw, 896px"
+                    className="object-contain"
+                    sizes="(max-width: 1024px) 100vw, 1024px"
                     priority={index < 2} // Priority load for visible images
                   />
                 </div>
