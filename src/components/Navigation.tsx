@@ -86,7 +86,6 @@ export default function Navigation() {
       href: '/gallery',
       subItems: [
         { name: 'Media', href: '/gallery/media' },
-        { name: 'Video Gallery', href: '/gallery/video-gallery' },
       ]
     },
     { name: 'Contact', href: '/contact-us' },
