@@ -31,7 +31,7 @@ export default function MediaGalleryPage() {
     } else if (id === 9) {
       src = `/GALLERY/MEDIA/9-1024x683.webp`;
     } else if (id === 10) {
-      src = `/GALLERY/MEDIA/10.webp`;
+      src = `/GALLERY/MEDIA/10-576x1024.webp`;
     } else if (id === 11) {
       src = `/GALLERY/MEDIA/11-768x1024.webp`;
     } else if (id === 12) {
