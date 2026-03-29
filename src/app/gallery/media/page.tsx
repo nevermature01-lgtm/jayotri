@@ -6,9 +6,9 @@ import Image from 'next/image';
 
 export default function MediaGalleryPage() {
   // Mapping for images with non-standard resolutions in filenames to ensure they load correctly
-  // Image 29 is strictly filtered out from the list as per requirements.
+  // Images 24, 25, 27, and 29 are strictly filtered out from the list as per requirements.
   const galleryImages = Array.from({ length: 39 }, (_, i) => i + 1)
-    .filter(id => id !== 29)
+    .filter(id => ![24, 25, 27, 29].includes(id))
     .map((id) => {
       let src = '';
       
