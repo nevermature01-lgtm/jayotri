@@ -37,8 +37,7 @@ export default function Navigation() {
       href: '/about-us',
       subItems: [
         { name: 'Our School', href: '/about-us/our-school' },
-        { name: 'Vision & Mission', href: '/about-us/vision' },
-        { name: 'Values', href: '/about-us/values' },
+        { name: 'Vision & Values', href: '/about-us/vision-values' },
         { name: 'Principal Message', href: '/about-us/principal-message' },
         { name: 'MD Message', href: '/about-us/managing-director-message' },
         { name: 'Secretary Message', href: '/about-us/secretary-message' },
