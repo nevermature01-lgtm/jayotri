@@ -126,9 +126,9 @@ export default function Navigation() {
                     {item.name} <ChevronDown className="h-4 w-4 opacity-50 group-hover:rotate-180 transition-transform duration-300" />
                   </button>
                   
-                  {/* Dropdown Menu Container */}
+                  {/* Dropdown Menu Container - SOLID STYLE */}
                   <div className="absolute top-[80%] left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
-                    <div className="min-w-[220px] p-2 bg-white/60 backdrop-blur-xl border border-white/30 shadow-2xl rounded-xl overflow-hidden">
+                    <div className="min-w-[220px] p-2 bg-white border border-slate-200 shadow-2xl rounded-xl overflow-hidden">
                       <div className="flex flex-col">
                         {item.subItems.map((sub) => (
                           <Link 
