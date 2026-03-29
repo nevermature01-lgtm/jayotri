@@ -22,6 +22,8 @@ export default function MediaGalleryPage() {
       src = `/GALLERY/MEDIA/4.webp`;
     } else if (id === 5) {
       src = `/GALLERY/MEDIA/5-1024x609.webp`;
+    } else if (id === 6) {
+      src = `/GALLERY/MEDIA/6.webp`;
     } else {
       // Default pattern for the rest of the images
       src = `/GALLERY/MEDIA/${id}-683x1024.webp`;
