@@ -71,7 +71,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex justify-center items-center text-[10px] font-bold uppercase tracking-widest text-white/40 text-center">
-          <p>© 2016 Jayotri Academy. All Rights Reserved.</p>
+          <p>© 2026 Jayotri Academy. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
