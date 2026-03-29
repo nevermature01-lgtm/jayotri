@@ -53,17 +53,20 @@ export default function Home() {
 
   const heroSlides = [
     { 
-      imageUrl: '/7.webp', 
+      desktopUrl: '/7.webp', 
+      mobileUrl: '/7.webp', 
       description: 'Jayotri Academy Campus View', 
       imageHint: 'school campus' 
     },
     { 
-      imageUrl: '/14 (1).webp', 
+      desktopUrl: '/14 (1).webp', 
+      mobileUrl: '/14 (1).webp', 
       description: 'Excellence in Classroom Learning', 
       imageHint: 'classroom' 
     },
     { 
-      imageUrl: '/37 (1).webp', 
+      desktopUrl: '/37 (1).webp', 
+      mobileUrl: '/37 (1).webp', 
       description: 'Shaping the Thinkers of Tomorrow', 
       imageHint: 'students' 
     },
@@ -117,11 +120,21 @@ export default function Home() {
               {heroSlides.map((slide, index) => (
                 <CarouselItem key={index} className="relative h-full w-full">
                   <div className="absolute inset-0 z-0">
+                    {/* Desktop Hero Image */}
                     <Image
-                      src={slide.imageUrl}
+                      src={slide.desktopUrl}
                       alt={slide.description}
                       fill
-                      className="object-cover"
+                      className="hidden md:block object-cover"
+                      priority={index === 0}
+                      unoptimized={true}
+                    />
+                    {/* Mobile Hero Image */}
+                    <Image
+                      src={slide.mobileUrl}
+                      alt={slide.description}
+                      fill
+                      className="block md:hidden object-cover"
                       priority={index === 0}
                       unoptimized={true}
                     />
