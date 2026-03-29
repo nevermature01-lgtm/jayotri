@@ -361,7 +361,7 @@ export default function Home() {
         {/* Academy Promotion Section */}
         <section className="relative h-[50vh] md:h-[60vh] w-full overflow-hidden">
           <Image
-            src="/28.webp"
+            src="/WhatsApp-Image-2025-03-26-at-11.03.44_e32c75a9-1024x682.webp"
             alt="Academy Classroom"
             fill
             className="object-cover"
