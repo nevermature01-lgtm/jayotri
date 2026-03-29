@@ -4,12 +4,9 @@
 import Image from 'next/image';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Quote } from 'lucide-react';
 
 export default function SecretaryMessagePage() {
-  const secretaryImg = PlaceHolderImages.find(img => img.id === 'secretary-portrait');
-
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -36,15 +33,12 @@ export default function SecretaryMessagePage() {
             {/* Secretary Image */}
             <div className="lg:w-2/5 w-full">
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                {secretaryImg && (
-                  <Image
-                    src={secretaryImg.imageUrl}
-                    alt="Mr. Manoj Porwal - Secretary"
-                    fill
-                    className="object-cover"
-                    data-ai-hint="professional portrait"
-                  />
-                )}
+                <Image
+                  src="/ABOUT US/SECRETARY MESSAGE/Manoj-Porwal-300x300-1.webp"
+                  alt="Mr. Manoj Porwal - Secretary"
+                  fill
+                  className="object-cover"
+                />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/80 to-transparent p-8 text-white">
                   <p className="font-headline text-2xl font-bold">Mr. Manoj Porwal</p>
                   <p className="text-sm uppercase tracking-widest text-accent font-bold">Secretary</p>
