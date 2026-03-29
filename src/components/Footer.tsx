@@ -1,9 +1,20 @@
 "use client";
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Facebook, Instagram, Youtube, Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Footer() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <footer className="bg-primary text-white pt-20 pb-10">
       <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
