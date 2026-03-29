@@ -54,7 +54,7 @@ export default function Home() {
   const heroSlides = [
     { 
       desktopUrl: '/7.webp', 
-      mobileUrl: '/7.webp', 
+      mobileUrl: '/mob-1.webp', 
       description: 'Jayotri Academy Campus View', 
       imageHint: 'school campus' 
     },
