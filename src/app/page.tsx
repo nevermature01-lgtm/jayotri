@@ -105,7 +105,7 @@ export default function Home() {
       
       <main>
         {/* Hero Slider Section */}
-        <section className="relative h-[90vh] md:h-[85vh] w-full overflow-hidden">
+        <section className="relative h-[70vh] md:h-[85vh] w-full overflow-hidden">
           <Carousel 
             className="w-full h-full" 
             opts={{ loop: true }}
@@ -116,7 +116,7 @@ export default function Home() {
               }),
             ]}
           >
-            <CarouselContent className="h-[90vh] md:h-[85vh]">
+            <CarouselContent className="h-[70vh] md:h-[85vh]">
               {heroSlides.map((slide, index) => (
                 <CarouselItem key={index} className="relative h-full w-full">
                   <div className="absolute inset-0 z-0">
