@@ -11,17 +11,12 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { cn } from '@/lib/utils';
 
 interface NavItem {
   name: string;
@@ -110,13 +105,11 @@ export default function Navigation() {
               className="site-logo"
             />
           </Link>
-          {/* Spacer for mobile to balance the right menu trigger, ensuring perfect centering */}
           <div className="md:hidden w-12" /> 
         </div>
 
         {/* Center Section: Desktop Nav / Mobile Logo */}
         <div className="flex-1 md:flex-[2] flex justify-center items-center">
-          {/* Mobile Logo */}
           <Link href="/" className="md:hidden flex items-center justify-center">
             <img
               src="/jayotri_logo_upscaled.png"
@@ -125,24 +118,32 @@ export default function Navigation() {
             />
           </Link>
 
-          {/* Desktop Nav (Centered) */}
+          {/* Desktop Nav (Centered with Hover Dropdowns) */}
           <div className="hidden md:flex items-center space-x-6 whitespace-nowrap">
             {navItems.map((item) => (
               item.subItems ? (
-                <DropdownMenu key={item.name}>
-                  <DropdownMenuTrigger className="flex items-center gap-1.5 text-slate-600 font-bold hover:text-primary transition-colors text-[10px] uppercase tracking-[0.2em] outline-none h-20">
-                    {item.name} <ChevronDown className="h-3.5 w-3.5 opacity-50" />
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="center" className="min-w-[200px] p-2 bg-white/95 backdrop-blur-md">
-                    {item.subItems.map((sub) => (
-                      <DropdownMenuItem key={sub.name} asChild>
-                        <Link href={sub.href} className="w-full text-[9px] font-bold uppercase tracking-widest py-2.5 cursor-pointer">
-                          {sub.name}
-                        </Link>
-                      </DropdownMenuItem>
-                    ))}
-                  </DropdownMenuContent>
-                </DropdownMenu>
+                <div key={item.name} className="group relative h-20 flex items-center">
+                  <button className="flex items-center gap-1.5 text-slate-600 font-bold hover:text-primary transition-colors text-[10px] uppercase tracking-[0.2em] outline-none">
+                    {item.name} <ChevronDown className="h-3.5 w-3.5 opacity-50 group-hover:rotate-180 transition-transform duration-300" />
+                  </button>
+                  
+                  {/* Dropdown Menu Container */}
+                  <div className="absolute top-[80%] left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
+                    <div className="min-w-[220px] p-2 bg-white/95 backdrop-blur-md border border-slate-100 shadow-2xl rounded-xl">
+                      <div className="flex flex-col">
+                        {item.subItems.map((sub) => (
+                          <Link 
+                            key={sub.name} 
+                            href={sub.href} 
+                            className="w-full text-[9px] font-bold uppercase tracking-widest px-4 py-3 hover:bg-[#00b2a9]/10 hover:text-primary transition-all rounded-lg"
+                          >
+                            {sub.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
               ) : (
                 <Link
                   key={item.name}
@@ -162,7 +163,6 @@ export default function Navigation() {
             Apply Now
           </Button>
 
-          {/* Mobile Menu Trigger (Right Aligned, Stylish) */}
           <div className="md:hidden">
             <Sheet>
               <SheetTrigger asChild>
