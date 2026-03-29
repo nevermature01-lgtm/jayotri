@@ -52,13 +52,36 @@ export default function ContactUsPage() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: "Message Sent",
-      description: "Thank you for reaching out to Jayotri Academy. We will get back to you soon.",
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/jayotriacademy2015@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          ...values,
+          _subject: `New Contact Form Submission: ${values.subject}`
+        }),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent",
+          description: "Thank you for reaching out to Jayotri Academy. We will get back to you soon.",
+        });
+        form.reset();
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: "Something went wrong while sending your message. Please try again later.",
+      });
+    }
   }
 
   return (
@@ -94,7 +117,7 @@ export default function ContactUsPage() {
                 </div>
                 <h3 className="font-headline text-4xl font-bold text-slate-800 mb-6 leading-tight">Get in touch and let us know how we can help.</h3>
                 <p className="text-slate-500 text-lg leading-relaxed max-w-xl">
-                  Get in touch and let us know how we can help. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                  Reach out to us for admissions, academic enquiries, or any other information. Our team is here to assist you.
                 </p>
               </div>
 
@@ -279,9 +302,9 @@ export default function ContactUsPage() {
                     )}
                   />
 
-                  <Button type="submit" className="w-full bg-[#00b2a9] text-white hover:bg-[#009a92] h-14 rounded-2xl font-bold uppercase tracking-[0.2em] text-[10px] shadow-lg shadow-[#00b2a9]/20 transition-all duration-300">
+                  <Button type="submit" disabled={form.formState.isSubmitting} className="w-full bg-[#00b2a9] text-white hover:bg-[#009a92] h-14 rounded-2xl font-bold uppercase tracking-[0.2em] text-[10px] shadow-lg shadow-[#00b2a9]/20 transition-all duration-300">
                     <Send className="h-4 w-4 mr-2" />
-                    Send Message
+                    {form.formState.isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
               </Form>
