@@ -50,14 +50,14 @@ export default function Navigation() {
       name: 'Admissions', 
       href: '/admissions',
       subItems: [
-        { name: 'Fee Structure', href: '/admissions/fee-structure' },
+        { name: 'fee Structure', href: '/admissions/fee-structure' },
         { name: 'Admission Procedure', href: '/admissions/admission-procedure' },
-        { name: 'Withdrawal', href: '/admissions/withdrawal-procedure' },
+        { name: 'Withdrawal Procedure', href: '/admissions/withdrawal-procedure' },
         { name: 'Transport Fee', href: '/admissions/transport-fee' },
-        { name: 'Refund Policy', href: '/admissions/cancellation-and-refund-policy' },
-        { name: 'Prospectus', href: '/admissions/school-prospectus' },
-        { name: 'Information', href: '/admissions/school-information' },
-        { name: 'Affiliation', href: '/admissions/affiliation-letter' },
+        { name: 'Cancellation and Refund Policy', href: '/admissions/cancellation-and-refund-policy' },
+        { name: 'School Prospectus', href: '/admissions/school-prospectus' },
+        { name: 'School Information', href: '/admissions/school-information' },
+        { name: 'Affiliation Letter', href: '/admissions/affiliation-letter' },
       ]
     },
     { 
