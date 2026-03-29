@@ -66,7 +66,7 @@ export default function Home() {
     },
     { 
       desktopUrl: '/37 (1).webp', 
-      mobileUrl: '/37 (1).webp', 
+      mobileUrl: '/mob-3.webp', 
       description: 'Shaping the Thinkers of Tomorrow', 
       imageHint: 'students' 
     },
