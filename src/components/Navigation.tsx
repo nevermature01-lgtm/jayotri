@@ -102,7 +102,7 @@ export default function Navigation() {
     <nav className="sticky top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
       <div className="relative max-w-screen-2xl mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
         
-        {/* Left Section: Desktop Logo */}
+        {/* Left Section: Desktop Logo & Mobile Spacer */}
         <div className="flex-1 flex items-center">
           <Link href="/" className="hidden md:flex items-center">
             <img
@@ -111,12 +111,14 @@ export default function Navigation() {
               className="site-logo"
             />
           </Link>
+          {/* Spacer for mobile to balance the right menu trigger, ensuring perfect centering */}
+          <div className="md:hidden w-12" /> 
         </div>
 
         {/* Center Section: Desktop Nav / Mobile Logo */}
-        <div className="flex-[2] flex justify-center items-center">
-          {/* Mobile Logo (Centered) */}
-          <Link href="/" className="md:hidden absolute left-1/2 -translate-x-1/2">
+        <div className="flex-1 md:flex-[2] flex justify-center items-center">
+          {/* Mobile Logo */}
+          <Link href="/" className="md:hidden flex items-center justify-center">
             <img
               src="/jayotri_logo_upscaled.png"
               alt="Jayotri Academy Logo"
@@ -161,7 +163,7 @@ export default function Navigation() {
             Apply Now
           </Button>
 
-          {/* Mobile Menu Trigger (Right Aligned & Stylish) */}
+          {/* Mobile Menu Trigger (Right Aligned, Stylish) */}
           <div className="md:hidden">
             <Sheet>
               <SheetTrigger asChild>
