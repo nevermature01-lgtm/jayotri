@@ -16,7 +16,7 @@ export default function SchoolProspectusPage() {
     "/ABOUT US/School Prospectus/Prospectus-New-7-scaled-1-1024x512.webp",
     "/ABOUT US/School Prospectus/Prospectus-New-8-scaled-1-1024x512.webp",
     "/ABOUT US/School Prospectus/Prospectus-New-9-scaled-1-1024x512.webp",
-    "/ABOUT US/School Prospectus/Prospectus-New-10-scaled-1-1024x1024.webp",
+    "/ABOUT US/School Prospectus/Prospectus-New-10-scaled-1-1024x512.webp",
   ];
 
   return (
@@ -32,7 +32,7 @@ export default function SchoolProspectusPage() {
           <div className="w-20 h-1 bg-[#00b2a9] mx-auto mt-4 rounded-full" />
         </section>
 
-        {/* Prospectus Images Vertical List - No extra space, full width */}
+        {/* Prospectus Images Vertical List - No extra space, centered container */}
         <section className="max-w-4xl mx-auto px-0">
           <div className="flex flex-col">
             {prospectusImages.map((src, index) => {
