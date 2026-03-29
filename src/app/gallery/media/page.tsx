@@ -10,8 +10,8 @@ export default function MediaGalleryPage() {
   const imageResolutions: Record<number, string> = {
     1: '683x1024',
     2: '768x1024',
+    3: '768x1024',
     // The following assume common resolution seen in the directory pattern
-    3: '683x1024',
     4: '683x1024',
     5: '683x1024',
     6: '683x1024',
