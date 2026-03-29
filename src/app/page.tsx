@@ -361,7 +361,7 @@ export default function Home() {
         {/* Academy Promotion Section */}
         <section className="relative h-[50vh] md:h-[60vh] w-full overflow-hidden">
           <Image
-            src="https://picsum.photos/seed/univ6/1920/1080"
+            src="/28.webp"
             alt="Academy Classroom"
             fill
             className="object-cover"
