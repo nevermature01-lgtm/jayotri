@@ -57,7 +57,7 @@ export default function Home() {
   }, []);
 
   const heroSlides = [
-    { id: 'custom-hero', imageUrl: '/7.webp', description: 'Jayotri Academy Campus', imageHint: 'school campus' },
+    { id: 'custom-hero', imageUrl: '/14 (1).webp', description: 'Jayotri Academy Campus', imageHint: 'school campus' },
     PlaceHolderImages.find(img => img.id === 'student-life'),
     PlaceHolderImages.find(img => img.id === 'research-lab'),
     PlaceHolderImages.find(img => img.id === 'graduation'),
