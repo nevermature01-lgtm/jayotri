@@ -161,16 +161,18 @@ export default function Home() {
                             Visit Campus
                           </Button>
                         </div>
+                        
+                        {/* Navigation Buttons placed below CTA */}
+                        <div className="flex justify-end gap-4 mt-8 max-w-xl">
+                          <CarouselPrevious className="relative left-0 translate-y-0 bg-white/10 border-white/30 text-white backdrop-blur-md hover:bg-white/20 hover:text-white" />
+                          <CarouselNext className="relative right-0 translate-y-0 bg-white/10 border-white/30 text-white backdrop-blur-md hover:bg-white/20 hover:text-white" />
+                        </div>
                       </div>
                     </div>
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="absolute bottom-12 right-12 flex gap-4 z-20">
-              <CarouselPrevious className="relative left-0 translate-y-0 bg-white/10 border-white/30 text-white backdrop-blur-md hover:bg-white/20 hover:text-white" />
-              <CarouselNext className="relative right-0 translate-y-0 bg-white/10 border-white/30 text-white backdrop-blur-md hover:bg-white/20 hover:text-white" />
-            </div>
           </Carousel>
         </section>
 
