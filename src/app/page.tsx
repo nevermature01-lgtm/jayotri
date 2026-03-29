@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
@@ -145,22 +146,22 @@ export default function Home() {
                   <div className="relative z-10 h-full flex items-end pb-12 md:pb-24">
                     <div className="max-w-screen-2xl mx-auto px-6 md:px-12 w-full flex flex-col md:flex-row md:items-end md:justify-between gap-8">
                       <div className="max-w-3xl">
-                        <span className="inline-block px-4 py-1 bg-accent text-primary text-[10px] font-bold tracking-[0.2em] mb-6 rounded-sm">
+                        <span className="inline-block px-4 py-1 bg-accent text-primary text-[10px] font-bold tracking-[0.2em] mb-4 md:mb-6 rounded-sm">
                           SINCE 2008
                         </span>
-                        <h1 className="font-headline text-5xl sm:text-7xl md:text-8xl text-white font-black tracking-tighter lineage-[0.95] md:leading-[0.9] mb-8 text-balance">
+                        <h1 className="font-headline text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-black tracking-tighter leading-[1.1] md:leading-[0.9] mb-4 md:mb-8 text-balance">
                           Jayotri Academy
                         </h1>
-                        <p className="text-lg md:text-xl text-white/80 font-body max-w-xl mb-10 leading-relaxed">
+                        <p className="text-sm sm:text-lg md:text-xl text-white/80 font-body max-w-xl mb-8 md:mb-10 leading-relaxed">
                           Jayotri Academy is an English medium school believing in the all-round development of a child with in a coeducational, compassionate welcoming and broadminded community. It is based on the central board of secondary Education (CBSE) curriculum.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                          <Button asChild size="lg" className="w-full sm:w-auto bg-white text-primary hover:bg-slate-100 font-bold uppercase tracking-widest text-xs px-8 h-14">
+                          <Button asChild size="lg" className="w-full sm:w-auto bg-white text-primary hover:bg-slate-100 font-bold uppercase tracking-widest text-xs px-8 h-12 md:h-14 transition-all">
                             <Link href="/about-us/our-school">
                               Explore more
                             </Link>
                           </Button>
-                          <Button asChild variant="outline" size="lg" className="w-full sm:w-auto bg-white/10 border-white/30 text-white backdrop-blur-xl hover:bg-white/20 font-bold uppercase tracking-widest text-xs px-8 h-14 shadow-2xl transition-all duration-300">
+                          <Button asChild variant="outline" size="lg" className="w-full sm:w-auto bg-white/10 border-white/30 text-white backdrop-blur-xl hover:bg-white/20 font-bold uppercase tracking-widest text-xs px-8 h-12 md:h-14 shadow-2xl transition-all duration-300">
                             <Link href="/contact-us">
                               Contact us
                             </Link>
@@ -169,7 +170,7 @@ export default function Home() {
                       </div>
 
                       {/* Navigation Buttons aligned to the right on desktop */}
-                      <div className="flex justify-center md:justify-end gap-4 mt-4 md:mt-0">
+                      <div className="flex justify-center md:justify-end gap-4 mt-6 md:mt-0">
                         <CarouselPrevious className="relative left-0 translate-y-0 bg-white/10 border-white/30 text-white backdrop-blur-md hover:bg-white/20 hover:text-white" />
                         <CarouselNext className="relative right-0 translate-y-0 bg-white/10 border-white/30 text-white backdrop-blur-md hover:bg-white/20 hover:text-white" />
                       </div>
