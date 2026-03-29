@@ -4,12 +4,9 @@
 import Image from 'next/image';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Target, Globe, School } from 'lucide-react';
 
 export default function OurSchoolPage() {
-  const classroomImg = PlaceHolderImages.find(img => img.id === 'classroom-hero');
-
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -60,15 +57,12 @@ export default function OurSchoolPage() {
 
             <div className="lg:w-1/2 relative mt-12 lg:mt-0">
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-8 border-[#00b2a9]/10">
-                {classroomImg && (
-                  <Image
-                    src={classroomImg.imageUrl}
-                    alt="Jayotri Academy Classroom"
-                    fill
-                    className="object-cover"
-                    data-ai-hint="school classroom"
-                  />
-                )}
+                <Image
+                  src="/ABOUT US/OUR SCHOOL/our school.webp"
+                  alt="Jayotri Academy Campus"
+                  fill
+                  className="object-cover"
+                />
               </div>
               
               {/* Floating Stat Badge */}
