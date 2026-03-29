@@ -11,7 +11,7 @@ export default function MediaGalleryPage() {
     const id = i + 1;
     let src = '';
     
-    // Handle specific file naming patterns provided by the user
+    // Handle specific file naming patterns based on the school's media directory structure
     if (id === 1) {
       src = `/GALLERY/MEDIA/1-683x1024.webp`;
     } else if (id === 2) {
@@ -71,7 +71,6 @@ export default function MediaGalleryPage() {
       <main>
         {/* Simple Header Section */}
         <section className="relative py-20 md:py-28 bg-[#FCF9F4] overflow-hidden border-b border-slate-100">
-          {/* Decorative elements */}
           <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-64 h-64 border-2 border-dashed border-[#00b2a9]/20 rounded-full hidden lg:block" />
           <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-80 h-80 border border-[#00b2a9]/10 rounded-full hidden lg:block" />
           
@@ -123,7 +122,6 @@ export default function MediaGalleryPage() {
             ))}
           </div>
           
-          {/* Gallery Info Note */}
           <div className="mt-20 text-center">
             <div className="w-24 h-1 bg-[#00b2a9] mx-auto rounded-full mb-8" />
             <p className="text-slate-400 font-medium italic">
@@ -132,7 +130,6 @@ export default function MediaGalleryPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
         <section className="py-20 bg-primary text-white text-center">
           <div className="max-w-3xl mx-auto px-6">
             <h3 className="font-headline text-3xl md:text-4xl mb-6">Experience Excellence Firsthand</h3>
