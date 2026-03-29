@@ -145,23 +145,6 @@ export default function MediaGalleryPage() {
             </p>
           </div>
         </section>
-
-        <section className="py-20 bg-primary text-white text-center">
-          <div className="max-w-3xl mx-auto px-6">
-            <h3 className="font-headline text-3xl md:text-4xl mb-6">Experience Excellence Firsthand</h3>
-            <p className="text-white/70 text-lg mb-8">
-              Want to see our campus in person? Schedule a tour today and discover the vibrant environment of Jayotri Academy.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-accent text-primary px-8 py-4 font-bold uppercase tracking-widest text-xs hover:bg-white transition-colors rounded-none">
-                Request a Tour
-              </button>
-              <button className="border border-white/30 px-8 py-4 font-bold uppercase tracking-widest text-xs hover:bg-white/10 transition-all rounded-none">
-                Contact Admissions
-              </button>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />
