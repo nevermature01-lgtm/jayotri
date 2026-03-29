@@ -92,7 +92,7 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="sticky top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+    <nav className="sticky top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.05)] border-b border-white/20">
       <div className="relative max-w-screen-2xl mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
         
         {/* Left Section: Desktop Logo & Mobile Spacer */}
@@ -128,13 +128,13 @@ export default function Navigation() {
                   
                   {/* Dropdown Menu Container */}
                   <div className="absolute top-[80%] left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
-                    <div className="min-w-[220px] p-2 bg-white/95 backdrop-blur-md border border-slate-100 shadow-2xl rounded-xl">
+                    <div className="min-w-[220px] p-2 bg-white/60 backdrop-blur-xl border border-white/30 shadow-2xl rounded-xl overflow-hidden">
                       <div className="flex flex-col">
                         {item.subItems.map((sub) => (
                           <Link 
                             key={sub.name} 
                             href={sub.href} 
-                            className="w-full text-[11px] font-body font-bold uppercase tracking-widest px-4 py-3 hover:bg-[#00b2a9]/10 hover:text-primary transition-all rounded-lg"
+                            className="w-full text-[11px] font-body font-bold uppercase tracking-widest px-4 py-3 hover:bg-primary/10 hover:text-primary transition-all rounded-lg"
                           >
                             {sub.name}
                           </Link>
@@ -168,12 +168,12 @@ export default function Navigation() {
                 <Button 
                   variant="ghost" 
                   size="icon" 
-                  className="h-12 w-12 rounded-xl bg-slate-50 border border-slate-100 shadow-sm hover:bg-slate-100 active:scale-95 transition-all duration-200"
+                  className="h-12 w-12 rounded-xl bg-white/40 backdrop-blur-lg border border-white/20 shadow-sm hover:bg-white/50 active:scale-95 transition-all duration-200"
                 >
                   <Menu className="h-7 w-7 text-primary" strokeWidth={1.5} />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] overflow-y-auto">
+              <SheetContent side="right" className="w-[300px] overflow-y-auto bg-white/80 backdrop-blur-xl border-l border-white/20">
                 <SheetHeader className="text-left mb-8">
                   <SheetTitle>
                     <img
