@@ -3,7 +3,6 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
-import { ImageIcon } from 'lucide-react';
 
 export default function MediaGalleryPage() {
   // Mapping for images with non-standard resolutions in filenames to ensure they load correctly
@@ -99,50 +98,24 @@ export default function MediaGalleryPage() {
       <Navigation />
       
       <main>
-        {/* Simple Header Section */}
-        <section className="relative py-20 md:py-28 bg-[#FCF9F4] overflow-hidden border-b border-slate-100">
-          <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-64 h-64 border-2 border-dashed border-[#00b2a9]/20 rounded-full hidden lg:block" />
-          <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-80 h-80 border border-[#00b2a9]/10 rounded-full hidden lg:block" />
-          
-          <div className="relative z-10 max-w-screen-xl mx-auto px-6 text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00b2a9]/10 rounded-full text-[#00b2a9] text-xs font-bold uppercase tracking-widest mb-6">
-              <ImageIcon className="h-4 w-4" />
-              Visual Journey
-            </div>
-            <h1 className="font-headline text-5xl md:text-6xl text-slate-800 font-bold mb-4">
-              Media Gallery
-            </h1>
-            <p className="text-xl text-slate-500 font-medium italic max-w-2xl mx-auto">
-              Capturing moments of learning, achievement, and growth at Jayotri Academy.
-            </p>
-          </div>
-        </section>
-
         {/* Gallery Grid Section */}
         <section className="py-20 max-w-screen-2xl mx-auto px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {galleryImages.map((image) => (
               <div 
                 key={image.id} 
-                className="group relative aspect-[3/4] overflow-hidden rounded-2xl bg-slate-100 shadow-sm hover:shadow-xl transition-all duration-500"
+                className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-slate-100 shadow-sm"
               >
                 <Image
                   src={image.src}
                   alt={image.alt}
                   fill
                   unoptimized={true}
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="object-cover"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                 />
               </div>
             ))}
-          </div>
-          
-          <div className="mt-20 text-center">
-            <div className="w-24 h-1 bg-[#00b2a9] mx-auto rounded-full mb-8" />
-            <p className="text-slate-400 font-medium italic">
-              * Showing the latest {galleryImages.length} moments from our campus life.
-            </p>
           </div>
         </section>
       </main>
