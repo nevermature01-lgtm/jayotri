@@ -6,13 +6,55 @@ import Image from 'next/image';
 import { ImageIcon, Maximize2 } from 'lucide-react';
 
 export default function MediaGalleryPage() {
-  // Generate 35 image paths based on the provided pattern
-  // Added unoptimized={true} to ensure reliable loading of local assets
-  const galleryImages = Array.from({ length: 35 }, (_, i) => ({
-    id: i + 1,
-    src: `/GALLERY/MEDIA/${i + 1}-683x1024.webp`,
-    alt: `Jayotri Academy Event Photo ${i + 1}`
-  }));
+  // Mapping for images with non-standard resolutions in filenames to ensure they load correctly
+  const imageResolutions: Record<number, string> = {
+    1: '683x1024',
+    2: '768x1024',
+    // The following assume common resolution seen in the directory pattern
+    3: '683x1024',
+    4: '683x1024',
+    5: '683x1024',
+    6: '683x1024',
+    7: '683x1024',
+    8: '683x1024',
+    9: '683x1024',
+    10: '683x1024',
+    11: '683x1024',
+    12: '683x1024',
+    13: '683x1024',
+    14: '683x1024',
+    15: '683x1024',
+    16: '683x1024',
+    17: '683x1024',
+    18: '683x1024',
+    19: '683x1024',
+    20: '683x1024',
+    21: '683x1024',
+    22: '683x1024',
+    23: '683x1024',
+    24: '683x1024',
+    25: '683x1024',
+    26: '683x1024',
+    27: '683x1024',
+    28: '683x1024',
+    29: '683x1024',
+    30: '683x1024',
+    31: '683x1024',
+    32: '683x1024',
+    33: '683x1024',
+    34: '683x1024',
+    35: '683x1024',
+  };
+
+  const galleryImages = Array.from({ length: 35 }, (_, i) => {
+    const id = i + 1;
+    const res = imageResolutions[id] || '683x1024';
+    return {
+      id,
+      src: `/GALLERY/MEDIA/${id}-${res}.webp`,
+      alt: `Jayotri Academy Event Photo ${id}`
+    };
+  });
 
   return (
     <div className="min-h-screen bg-white">
