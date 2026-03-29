@@ -36,7 +36,7 @@ export default function Newsletter() {
             required
           />
           <Button className="h-12 bg-accent text-primary px-10 rounded-md font-bold text-sm uppercase tracking-widest hover:bg-white transition-colors">
-            Request Prospectus
+            Submit
           </Button>
         </form>
         <div className="mt-8 flex justify-center gap-6">
