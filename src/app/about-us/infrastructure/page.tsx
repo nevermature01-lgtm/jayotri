@@ -86,7 +86,7 @@ export default function InfrastructurePage() {
               
               <div className="sm:col-span-2 relative aspect-video rounded-2xl overflow-hidden shadow-2xl mt-4">
                 <Image
-                  src="/ABOUT US/INFRASTRUCTURE/infrastructure.webp"
+                  src="/ABOUT US/School Information/infrastructure.webp"
                   alt="Jayotri Academy Campus"
                   fill
                   className="object-cover"

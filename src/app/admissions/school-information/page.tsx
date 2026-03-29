@@ -3,7 +3,6 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { 
   School, 
   Info, 
@@ -16,8 +15,6 @@ import {
 } from 'lucide-react';
 
 export default function SchoolInformationPage() {
-  const campusImg = PlaceHolderImages.find(img => img.id === 'hero-campus');
-
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -77,15 +74,12 @@ export default function SchoolInformationPage() {
 
             <div className="lg:w-1/2 relative">
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
-                {campusImg && (
-                  <Image
-                    src={campusImg.imageUrl}
-                    alt="Jayotri Academy Campus"
-                    fill
-                    className="object-cover"
-                    data-ai-hint="university building"
-                  />
-                )}
+                <Image
+                  src="/ABOUT US/School Information/infrastructure.webp"
+                  alt="Jayotri Academy Campus"
+                  fill
+                  className="object-cover"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-8 left-8 text-white">
                   <p className="text-4xl font-headline font-bold">20 Acres</p>
