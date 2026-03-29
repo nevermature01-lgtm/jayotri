@@ -22,7 +22,6 @@ import {
   Target,
   CheckCircle2
 } from 'lucide-react';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Autoplay from 'embla-carousel-autoplay';
 import {
   Carousel,
@@ -58,9 +57,9 @@ export default function Home() {
 
   const heroSlides = [
     { 
-      imageUrl: '/7.webp', 
-      description: 'Jayotri Academy Main Building', 
-      imageHint: 'school building' 
+      imageUrl: '/30.webp', 
+      description: 'Jayotri Academy Campus View', 
+      imageHint: 'school campus' 
     },
     { 
       imageUrl: '/14 (1).webp', 
@@ -73,9 +72,6 @@ export default function Home() {
       imageHint: 'students' 
     },
   ];
-
-  const heroCampusImg = PlaceHolderImages.find(img => img.id === 'hero-campus');
-  const classroomHeroImg = PlaceHolderImages.find(img => img.id === 'classroom-hero');
 
   const featureCards = [
     {
@@ -244,16 +240,14 @@ export default function Home() {
               </div>
               <div className="lg:w-1/2 relative">
                 <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
-                  {heroCampusImg && (
-                    <Image
-                      src={heroCampusImg.imageUrl}
-                      alt="Our Campus Heritage"
-                      fill
-                      className="object-cover"
-                      unoptimized={true}
-                      data-ai-hint="university building"
-                    />
-                  )}
+                  <Image
+                    src="/7.webp"
+                    alt="Our Campus Heritage"
+                    fill
+                    className="object-cover"
+                    unoptimized={true}
+                    data-ai-hint="university building"
+                  />
                 </div>
                 {/* Decorative element */}
                 <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-accent rounded-full -z-10 opacity-50"></div>
@@ -364,18 +358,16 @@ export default function Home() {
 
         <Newsletter />
 
-        {/* Academy Promotion Section - Optimized sizes */}
+        {/* Academy Promotion Section */}
         <section className="relative h-[50vh] md:h-[60vh] w-full overflow-hidden">
-          {classroomHeroImg && (
-            <Image
-              src={classroomHeroImg.imageUrl}
-              alt="Academy Classroom"
-              fill
-              className="object-cover"
-              unoptimized={true}
-              data-ai-hint="classroom students"
-            />
-          )}
+          <Image
+            src="https://picsum.photos/seed/univ6/1920/1080"
+            alt="Academy Classroom"
+            fill
+            className="object-cover"
+            unoptimized={true}
+            data-ai-hint="classroom students"
+          />
           <div className="absolute inset-0 bg-black/50 flex items-center">
             <div className="max-w-screen-2xl mx-auto px-6 md:px-12 w-full">
               <div className="max-w-2xl">

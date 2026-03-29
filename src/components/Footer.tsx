@@ -1,11 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Facebook, Instagram, Twitter, MapPin, Mail, Phone } from 'lucide-react';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function Footer() {
-  const mapImage = PlaceHolderImages.find(img => img.id === 'campus-map');
-
   return (
     <footer className="bg-primary text-white pt-20 pb-10">
       <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
@@ -77,17 +74,16 @@ export default function Footer() {
                 <p>info@jayotriacademy.com</p>
               </div>
             </div>
-            {mapImage && (
-              <div className="relative w-full h-24 overflow-hidden rounded-lg opacity-60 hover:opacity-100 transition-opacity duration-500 mt-4 border border-white/10">
-                <Image 
-                  src={mapImage.imageUrl}
-                  alt="Campus Map"
-                  fill
-                  className="object-cover"
-                  data-ai-hint="map"
-                />
-              </div>
-            )}
+            <div className="relative w-full h-24 overflow-hidden rounded-lg opacity-60 hover:opacity-100 transition-opacity duration-500 mt-4 border border-white/10">
+              <Image 
+                src="https://picsum.photos/seed/univ5/600/400"
+                alt="Campus Map"
+                fill
+                className="object-cover"
+                unoptimized={true}
+                data-ai-hint="campus map"
+              />
+            </div>
           </div>
         </div>
 
