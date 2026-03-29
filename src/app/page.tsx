@@ -57,11 +57,11 @@ export default function Home() {
   }, []);
 
   const heroSlides = [
-    PlaceHolderImages.find(img => img.id === 'hero-campus'),
+    { id: 'custom-hero', imageUrl: '/7.webp', description: 'Jayotri Academy Campus', imageHint: 'school campus' },
     PlaceHolderImages.find(img => img.id === 'student-life'),
     PlaceHolderImages.find(img => img.id === 'research-lab'),
     PlaceHolderImages.find(img => img.id === 'graduation'),
-  ].filter(Boolean);
+  ].filter(Boolean) as any[];
 
   const heroCampusImg = PlaceHolderImages.find(img => img.id === 'hero-campus');
   const classroomHeroImg = PlaceHolderImages.find(img => img.id === 'classroom-hero');
@@ -121,6 +121,7 @@ export default function Home() {
                         fill
                         className="object-cover"
                         priority={index === 0}
+                        unoptimized={true}
                         data-ai-hint={slide.imageHint}
                       />
                     )}
@@ -240,6 +241,7 @@ export default function Home() {
                       alt="Our Campus Heritage"
                       fill
                       className="object-cover"
+                      unoptimized={true}
                       data-ai-hint="university building"
                     />
                   )}
@@ -361,6 +363,7 @@ export default function Home() {
               alt="Academy Classroom"
               fill
               className="object-cover"
+              unoptimized={true}
               data-ai-hint="classroom students"
             />
           )}
