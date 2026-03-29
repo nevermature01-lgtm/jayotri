@@ -2,16 +2,10 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
 import Newsletter from '@/components/Newsletter';
 import { Button } from '@/components/ui/button';
 import { 
-  School, 
-  Award, 
-  ArrowRight, 
-  ExternalLink, 
   GraduationCap, 
   Brain, 
   Lightbulb, 
@@ -19,6 +13,7 @@ import {
   Users, 
   History,
   BookOpen,
+  School,
   Target,
   CheckCircle2
 } from 'lucide-react';
@@ -128,7 +123,6 @@ export default function Home() {
                       className="object-cover"
                       priority={index === 0}
                       unoptimized={true}
-                      data-ai-hint={slide.imageHint}
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/40 to-transparent"></div>
                   </div>
@@ -246,7 +240,6 @@ export default function Home() {
                     fill
                     className="object-cover"
                     unoptimized={true}
-                    data-ai-hint="university building"
                   />
                 </div>
                 {/* Decorative element */}
@@ -366,7 +359,6 @@ export default function Home() {
             fill
             className="object-cover"
             unoptimized={true}
-            data-ai-hint="classroom students"
           />
           <div className="absolute inset-0 bg-black/50 flex items-center">
             <div className="max-w-screen-2xl mx-auto px-6 md:px-12 w-full">
@@ -385,8 +377,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 }
