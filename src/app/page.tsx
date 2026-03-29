@@ -57,7 +57,7 @@ export default function Home() {
 
   const heroSlides = [
     { 
-      imageUrl: '/30.webp', 
+      imageUrl: '/7.webp', 
       description: 'Jayotri Academy Campus View', 
       imageHint: 'school campus' 
     },
@@ -139,7 +139,7 @@ export default function Home() {
                         <span className="inline-block px-4 py-1 bg-accent text-primary text-[10px] font-bold tracking-[0.2em] mb-6 rounded-sm">
                           SINCE 2008
                         </span>
-                        <h1 className="font-headline text-5xl sm:text-7xl md:text-8xl text-white font-black tracking-tighter leading-[0.95] md:leading-[0.9] mb-8 text-balance">
+                        <h1 className="font-headline text-5xl sm:text-7xl md:text-8xl text-white font-black tracking-tighter lineage-[0.95] md:leading-[0.9] mb-8 text-balance">
                           Jayotri Academy
                         </h1>
                         <p className="text-lg md:text-xl text-white/80 font-body max-w-xl mb-10 leading-relaxed">
