@@ -156,12 +156,8 @@ export default function Navigation() {
           </div>
         </div>
 
-        {/* Right Section: Desktop Actions & Mobile Menu Trigger */}
+        {/* Right Section: Mobile Menu Trigger */}
         <div className="flex-1 flex items-center justify-end gap-3">
-          <Button className="hidden sm:flex bg-[#00b2a9] text-white px-6 font-bold text-[10px] uppercase tracking-[0.2em] rounded-none h-11">
-            Apply Now
-          </Button>
-
           <div className="md:hidden">
             <Sheet>
               <SheetTrigger asChild>
