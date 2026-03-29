@@ -72,11 +72,6 @@ export default function Home() {
       description: 'Shaping the Thinkers of Tomorrow', 
       imageHint: 'students' 
     },
-    { 
-      imageUrl: 'https://picsum.photos/seed/jayotri4/1920/1080', 
-      description: 'A Legacy of Academic Success', 
-      imageHint: 'graduation' 
-    },
   ];
 
   const heroCampusImg = PlaceHolderImages.find(img => img.id === 'hero-campus');
