@@ -8,7 +8,7 @@ export default function SchoolProspectusPage() {
   // Array of 10 prospectus images to be displayed vertically
   const prospectusImages = [
     "/ABOUT US/School Prospectus/Prospectus-New-1-scaled-1-1024x1024.webp",
-    "/ABOUT US/School Prospectus/Prospectus-New-2-scaled-1-1024x1024.webp",
+    "/ABOUT US/School Prospectus/Prospectus-New-2-scaled-1-1024x512.webp",
     "/ABOUT US/School Prospectus/Prospectus-New-3-scaled-1-1024x1024.webp",
     "/ABOUT US/School Prospectus/Prospectus-New-4-scaled-1-1024x1024.webp",
     "/ABOUT US/School Prospectus/Prospectus-New-5-scaled-1-1024x1024.webp",
@@ -32,7 +32,7 @@ export default function SchoolProspectusPage() {
           <div className="w-20 h-1 bg-[#00b2a9] mx-auto mt-4 rounded-full" />
         </section>
 
-        {/* Prospectus Images Vertical List - Removed extra space, shadows, and borders */}
+        {/* Prospectus Images Vertical List - No extra space, full width */}
         <section className="max-w-4xl mx-auto px-0">
           <div className="flex flex-col">
             {prospectusImages.map((src, index) => (
