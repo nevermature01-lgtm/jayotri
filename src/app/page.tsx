@@ -60,7 +60,7 @@ export default function Home() {
     },
     { 
       desktopUrl: '/14 (1).webp', 
-      mobileUrl: '/14 (1).webp', 
+      mobileUrl: '/mob-2.webp', 
       description: 'Excellence in Classroom Learning', 
       imageHint: 'classroom' 
     },
@@ -157,7 +157,7 @@ export default function Home() {
                           <Button size="lg" className="w-full sm:w-auto bg-white text-primary hover:bg-slate-100 font-bold uppercase tracking-widest text-xs px-8 h-14">
                             Discover Programs
                           </Button>
-                          <Button variant="outline" size="lg" className="w-full sm:w-auto bg-white/10 border-white/30 text-white backdrop-blur-xl hover:bg-white/20 font-bold uppercase tracking-widest text-xs px-8 h-14 shadow-2xl transition-all duration-300">
+                          <Button variant="outline" size="lg" className="w-full sm:w-auto border-white/30 text-white backdrop-blur-xl hover:bg-white/10 font-bold uppercase tracking-widest text-xs px-8 h-14 shadow-2xl transition-all duration-300">
                             Visit Campus
                           </Button>
                         </div>
