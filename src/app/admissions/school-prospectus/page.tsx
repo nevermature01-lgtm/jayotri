@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import Image from 'next/image';
 
 export default function SchoolProspectusPage() {
-  // Array of 10 prospectus images to be displayed vertically with the specific naming convention
+  // Array of 10 prospectus images to be displayed vertically
   const prospectusImages = [
     "/ABOUT US/School Prospectus/Prospectus-New-1-scaled-1-1024x1024.webp",
     "/ABOUT US/School Prospectus/Prospectus-New-2-scaled-1-1024x1024.webp",
@@ -23,35 +23,29 @@ export default function SchoolProspectusPage() {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      <main className="bg-[#f5f5f5] pb-20">
-        {/* Simple Header Section - Only Heading */}
-        <section className="py-16 text-center">
+      <main className="pb-0">
+        {/* Simple Header Section */}
+        <section className="py-12 text-center bg-white">
           <h1 className="font-headline text-4xl md:text-5xl text-slate-800 font-bold">
             School Prospectus
           </h1>
           <div className="w-20 h-1 bg-[#00b2a9] mx-auto mt-4 rounded-full" />
         </section>
 
-        {/* Prospectus Images Vertical List - One image per line */}
-        <section className="max-w-5xl mx-auto px-4 md:px-6">
-          <div className="flex flex-col gap-6 md:gap-10">
+        {/* Prospectus Images Vertical List - Removed extra space, shadows, and borders */}
+        <section className="max-w-4xl mx-auto px-0">
+          <div className="flex flex-col">
             {prospectusImages.map((src, index) => (
-              <div key={index} className="relative w-full shadow-xl rounded-sm overflow-hidden bg-white border border-slate-200">
-                {/* 
-                  Maintain a standard document aspect ratio. 
-                  Using object-contain ensures the image is NEVER cut off,
-                  even if the aspect ratio of the actual file differs slightly.
-                */}
-                <div className="relative aspect-[1/1.414] w-full bg-white">
-                  <Image
-                    src={src}
-                    alt={`Prospectus Page ${index + 1}`}
-                    fill
-                    className="object-contain"
-                    sizes="(max-width: 1024px) 100vw, 1024px"
-                    priority={index < 2} // Priority load for visible images
-                  />
-                </div>
+              <div key={index} className="relative w-full">
+                <Image
+                  src={src}
+                  alt={`Prospectus Page ${index + 1}`}
+                  width={1024}
+                  height={1448}
+                  className="w-full h-auto block"
+                  priority={index < 2}
+                  sizes="(max-width: 896px) 100vw, 896px"
+                />
               </div>
             ))}
           </div>
