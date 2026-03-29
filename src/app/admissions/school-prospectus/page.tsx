@@ -12,7 +12,7 @@ export default function SchoolProspectusPage() {
     "/ABOUT US/School Prospectus/Prospectus-New-3-scaled-1-1024x512.webp",
     "/ABOUT US/School Prospectus/Prospectus-New-4-scaled-1-1024x512.webp",
     "/ABOUT US/School Prospectus/Prospectus-New-5-scaled-1-1024x512.webp",
-    "/ABOUT US/School Prospectus/Prospectus-New-6-scaled-1-1024x1024.webp",
+    "/ABOUT US/School Prospectus/Prospectus-New-6-scaled-1-1024x512.webp",
     "/ABOUT US/School Prospectus/Prospectus-New-7-scaled-1-1024x1024.webp",
     "/ABOUT US/School Prospectus/Prospectus-New-8-scaled-1-1024x1024.webp",
     "/ABOUT US/School Prospectus/Prospectus-New-9-scaled-1-1024x1024.webp",
@@ -35,19 +35,22 @@ export default function SchoolProspectusPage() {
         {/* Prospectus Images Vertical List - No extra space, full width */}
         <section className="max-w-4xl mx-auto px-0">
           <div className="flex flex-col">
-            {prospectusImages.map((src, index) => (
-              <div key={index} className="relative w-full">
-                <Image
-                  src={src}
-                  alt={`Prospectus Page ${index + 1}`}
-                  width={1024}
-                  height={1448}
-                  className="w-full h-auto block"
-                  priority={index < 2}
-                  sizes="(max-width: 896px) 100vw, 896px"
-                />
-              </div>
-            ))}
+            {prospectusImages.map((src, index) => {
+              const isWide = src.includes('1024x512');
+              return (
+                <div key={index} className="relative w-full">
+                  <Image
+                    src={src}
+                    alt={`Prospectus Page ${index + 1}`}
+                    width={1024}
+                    height={isWide ? 512 : 1024}
+                    className="w-full h-auto block"
+                    priority={index < 2}
+                    sizes="(max-width: 896px) 100vw, 896px"
+                  />
+                </div>
+              );
+            })}
           </div>
         </section>
       </main>
