@@ -68,7 +68,7 @@ export default function Home() {
       imageHint: 'classroom' 
     },
     { 
-      imageUrl: 'https://picsum.photos/seed/jayotri3/1920/1080', 
+      imageUrl: '/37 (1).webp', 
       description: 'Shaping the Thinkers of Tomorrow', 
       imageHint: 'students' 
     },
