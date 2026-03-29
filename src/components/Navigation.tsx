@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Search, Menu, ChevronDown } from 'lucide-react';
+import { Menu, ChevronDown } from 'lucide-react';
 import {
   Sheet,
   SheetContent,
@@ -177,7 +177,7 @@ export default function Navigation() {
             />
           </Link>
 
-          {/* Desktop Nav (Strictly Centered and Aligned) */}
+          {/* Desktop Nav (Centered) */}
           <div className="hidden md:flex items-center space-x-6 whitespace-nowrap">
             {navItems.map((item) => (
               item.subItems ? (
@@ -209,10 +209,7 @@ export default function Navigation() {
         </div>
 
         {/* Right Section: Actions */}
-        <div className="flex-1 flex items-center justify-end gap-2 md:gap-4">
-          <Button variant="ghost" size="icon" className="text-slate-500 hover:bg-slate-100">
-            <Search className="h-5 w-5" />
-          </Button>
+        <div className="flex-1 flex items-center justify-end">
           <Button className="hidden sm:flex bg-[#00b2a9] text-white px-6 font-bold text-[10px] uppercase tracking-[0.2em] rounded-none h-11">
             Apply Now
           </Button>
