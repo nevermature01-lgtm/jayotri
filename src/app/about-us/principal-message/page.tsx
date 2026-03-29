@@ -3,12 +3,9 @@
 import Image from 'next/image';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Quote } from 'lucide-react';
 
 export default function PrincipalMessagePage() {
-  const principalImg = PlaceHolderImages.find(img => img.id === 'principal-portrait');
-
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -35,15 +32,12 @@ export default function PrincipalMessagePage() {
             {/* Principal Image */}
             <div className="lg:w-2/5 w-full">
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                {principalImg && (
-                  <Image
-                    src={principalImg.imageUrl}
-                    alt="Mr. Yogendra Mishra - Principal"
-                    fill
-                    className="object-cover"
-                    data-ai-hint="professional portrait"
-                  />
-                )}
+                <Image
+                  src="/ABOUT US/PRINCIPAL MESSAGE/Yogendra-Mishra.webp"
+                  alt="Mr. Yogendra Mishra - Principal"
+                  fill
+                  className="object-cover"
+                />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/80 to-transparent p-8 text-white">
                   <p className="font-headline text-2xl font-bold">Mr. Yogendra Mishra</p>
                   <p className="text-sm uppercase tracking-widest text-accent font-bold">Principal, Jayotri Academy</p>
