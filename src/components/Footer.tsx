@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="bg-primary text-white pt-20 pb-10">
       <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
           {/* Logo & Description */}
           <div className="space-y-6">
             <Link href="/" className="inline-block bg-white p-2 rounded-lg">
@@ -38,22 +38,11 @@ export default function Footer() {
             <h4 className="font-headline text-xl font-bold mb-6">Quick Links</h4>
             <ul className="space-y-4 text-sm text-white/70">
               <li><Link href="/about-us/our-school" className="hover:text-accent transition-colors">Our School</Link></li>
+              <li><Link href="/about-us/vision-values" className="hover:text-accent transition-colors">Vision & Mission</Link></li>
               <li><Link href="/admissions/admission-procedure" className="hover:text-accent transition-colors">Admissions</Link></li>
               <li><Link href="/academics/result" className="hover:text-accent transition-colors">Examination Result</Link></li>
               <li><Link href="/academics/syllabus" className="hover:text-accent transition-colors">Academic Syllabus</Link></li>
               <li><Link href="/contact-us" className="hover:text-accent transition-colors">Contact Us</Link></li>
-            </ul>
-          </div>
-
-          {/* Compliance Links */}
-          <div>
-            <h4 className="font-headline text-xl font-bold mb-6">Compliance</h4>
-            <ul className="space-y-4 text-sm text-white/70">
-              <li><Link href="/the-school/building-safety-certificate" className="hover:text-accent transition-colors">Safety Certificates</Link></li>
-              <li><Link href="/the-school/parents-teachers-association" className="hover:text-accent transition-colors">PTA Members</Link></li>
-              <li><Link href="/the-school/school-management-committee" className="hover:text-accent transition-colors">SMC Committee</Link></li>
-              <li><Link href="/admissions/fee-structure" className="hover:text-accent transition-colors">Fee Structure</Link></li>
-              <li><Link href="/gallery/media" className="hover:text-accent transition-colors">Photo Gallery</Link></li>
             </ul>
           </div>
 
@@ -66,7 +55,7 @@ export default function Footer() {
             </div>
             <div className="flex gap-4">
               <Phone className="h-5 w-5 text-accent shrink-0" />
-              <div className="text-sm text-white/70 space-y-1">
+              <div className="text-sm text-white/70 space-y-2">
                 <p><span className="font-bold">Principal:</span> 9557558008</p>
                 <p><span className="font-bold">Director:</span> 8650332851</p>
                 <p><span className="font-bold">Account Office:</span> 9837221611</p>
