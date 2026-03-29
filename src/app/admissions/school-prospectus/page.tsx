@@ -5,12 +5,18 @@ import Footer from '@/components/Footer';
 import Image from 'next/image';
 
 export default function SchoolProspectusPage() {
-  // Assuming the images are named based on the page numbers visible in the screenshot (2, 3, 4, 5...)
-  const prospectusPages = [
-    { left: "/ABOUT US/School Prospectus/2.webp", right: "/ABOUT US/School Prospectus/3.webp" },
-    { left: "/ABOUT US/School Prospectus/4.webp", right: "/ABOUT US/School Prospectus/5.webp" },
-    { left: "/ABOUT US/School Prospectus/6.webp", right: "/ABOUT US/School Prospectus/7.webp" },
-    { left: "/ABOUT US/School Prospectus/8.webp", right: "/ABOUT US/School Prospectus/9.webp" },
+  // Array of 10 prospectus images to be displayed vertically
+  const prospectusImages = [
+    "/ABOUT US/School Prospectus/1.webp",
+    "/ABOUT US/School Prospectus/2.webp",
+    "/ABOUT US/School Prospectus/3.webp",
+    "/ABOUT US/School Prospectus/4.webp",
+    "/ABOUT US/School Prospectus/5.webp",
+    "/ABOUT US/School Prospectus/6.webp",
+    "/ABOUT US/School Prospectus/7.webp",
+    "/ABOUT US/School Prospectus/8.webp",
+    "/ABOUT US/School Prospectus/9.webp",
+    "/ABOUT US/School Prospectus/10.webp",
   ];
 
   return (
@@ -26,27 +32,20 @@ export default function SchoolProspectusPage() {
           <div className="w-20 h-1 bg-[#00b2a9] mx-auto mt-4 rounded-full" />
         </section>
 
-        {/* Prospectus Images Grid */}
-        <section className="max-w-screen-xl mx-auto px-4 md:px-6">
-          <div className="flex flex-col gap-12 md:gap-20">
-            {prospectusPages.map((pair, index) => (
-              <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-0 shadow-2xl rounded-sm overflow-hidden bg-white">
-                <div className="relative aspect-[1/1.1] w-full">
+        {/* Prospectus Images Vertical List */}
+        <section className="max-w-4xl mx-auto px-4 md:px-6">
+          <div className="flex flex-col gap-8 md:gap-12">
+            {prospectusImages.map((src, index) => (
+              <div key={index} className="relative w-full shadow-2xl rounded-sm overflow-hidden bg-white border border-slate-200">
+                {/* Maintain a standard document aspect ratio (roughly 1:1.41 for A4) */}
+                <div className="relative aspect-[1/1.41] w-full">
                   <Image
-                    src={pair.left}
-                    alt={`Prospectus Page ${index * 2 + 2}`}
+                    src={src}
+                    alt={`Prospectus Page ${index + 1}`}
                     fill
                     className="object-contain md:object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
-                <div className="relative aspect-[1/1.1] w-full border-l border-slate-100">
-                  <Image
-                    src={pair.right}
-                    alt={`Prospectus Page ${index * 2 + 3}`}
-                    fill
-                    className="object-contain md:object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    sizes="(max-width: 896px) 100vw, 896px"
+                    priority={index < 2} // Priority load for first two images
                   />
                 </div>
               </div>
