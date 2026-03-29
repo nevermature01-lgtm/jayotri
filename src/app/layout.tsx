@@ -5,6 +5,9 @@ import { Toaster } from "@/components/ui/toaster";
 export const metadata: Metadata = {
   title: 'Jayotri Academy | Excellence in Tradition',
   description: 'Join a community where tradition meets the vanguard of research. Jayotri Academy - Shaping the thinkers of tomorrow.',
+  icons: {
+    icon: '/jayotri_logo_upscaled.png',
+  },
 };
 
 export default function RootLayout({
