@@ -139,11 +139,11 @@ export default function Home() {
                       priority={index === 0}
                       unoptimized={true}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/40 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
                   </div>
                   
-                  <div className="relative z-10 h-full flex items-center">
-                    <div className="max-w-screen-2xl mx-auto px-6 md:px-12 w-full">
+                  <div className="relative z-10 h-full flex items-end pb-12 md:pb-24">
+                    <div className="max-w-screen-2xl mx-auto px-6 md:px-12 w-full flex flex-col md:flex-row md:items-end md:justify-between gap-8">
                       <div className="max-w-3xl">
                         <span className="inline-block px-4 py-1 bg-accent text-primary text-[10px] font-bold tracking-[0.2em] mb-6 rounded-sm">
                           SINCE 2008
@@ -151,7 +151,7 @@ export default function Home() {
                         <h1 className="font-headline text-5xl sm:text-7xl md:text-8xl text-white font-black tracking-tighter lineage-[0.95] md:leading-[0.9] mb-8 text-balance">
                           Jayotri Academy
                         </h1>
-                        <p className="text-lg md:text-xl text-white/80 font-body max-w-xl mb-10 leading-relaxed">
+                        <p className="hidden md:block text-lg md:text-xl text-white/80 font-body max-w-xl mb-10 leading-relaxed">
                           Jayotri Academy is an English medium school believing in the all-round development of a child with in a coeducational, compassionate welcoming and broadminded community. It is based on the central board of secondary Education (CBSE) curriculum.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
@@ -166,12 +166,12 @@ export default function Home() {
                             </Link>
                           </Button>
                         </div>
-                        
-                        {/* Navigation Buttons placed below CTA */}
-                        <div className="flex justify-end gap-4 mt-8 max-w-xl">
-                          <CarouselPrevious className="relative left-0 translate-y-0 bg-white/10 border-white/30 text-white backdrop-blur-md hover:bg-white/20 hover:text-white" />
-                          <CarouselNext className="relative right-0 translate-y-0 bg-white/10 border-white/30 text-white backdrop-blur-md hover:bg-white/20 hover:text-white" />
-                        </div>
+                      </div>
+
+                      {/* Navigation Buttons aligned to the right on desktop */}
+                      <div className="flex justify-center md:justify-end gap-4 mt-4 md:mt-0">
+                        <CarouselPrevious className="relative left-0 translate-y-0 bg-white/10 border-white/30 text-white backdrop-blur-md hover:bg-white/20 hover:text-white" />
+                        <CarouselNext className="relative right-0 translate-y-0 bg-white/10 border-white/30 text-white backdrop-blur-md hover:bg-white/20 hover:text-white" />
                       </div>
                     </div>
                   </div>
