@@ -9,7 +9,7 @@ export default function SchoolProspectusPage() {
   const prospectusImages = [
     "/ABOUT US/School Prospectus/Prospectus-New-1-scaled-1-1024x1024.webp",
     "/ABOUT US/School Prospectus/Prospectus-New-2-scaled-1-1024x512.webp",
-    "/ABOUT US/School Prospectus/Prospectus-New-3-scaled-1-1024x1024.webp",
+    "/ABOUT US/School Prospectus/Prospectus-New-3-scaled-1-1024x512.webp",
     "/ABOUT US/School Prospectus/Prospectus-New-4-scaled-1-1024x1024.webp",
     "/ABOUT US/School Prospectus/Prospectus-New-5-scaled-1-1024x1024.webp",
     "/ABOUT US/School Prospectus/Prospectus-New-6-scaled-1-1024x1024.webp",
