@@ -35,6 +35,7 @@ export default function SafetyCertificatesPage() {
                     alt={`Safety Certificate Page ${index + 1}`}
                     width={849}
                     height={1200} // Maintains aspect ratio for standard certificate scans
+                    unoptimized={true}
                     className="w-full h-auto block"
                     priority={index === 0}
                     sizes="(max-width: 896px) 100vw, 896px"

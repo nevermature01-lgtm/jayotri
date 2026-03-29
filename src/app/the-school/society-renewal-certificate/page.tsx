@@ -34,6 +34,7 @@ export default function SocietyRenewalCertificatePage() {
                     alt={`Society Renewal Certificate Page ${index + 1}`}
                     width={600}
                     height={849}
+                    unoptimized={true}
                     className="w-full h-auto block"
                     priority={index === 0}
                     sizes="(max-width: 896px) 100vw, 896px"

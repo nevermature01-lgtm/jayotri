@@ -34,6 +34,7 @@ export default function SelfClarificationPage() {
                     alt={`Self Clarification Page ${index + 1}`}
                     width={600}
                     height={852}
+                    unoptimized={true}
                     className="w-full h-auto block"
                     priority={index === 0}
                     sizes="(max-width: 896px) 100vw, 896px"

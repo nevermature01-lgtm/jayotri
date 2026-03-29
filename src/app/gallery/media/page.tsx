@@ -7,7 +7,7 @@ import { ImageIcon, Maximize2 } from 'lucide-react';
 
 export default function MediaGalleryPage() {
   // Mapping for images with non-standard resolutions in filenames to ensure they load correctly
-  const galleryImages = Array.from({ length: 35 }, (_, i) => {
+  const galleryImages = Array.from({ length: 39 }, (_, i) => {
     const id = i + 1;
     let src = '';
     
@@ -52,6 +52,34 @@ export default function MediaGalleryPage() {
       src = `/GALLERY/MEDIA/19-768x1024.webp`;
     } else if (id === 20) {
       src = `/GALLERY/MEDIA/20-1024x576.webp`;
+    } else if (id === 22) {
+      src = `/GALLERY/MEDIA/22-768x1024.webp`;
+    } else if (id === 23) {
+      src = `/GALLERY/MEDIA/23-1024x462.webp`;
+    } else if (id === 26) {
+      src = `/GALLERY/MEDIA/26-1024x682.webp`;
+    } else if (id === 28) {
+      src = `/GALLERY/MEDIA/28-1024x461.webp`;
+    } else if (id === 30) {
+      src = `/GALLERY/MEDIA/30-834x1024.webp`;
+    } else if (id === 31) {
+      src = `/GALLERY/MEDIA/31-1024x682.webp`;
+    } else if (id === 32) {
+      src = `/GALLERY/MEDIA/32-1024x683.webp`;
+    } else if (id === 33) {
+      src = `/GALLERY/MEDIA/33.webp`;
+    } else if (id === 34) {
+      src = `/GALLERY/MEDIA/34.webp`;
+    } else if (id === 35) {
+      src = `/GALLERY/MEDIA/35.webp`;
+    } else if (id === 36) {
+      src = `/GALLERY/MEDIA/36-1024x462.webp`;
+    } else if (id === 37) {
+      src = `/GALLERY/MEDIA/37.webp`;
+    } else if (id === 38) {
+      src = `/GALLERY/MEDIA/38-768x1024.webp`;
+    } else if (id === 39) {
+      src = `/GALLERY/MEDIA/39-576x1024.webp`;
     } else {
       // Default pattern for the rest of the images
       src = `/GALLERY/MEDIA/${id}-683x1024.webp`;
