@@ -122,8 +122,8 @@ export default function Navigation() {
             {navItems.map((item) => (
               item.subItems ? (
                 <div key={item.name} className="group relative h-20 flex items-center">
-                  <button className="flex items-center gap-1.5 text-slate-600 font-bold hover:text-primary transition-colors text-[10px] uppercase tracking-[0.2em] outline-none">
-                    {item.name} <ChevronDown className="h-3.5 w-3.5 opacity-50 group-hover:rotate-180 transition-transform duration-300" />
+                  <button className="flex items-center gap-1.5 text-slate-700 font-headline font-bold hover:text-primary transition-colors text-[13px] uppercase tracking-wider outline-none">
+                    {item.name} <ChevronDown className="h-4 w-4 opacity-50 group-hover:rotate-180 transition-transform duration-300" />
                   </button>
                   
                   {/* Dropdown Menu Container */}
@@ -134,7 +134,7 @@ export default function Navigation() {
                           <Link 
                             key={sub.name} 
                             href={sub.href} 
-                            className="w-full text-[9px] font-bold uppercase tracking-widest px-4 py-3 hover:bg-[#00b2a9]/10 hover:text-primary transition-all rounded-lg"
+                            className="w-full text-[11px] font-body font-bold uppercase tracking-widest px-4 py-3 hover:bg-[#00b2a9]/10 hover:text-primary transition-all rounded-lg"
                           >
                             {sub.name}
                           </Link>
@@ -147,7 +147,7 @@ export default function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="flex items-center text-slate-600 font-bold hover:text-primary transition-colors text-[10px] uppercase tracking-[0.2em] h-20"
+                  className="flex items-center text-slate-700 font-headline font-bold hover:text-primary transition-colors text-[13px] uppercase tracking-wider h-20"
                 >
                   {item.name}
                 </Link>
@@ -187,7 +187,7 @@ export default function Navigation() {
                   {navItems.map((item) => (
                     item.subItems ? (
                       <AccordionItem key={item.name} value={item.name} className="border-none">
-                        <AccordionTrigger className="text-[11px] font-bold text-slate-700 uppercase tracking-[0.2em] py-4 hover:no-underline">
+                        <AccordionTrigger className="text-[13px] font-headline font-bold text-slate-700 uppercase tracking-wider py-4 hover:no-underline">
                           {item.name}
                         </AccordionTrigger>
                         <AccordionContent className="flex flex-col gap-3 pl-4 pt-1 pb-4">
@@ -195,7 +195,7 @@ export default function Navigation() {
                             <Link
                               key={sub.name}
                               href={sub.href}
-                              className="text-[10px] font-medium text-slate-500 hover:text-primary transition-colors uppercase tracking-widest"
+                              className="text-[11px] font-body font-bold text-slate-500 hover:text-primary transition-colors uppercase tracking-widest"
                             >
                               {sub.name}
                             </Link>
@@ -206,7 +206,7 @@ export default function Navigation() {
                       <Link
                         key={item.name}
                         href={item.href}
-                        className="text-[11px] font-bold text-slate-700 uppercase tracking-[0.2em] py-4 block"
+                        className="text-[13px] font-headline font-bold text-slate-700 uppercase tracking-wider py-4 block"
                       >
                         {item.name}
                       </Link>
