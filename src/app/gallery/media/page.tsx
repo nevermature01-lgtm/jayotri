@@ -7,51 +7,27 @@ import { ImageIcon, Maximize2 } from 'lucide-react';
 
 export default function MediaGalleryPage() {
   // Mapping for images with non-standard resolutions in filenames to ensure they load correctly
-  const imageResolutions: Record<number, string> = {
-    1: '683x1024',
-    2: '768x1024',
-    3: '768x1024',
-    // The following assume common resolution seen in the directory pattern
-    4: '683x1024',
-    5: '683x1024',
-    6: '683x1024',
-    7: '683x1024',
-    8: '683x1024',
-    9: '683x1024',
-    10: '683x1024',
-    11: '683x1024',
-    12: '683x1024',
-    13: '683x1024',
-    14: '683x1024',
-    15: '683x1024',
-    16: '683x1024',
-    17: '683x1024',
-    18: '683x1024',
-    19: '683x1024',
-    20: '683x1024',
-    21: '683x1024',
-    22: '683x1024',
-    23: '683x1024',
-    24: '683x1024',
-    25: '683x1024',
-    26: '683x1024',
-    27: '683x1024',
-    28: '683x1024',
-    29: '683x1024',
-    30: '683x1024',
-    31: '683x1024',
-    32: '683x1024',
-    33: '683x1024',
-    34: '683x1024',
-    35: '683x1024',
-  };
-
   const galleryImages = Array.from({ length: 35 }, (_, i) => {
     const id = i + 1;
-    const res = imageResolutions[id] || '683x1024';
+    let src = '';
+    
+    // Handle specific file naming patterns provided by the user
+    if (id === 1) {
+      src = `/GALLERY/MEDIA/1-683x1024.webp`;
+    } else if (id === 2) {
+      src = `/GALLERY/MEDIA/2-768x1024.webp`;
+    } else if (id === 3) {
+      src = `/GALLERY/MEDIA/3-768x1024.webp`;
+    } else if (id === 4) {
+      src = `/GALLERY/MEDIA/4.webp`;
+    } else {
+      // Default pattern for the rest of the images
+      src = `/GALLERY/MEDIA/${id}-683x1024.webp`;
+    }
+
     return {
       id,
-      src: `/GALLERY/MEDIA/${id}-${res}.webp`,
+      src,
       alt: `Jayotri Academy Event Photo ${id}`
     };
   });
