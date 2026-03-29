@@ -70,8 +70,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-bold uppercase tracking-widest text-white/40">
-          <p>© 2025 Jayotri Academy. All Rights Reserved.</p>
+        <div className="pt-8 border-t border-white/10 flex justify-center items-center text-[10px] font-bold uppercase tracking-widest text-white/40 text-center">
+          <p>© 2016 Jayotri Academy. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
