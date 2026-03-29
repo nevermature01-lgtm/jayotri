@@ -8,6 +8,7 @@ export default function SafeWaterSanitationCertificatePage() {
   // Array of safe water and sanitation certificate images
   const certificateImages = [
     "/THE SCHOOL/SAFE WATER & SANITATION CERTIFICATE/Safe-Water-Sanitation-Certificate_page-0001-724x1024-1-600x849.webp",
+    "/THE SCHOOL/SAFE WATER & SANITATION CERTIFICATE/Safe-Water-Sanitation-Certificate_page-0002-724x1024-1-600x849.webp",
   ];
 
   return (
