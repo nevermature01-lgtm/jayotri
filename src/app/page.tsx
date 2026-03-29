@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Navigation from '@/components/Navigation';
 import Newsletter from '@/components/Newsletter';
+import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { 
   GraduationCap, 
@@ -377,6 +378,7 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   );
 }
