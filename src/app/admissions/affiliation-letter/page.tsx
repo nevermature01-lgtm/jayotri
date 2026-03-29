@@ -7,13 +7,13 @@ import Image from 'next/image';
 export default function AffiliationLetterPage() {
   // Array of 7 affiliation letter images to be displayed vertically
   const affiliationImages = [
-    "/ABOUT US/Affiliation/Affiliation-Letter-1.webp",
-    "/ABOUT US/Affiliation/Affiliation-Letter-2.webp",
-    "/ABOUT US/Affiliation/Affiliation-Letter-3.webp",
-    "/ABOUT US/Affiliation/Affiliation-Letter-4.webp",
-    "/ABOUT US/Affiliation/Affiliation-Letter-5.webp",
-    "/ABOUT US/Affiliation/Affiliation-Letter-6.webp",
-    "/ABOUT US/Affiliation/Affiliation-Letter-7.webp",
+    "/ABOUT US/Affiliation Letter/01.webp",
+    "/ABOUT US/Affiliation Letter/02.webp",
+    "/ABOUT US/Affiliation Letter/03.webp",
+    "/ABOUT US/Affiliation Letter/04.webp",
+    "/ABOUT US/Affiliation Letter/05.webp",
+    "/ABOUT US/Affiliation Letter/06.webp",
+    "/ABOUT US/Affiliation Letter/07.webp",
   ];
 
   return (
