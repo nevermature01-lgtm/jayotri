@@ -134,13 +134,6 @@ export default function MediaGalleryPage() {
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                 />
-                
-                {/* Image Label */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-gradient-to-t from-black/60 to-transparent">
-                  <p className="text-white text-xs font-bold uppercase tracking-widest opacity-80">
-                    Jayotri Academy Highlights
-                  </p>
-                </div>
               </div>
             ))}
           </div>
