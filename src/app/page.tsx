@@ -57,11 +57,27 @@ export default function Home() {
   }, []);
 
   const heroSlides = [
-    { id: 'custom-hero', imageUrl: '/7.webp', description: 'Jayotri Academy Campus', imageHint: 'school campus' },
-    PlaceHolderImages.find(img => img.id === 'student-life'),
-    PlaceHolderImages.find(img => img.id === 'research-lab'),
-    PlaceHolderImages.find(img => img.id === 'graduation'),
-  ].filter(Boolean) as any[];
+    { 
+      imageUrl: '/7.webp', 
+      description: 'Jayotri Academy Main Building', 
+      imageHint: 'school building' 
+    },
+    { 
+      imageUrl: '/14 (1).webp', 
+      description: 'Excellence in Classroom Learning', 
+      imageHint: 'classroom' 
+    },
+    { 
+      imageUrl: 'https://picsum.photos/seed/jayotri3/1920/1080', 
+      description: 'Shaping the Thinkers of Tomorrow', 
+      imageHint: 'students' 
+    },
+    { 
+      imageUrl: 'https://picsum.photos/seed/jayotri4/1920/1080', 
+      description: 'A Legacy of Academic Success', 
+      imageHint: 'graduation' 
+    },
+  ];
 
   const heroCampusImg = PlaceHolderImages.find(img => img.id === 'hero-campus');
   const classroomHeroImg = PlaceHolderImages.find(img => img.id === 'classroom-hero');
@@ -114,17 +130,15 @@ export default function Home() {
               {heroSlides.map((slide, index) => (
                 <CarouselItem key={index} className="relative h-full w-full">
                   <div className="absolute inset-0 z-0">
-                    {slide && (
-                      <Image
-                        src={slide.imageUrl}
-                        alt={slide.description}
-                        fill
-                        className="object-cover"
-                        priority={index === 0}
-                        unoptimized={true}
-                        data-ai-hint={slide.imageHint}
-                      />
-                    )}
+                    <Image
+                      src={slide.imageUrl}
+                      alt={slide.description}
+                      fill
+                      className="object-cover"
+                      priority={index === 0}
+                      unoptimized={true}
+                      data-ai-hint={slide.imageHint}
+                    />
                     <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/40 to-transparent"></div>
                   </div>
                   
