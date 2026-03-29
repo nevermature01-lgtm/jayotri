@@ -13,7 +13,13 @@ git branch -M main
 
 # Stage and commit
 git add .
-git commit -m "Update from Firebase Studio"
+# Check if there are changes to commit to avoid errors on empty commits
+if git diff-index --quiet HEAD -- 2>/dev/null; then
+    echo "No new changes to commit."
+else
+    git commit -m "Update from Firebase Studio"
+fi
 
 echo "Pushing code to GitHub..."
-git push -u origin main
+# Using --force to ensure the local project over-writes the remote (required for new repo initialization)
+git push -u origin main --force
