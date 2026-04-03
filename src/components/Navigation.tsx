@@ -87,6 +87,7 @@ export default function Navigation() {
       name: 'Campus Life', 
       href: '/gallery',
       subItems: [
+        { name: 'Gallery', href: '/gallery' },
         { name: 'Media', href: '/gallery/media' },
       ]
     },
