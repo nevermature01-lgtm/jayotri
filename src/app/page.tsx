@@ -6,7 +6,6 @@ import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Newsletter from '@/components/Newsletter';
 import Footer from '@/components/Footer';
-import Chatbot from '@/components/Chatbot';
 import { Button } from '@/components/ui/button';
 import { 
   GraduationCap, 
@@ -400,7 +399,6 @@ export default function Home() {
         </section>
       </main>
       <Footer />
-      <Chatbot />
     </div>
   );
 }
