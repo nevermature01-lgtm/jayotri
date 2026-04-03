@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { MessageCircle, X, Send, Loader2 } from 'lucide-react';
+import { MessageCircle, Send, Loader2 } from 'lucide-react';
 import { aiCampusGuideChatbot } from '@/ai/flows/ai-campus-guide-chatbot';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -48,7 +48,7 @@ export default function Chatbot() {
           <CardHeader className="bg-primary text-white flex flex-row items-center justify-between p-4 space-y-0">
             <CardTitle className="text-lg font-headline">Campus Guide</CardTitle>
             <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} className="h-10 w-10 hover:bg-white/20 text-white">
-              <X className="h-6 w-6" />
+              {/* Icon removed as requested */}
             </Button>
           </CardHeader>
           <CardContent className="flex-1 p-0 flex flex-col bg-background">
