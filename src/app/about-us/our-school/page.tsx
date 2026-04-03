@@ -41,11 +41,20 @@ export default function OurSchoolPage() {
             <div className="lg:w-1/2">
               <span className="text-[10px] font-bold tracking-[0.3em] text-[#00b2a9] uppercase mb-4 block">Founded in 2015</span>
               
-              {/* Affiliation Information */}
-              <div className="flex flex-wrap gap-x-4 gap-y-2 mb-6 text-[10px] font-bold uppercase tracking-widest text-slate-400">
-                <span>Affiliation No.: 2132244</span>
-                <span>School No.: 70358</span>
-                <span>Society Registration No.: 1313/ 2014-15</span>
+              {/* Highlighted Affiliation Information */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10 p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm">
+                <div className="space-y-1">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#00b2a9]">Affiliation No.</p>
+                  <p className="text-lg font-bold text-slate-800">2132244</p>
+                </div>
+                <div className="space-y-1">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#00b2a9]">School No.</p>
+                  <p className="text-lg font-bold text-slate-800">70358</p>
+                </div>
+                <div className="space-y-1">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#00b2a9]">Society Reg. No.</p>
+                  <p className="text-lg font-bold text-slate-800 text-nowrap">1313/ 2014-15</p>
+                </div>
               </div>
 
               <h2 className="font-headline text-3xl md:text-4xl font-bold text-slate-800 mb-8 leading-tight">
