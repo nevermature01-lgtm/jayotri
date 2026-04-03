@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -59,6 +60,7 @@ export default function Navigation() {
       name: 'Academics', 
       href: '/academics',
       subItems: [
+        { name: 'Academic Structure', href: '/academics/academic-structure' },
         { name: 'Booklist', href: '/academics/booklist' },
         { name: 'Datesheet', href: '/academics/datesheet' },
         { name: 'Syllabus', href: '/academics/syllabus' },
