@@ -23,7 +23,7 @@
     --border: 214 32% 91%;
     --input: 214 32% 91%;
     --ring: 213 100% 14%;
-    --radius: 0.25rem;
+    --radius: 0.5rem;
   }
   .dark {
     --background: 222 47% 11%;
@@ -51,9 +51,13 @@
 @layer base {
   * {
     @apply border-border;
+    -webkit-tap-highlight-color: transparent;
+  }
+  html {
+    @apply scroll-smooth;
   }
   body {
-    @apply bg-background text-foreground font-body;
+    @apply bg-background text-foreground font-body antialiased selection:bg-primary/10 selection:text-primary;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-headline;
@@ -65,5 +69,12 @@
     height: 50px;
     width: auto;
     object-fit: contain;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }

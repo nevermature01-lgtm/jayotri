@@ -18,10 +18,10 @@ export default function Footer() {
   return (
     <footer className="bg-primary text-white pt-20 pb-10">
       <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-24 mb-16 text-center md:text-left">
           {/* Logo & Description */}
-          <div className="space-y-6">
-            <Link href="/" className="inline-block bg-white p-2 rounded-lg">
+          <div className="space-y-6 flex flex-col items-center md:items-start">
+            <Link href="/" className="inline-block bg-white p-2 rounded-lg transition-transform hover:scale-105">
               <img
                 src="/jayotri_logo_upscaled.png"
                 alt="Jayotri Academy Logo"
@@ -45,8 +45,8 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h4 className="font-headline text-xl font-bold mb-6">Quick Links</h4>
+          <div className="flex flex-col items-center md:items-start">
+            <h4 className="font-headline text-xl font-bold mb-6 text-accent">Quick Links</h4>
             <ul className="space-y-4 text-sm text-white/70">
               <li><Link href="/about-us/our-school" className="hover:text-accent transition-colors">Our School</Link></li>
               <li><Link href="/about-us/vision-values" className="hover:text-accent transition-colors">Vision & Mission</Link></li>
@@ -58,13 +58,13 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-6">
-            <h4 className="font-headline text-xl font-bold mb-6">Contact Info</h4>
-            <div className="flex gap-4">
+          <div className="space-y-6 flex flex-col items-center md:items-start">
+            <h4 className="font-headline text-xl font-bold mb-6 text-accent">Contact Info</h4>
+            <div className="flex gap-4 justify-center md:justify-start">
               <MapPin className="h-5 w-5 text-accent shrink-0" />
               <p className="text-sm text-white/70">Bidhuna Road, Bharathana, Dist: Etawah – 206242</p>
             </div>
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-center md:justify-start">
               <Phone className="h-5 w-5 text-accent shrink-0" />
               <div className="text-sm text-white/70 space-y-2">
                 <p><span className="font-bold">Principal:</span> 9557558008</p>
@@ -73,7 +73,7 @@ export default function Footer() {
                 <p><span className="font-bold">Transport:</span> 9536438621</p>
               </div>
             </div>
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-center md:justify-start">
               <Mail className="h-5 w-5 text-accent shrink-0" />
               <p className="text-sm text-white/70">jayotriacademy2015@gmail.com</p>
             </div>
@@ -81,8 +81,12 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10 flex justify-center items-center text-[10px] font-bold uppercase tracking-widest text-white/40 text-center">
-          <p>© 2026 Jayotri Academy. All Rights Reserved.</p>
+        <div className="pt-8 border-t border-white/10 flex flex-col items-center gap-4 text-[10px] font-bold uppercase tracking-widest text-white/40 text-center">
+          <p>© {new Date().getFullYear()} Jayotri Academy. All Rights Reserved.</p>
+          <div className="flex gap-6">
+            <Link href="/admissions/cancellation-and-refund-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/admissions/admission-procedure" className="hover:text-white transition-colors">Terms of Admission</Link>
+          </div>
         </div>
       </div>
     </footer>

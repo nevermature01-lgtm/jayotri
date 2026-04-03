@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
@@ -7,6 +6,7 @@ import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Newsletter from '@/components/Newsletter';
 import Footer from '@/components/Footer';
+import Chatbot from '@/components/Chatbot';
 import { Button } from '@/components/ui/button';
 import { 
   GraduationCap, 
@@ -102,23 +102,23 @@ export default function Home() {
   ];
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen overflow-x-hidden">
       <Navigation />
       
       <main>
         {/* Hero Slider Section */}
-        <section className="relative h-[70vh] md:h-[85vh] w-full overflow-hidden">
+        <section className="relative h-[75vh] md:h-[85vh] w-full overflow-hidden">
           <Carousel 
             className="w-full h-full" 
             opts={{ loop: true }}
             plugins={[
               Autoplay({
-                delay: 4000,
+                delay: 5000,
                 stopOnInteraction: false,
               }),
             ]}
           >
-            <CarouselContent className="h-[70vh] md:h-[85vh]">
+            <CarouselContent className="h-[75vh] md:h-[85vh]">
               {heroSlides.map((slide, index) => (
                 <CarouselItem key={index} className="relative h-full w-full">
                   <div className="absolute inset-0 z-0">
@@ -140,12 +140,12 @@ export default function Home() {
                       priority={index === 0}
                       unoptimized={true}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/30 to-transparent"></div>
                   </div>
                   
                   <div className="relative z-10 h-full flex items-end pb-12 md:pb-24">
                     <div className="max-w-screen-2xl mx-auto px-6 md:px-12 w-full flex flex-col md:flex-row md:items-end md:justify-between gap-8">
-                      <div className="max-w-3xl">
+                      <div className="max-w-3xl animate-fade-in-up">
                         <span className="inline-block px-4 py-1 bg-accent text-primary text-[10px] font-bold tracking-[0.2em] mb-4 md:mb-6 rounded-sm">
                           SINCE 2008
                         </span>
@@ -153,15 +153,15 @@ export default function Home() {
                           Jayotri Academy
                         </h1>
                         <p className="text-sm sm:text-lg md:text-xl text-white/80 font-body max-w-xl mb-8 md:mb-10 leading-relaxed">
-                          Jayotri Academy is an English medium school believing in the all-round development of a child with in a coeducational, compassionate welcoming and broadminded community. It is based on the central board of secondary Education (CBSE) curriculum.
+                          Jayotri Academy is an English medium school believing in the all-round development of a child within a coeducational, compassionate welcoming and broadminded community.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                          <Button asChild size="lg" className="w-full sm:w-auto bg-white text-primary hover:bg-slate-100 font-bold uppercase tracking-widest text-xs px-8 h-12 md:h-14 transition-all">
+                          <Button asChild size="lg" className="w-full sm:w-auto bg-white text-primary hover:bg-slate-100 font-bold uppercase tracking-widest text-[10px] px-8 h-12 md:h-14 transition-all">
                             <Link href="/about-us/our-school">
                               Explore more
                             </Link>
                           </Button>
-                          <Button asChild variant="outline" size="lg" className="w-full sm:w-auto bg-white/10 border-white/30 text-white backdrop-blur-xl hover:bg-white/20 font-bold uppercase tracking-widest text-xs px-8 h-12 md:h-14 shadow-2xl transition-all duration-300">
+                          <Button asChild variant="outline" size="lg" className="w-full sm:w-auto bg-white/10 border-white/30 text-white backdrop-blur-md hover:bg-white/20 font-bold uppercase tracking-widest text-[10px] px-8 h-12 md:h-14 shadow-2xl transition-all duration-300">
                             <Link href="/contact-us">
                               Contact us
                             </Link>
@@ -169,10 +169,10 @@ export default function Home() {
                         </div>
                       </div>
 
-                      {/* Navigation Buttons aligned to the right on desktop */}
+                      {/* Navigation Buttons */}
                       <div className="flex justify-center md:justify-end gap-4 mt-6 md:mt-0">
-                        <CarouselPrevious className="relative left-0 translate-y-0 bg-white/10 border-white/30 text-white backdrop-blur-md hover:bg-white/20 hover:text-white" />
-                        <CarouselNext className="relative right-0 translate-y-0 bg-white/10 border-white/30 text-white backdrop-blur-md hover:bg-white/20 hover:text-white" />
+                        <CarouselPrevious className="relative left-0 translate-y-0 h-10 w-10 bg-white/10 border-white/30 text-white backdrop-blur-md hover:bg-white/20 hover:text-white" />
+                        <CarouselNext className="relative right-0 translate-y-0 h-10 w-10 bg-white/10 border-white/30 text-white backdrop-blur-md hover:bg-white/20 hover:text-white" />
                       </div>
                     </div>
                   </div>
@@ -183,14 +183,14 @@ export default function Home() {
         </section>
 
         {/* Pillars Section */}
-        <section ref={pillarsRef} className="relative py-24 bg-slate-50 overflow-hidden">
+        <section ref={pillarsRef} className="relative py-16 md:py-24 bg-slate-50 overflow-hidden">
           <div className="max-w-screen-2xl mx-auto px-6 md:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 lg:gap-4 relative z-30">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4 relative z-30">
               {featureCards.map((card, idx) => (
                 <div 
                   key={idx}
                   className={cn(
-                    "flex flex-col items-center text-center p-8 md:p-12 transition-all duration-1000 shadow-xl hover:-translate-y-2 hover:shadow-2xl",
+                    "flex flex-col items-center text-center p-8 md:p-12 transition-all duration-1000 shadow-lg hover:-translate-y-2 hover:shadow-2xl rounded-2xl md:rounded-none",
                     isPillarsVisible 
                       ? "opacity-100 translate-y-0" 
                       : "opacity-0 translate-y-24",
@@ -225,16 +225,16 @@ export default function Home() {
         </section>
 
         {/* Who We Are Section */}
-        <section className="py-24 bg-white overflow-hidden">
-          <div className="max-w-screen-2xl mx-auto px-6 md:px-8">
-            <div className="flex flex-col lg:flex-row items-center gap-16">
+        <section className="py-20 md:py-32 bg-white overflow-hidden">
+          <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
+            <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
               <div className="lg:w-1/2">
                 <span className="text-[10px] font-bold tracking-[0.3em] text-[#00b2a9] uppercase mb-4 block">WHO WE ARE</span>
-                <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary mb-8 leading-tight">
+                <h2 className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8 leading-tight">
                   Building strong foundations and shaping future-ready learners.
                 </h2>
                 <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-xl">
-                  We are an educational academy dedicated to nurturing young minds through strong primary instruction and advanced higher education. Our focus is on building academic excellence, critical thinking, and well-rounded development in a supportive learning environment.
+                  We are an educational academy dedicated to nurturing young minds through strong primary instruction and advanced higher education. Our focus is on building academic excellence, critical thinking, and well-rounded development.
                 </p>
                 <div className="space-y-4 mb-10">
                   {[
@@ -250,12 +250,12 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
-                <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-bold uppercase tracking-widest text-xs px-8 h-12 transition-all duration-300">
-                  Discover More
+                <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white font-bold uppercase tracking-widest text-[10px] px-8 h-12 transition-all duration-300 rounded-full">
+                  <Link href="/about-us/our-school">Discover More</Link>
                 </Button>
               </div>
-              <div className="lg:w-1/2 relative">
-                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="lg:w-1/2 relative w-full">
+                <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl">
                   <Image
                     src="/7.webp"
                     alt="Our Campus Heritage"
@@ -265,38 +265,38 @@ export default function Home() {
                   />
                 </div>
                 {/* Decorative element */}
-                <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-accent rounded-full -z-10 opacity-50"></div>
+                <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-accent rounded-full -z-10 opacity-50 blur-2xl"></div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Stats Strip Section */}
-        <section className="bg-[#1c1c1c] py-16">
-          <div className="max-w-screen-2xl mx-auto px-6 md:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0">
+        <section className="bg-[#1c1c1c] py-20">
+          <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-0 text-center">
               {/* Stat 1 */}
-              <div className="flex items-center justify-center gap-8 md:border-r border-white/10 px-4">
-                <Users className="h-14 w-14 text-[#00b2a9]" />
+              <div className="flex flex-col items-center gap-4 md:border-r border-white/10 px-4">
+                <Users className="h-12 w-12 text-[#00b2a9]" />
                 <div>
-                  <div className="text-white text-5xl font-headline font-bold">500+</div>
-                  <div className="text-white/60 text-[10px] font-bold uppercase tracking-[0.2em] mt-1">Students Active</div>
+                  <div className="text-white text-5xl md:text-6xl font-headline font-bold">1700+</div>
+                  <div className="text-white/60 text-[10px] font-bold uppercase tracking-[0.2em] mt-2">Students Enrolled</div>
                 </div>
               </div>
               {/* Stat 2 */}
-              <div className="flex items-center justify-center gap-8 md:border-r border-white/10 px-4">
-                <GraduationCap className="h-14 w-14 text-[#00b2a9]" />
+              <div className="flex flex-col items-center gap-4 md:border-r border-white/10 px-4">
+                <GraduationCap className="h-12 w-12 text-[#00b2a9]" />
                 <div>
-                  <div className="text-white text-5xl font-headline font-bold">30+</div>
-                  <div className="text-white/60 text-[10px] font-bold uppercase tracking-[0.2em] mt-1">Experienced Teachers</div>
+                  <div className="text-white text-5xl md:text-6xl font-headline font-bold">70+</div>
+                  <div className="text-white/60 text-[10px] font-bold uppercase tracking-[0.2em] mt-2">Qualified Teachers</div>
                 </div>
               </div>
               {/* Stat 3 */}
-              <div className="flex items-center justify-center gap-8 px-4">
-                <History className="h-14 w-14 text-[#00b2a9]" />
+              <div className="flex flex-col items-center gap-4 px-4">
+                <History className="h-12 w-12 text-[#00b2a9]" />
                 <div>
-                  <div className="text-white text-5xl font-headline font-bold">15+</div>
-                  <div className="text-white/60 text-[10px] font-bold uppercase tracking-[0.2em] mt-1">Years of Legacy</div>
+                  <div className="text-white text-5xl md:text-6xl font-headline font-bold">15+</div>
+                  <div className="text-white/60 text-[10px] font-bold uppercase tracking-[0.2em] mt-2">Years of Legacy</div>
                 </div>
               </div>
             </div>
@@ -305,20 +305,20 @@ export default function Home() {
 
         {/* Quality Education Section */}
         <section className="py-24 bg-white">
-          <div className="max-w-screen-2xl mx-auto px-6 md:px-8">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="font-headline text-4xl md:text-5xl font-bold text-slate-800 mb-6 leading-tight">
+          <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
+            <div className="text-center max-w-3xl mx-auto mb-20">
+              <h2 className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 mb-6 leading-tight">
                 Shaping Young Minds Through Quality Education
               </h2>
               <p className="text-slate-500 text-lg leading-relaxed">
-                At Jayotri Academy, we provide strong primary instruction and higher education through structured classroom learning, experienced faculty, and a supportive academic environment focused on student success.
+                At Jayotri Academy, we provide strong primary instruction and higher education through structured classroom learning and a supportive academic environment.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
               {/* Card 1 */}
-              <div className="flex items-start gap-6 p-8 rounded-xl bg-[#f0f9f9]">
-                <div className="shrink-0 w-16 h-16 rounded-full bg-[#00b2a9] flex items-center justify-center text-white shadow-lg">
+              <div className="flex flex-col sm:flex-row items-start gap-6 p-10 rounded-3xl bg-[#f0f9f9] border border-slate-50 transition-transform hover:scale-[1.02]">
+                <div className="shrink-0 w-16 h-16 rounded-2xl bg-[#00b2a9] flex items-center justify-center text-white shadow-lg shadow-[#00b2a9]/20">
                   <BookOpen className="h-8 w-8" />
                 </div>
                 <div>
@@ -330,8 +330,8 @@ export default function Home() {
               </div>
 
               {/* Card 2 */}
-              <div className="flex items-start gap-6 p-8 rounded-xl bg-[#f0f9f9]">
-                <div className="shrink-0 w-16 h-16 rounded-full bg-[#00b2a9] flex items-center justify-center text-white shadow-lg">
+              <div className="flex flex-col sm:flex-row items-start gap-6 p-10 rounded-3xl bg-[#f0f9f9] border border-slate-50 transition-transform hover:scale-[1.02]">
+                <div className="shrink-0 w-16 h-16 rounded-2xl bg-[#00b2a9] flex items-center justify-center text-white shadow-lg shadow-[#00b2a9]/20">
                   <School className="h-8 w-8" />
                 </div>
                 <div>
@@ -343,8 +343,8 @@ export default function Home() {
               </div>
 
               {/* Card 3 */}
-              <div className="flex items-start gap-6 p-8 rounded-xl bg-[#f0f9f9]">
-                <div className="shrink-0 w-16 h-16 rounded-full bg-[#00b2a9] flex items-center justify-center text-white shadow-lg">
+              <div className="flex flex-col sm:flex-row items-start gap-6 p-10 rounded-3xl bg-[#f0f9f9] border border-slate-50 transition-transform hover:scale-[1.02]">
+                <div className="shrink-0 w-16 h-16 rounded-2xl bg-[#00b2a9] flex items-center justify-center text-white shadow-lg shadow-[#00b2a9]/20">
                   <Brain className="h-8 w-8" />
                 </div>
                 <div>
@@ -356,8 +356,8 @@ export default function Home() {
               </div>
 
               {/* Card 4 */}
-              <div className="flex items-start gap-6 p-8 rounded-xl bg-[#f0f9f9]">
-                <div className="shrink-0 w-16 h-16 rounded-full bg-[#00b2a9] flex items-center justify-center text-white shadow-lg">
+              <div className="flex flex-col sm:flex-row items-start gap-6 p-10 rounded-3xl bg-[#f0f9f9] border border-slate-50 transition-transform hover:scale-[1.02]">
+                <div className="shrink-0 w-16 h-16 rounded-2xl bg-[#00b2a9] flex items-center justify-center text-white shadow-lg shadow-[#00b2a9]/20">
                   <Target className="h-8 w-8" />
                 </div>
                 <div>
@@ -374,7 +374,7 @@ export default function Home() {
         <Newsletter />
 
         {/* Academy Promotion Section */}
-        <section className="relative h-[50vh] md:h-[60vh] w-full overflow-hidden">
+        <section className="relative h-[60vh] md:h-[70vh] w-full overflow-hidden">
           <Image
             src="/28.webp"
             alt="Academy Classroom"
@@ -382,17 +382,17 @@ export default function Home() {
             className="object-cover"
             unoptimized={true}
           />
-          <div className="absolute inset-0 bg-black/50 flex items-center">
-            <div className="max-w-screen-2xl mx-auto px-6 md:px-12 w-full">
+          <div className="absolute inset-0 bg-primary/60 flex items-center">
+            <div className="max-w-screen-2xl mx-auto px-6 md:px-12 w-full text-center md:text-left">
               <div className="max-w-2xl">
-                <h2 className="font-headline text-3xl sm:text-5xl md:text-6xl text-white font-bold leading-[1.15] mb-4">
+                <h2 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-bold leading-[1.1] mb-6">
                   Join Our Academy and Shape a Successful Future
                 </h2>
-                <p className="text-base md:text-lg text-white/90 font-body max-w-xl mb-8 leading-relaxed">
-                  At Jayotri Academy, we provide quality primary instruction and higher education through expert guidance, structured classroom learning, and a supportive academic environment.
+                <p className="text-base md:text-lg text-white/80 font-body max-w-xl mb-10 leading-relaxed">
+                  At Jayotri Academy, we provide quality primary instruction and higher education through expert guidance and a supportive academic environment.
                 </p>
-                <Button size="lg" className="bg-[#00b2a9] text-white hover:bg-[#00968f] font-bold uppercase tracking-widest text-[11px] px-8 h-12 rounded-none transition-all">
-                  Explore Our Programs
+                <Button asChild size="lg" className="bg-[#00b2a9] text-white hover:bg-[#00968f] font-bold uppercase tracking-widest text-[10px] px-10 h-14 rounded-full transition-all shadow-xl shadow-[#00b2a9]/20">
+                  <Link href="/admissions/admission-procedure">Explore Our Programs</Link>
                 </Button>
               </div>
             </div>
@@ -400,6 +400,7 @@ export default function Home() {
         </section>
       </main>
       <Footer />
+      <Chatbot />
     </div>
   );
 }
