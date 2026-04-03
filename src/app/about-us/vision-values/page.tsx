@@ -2,7 +2,20 @@
 
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { Target, Lightbulb, Compass, Palette, User, Briefcase, Star } from 'lucide-react';
+import { 
+  Target, 
+  Lightbulb, 
+  Compass, 
+  Palette, 
+  User, 
+  Briefcase, 
+  Star, 
+  CheckCircle2, 
+  Mic2, 
+  Cpu, 
+  BookOpen, 
+  Coins 
+} from 'lucide-react';
 
 export default function VisionValuesPage() {
   const pillars = [
@@ -43,22 +56,27 @@ export default function VisionValuesPage() {
               Vision & Values
             </h1>
             <p className="text-xl text-slate-500 font-medium italic">
-              Welcome to Jayotri Academy
+              Multidimensional Education at Jayotri Academy
             </p>
           </div>
         </section>
 
         {/* Vision & Mission Content */}
         <section className="py-20 max-w-screen-xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch mb-24">
             {/* Vision Card */}
             <div className="bg-primary p-12 rounded-3xl text-white relative overflow-hidden group shadow-2xl">
               <div className="absolute -right-8 -top-8 w-32 h-32 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700" />
               <Target className="h-12 w-12 text-accent mb-8" />
               <h2 className="font-headline text-3xl md:text-4xl font-bold mb-6">Our Vision</h2>
-              <p className="text-xl md:text-2xl font-light leading-relaxed text-white/90">
-                Shaping young minds with communication, character and clarity to build responsible citizens for society and the nation.
-              </p>
+              <div className="space-y-4 text-white/90 leading-relaxed text-lg">
+                <p>
+                  Our vision is to nurture young minds with strong communication skills, sound character, and clarity of thought. We aim to develop confident individuals who think independently and act responsibly.
+                </p>
+                <p>
+                  By instilling values and leadership qualities, we prepare students for meaningful roles in society. We strive to shape compassionate, ethical, and socially aware personalities. Our ultimate goal is to build responsible citizens who contribute positively to the nation and the world.
+                </p>
+              </div>
             </div>
 
             {/* Mission Section */}
@@ -70,17 +88,119 @@ export default function VisionValuesPage() {
               <h2 className="font-headline text-4xl font-bold text-slate-800 mb-8">Our Mission</h2>
               <div className="space-y-6 text-slate-600 leading-relaxed text-lg">
                 <p>
-                  At Jayotri Academy, we are committed to providing multidimensional education that strengthens communication, builds character, and nurtures clarity of thought.
+                  At Jayotri Academy, our mission is to provide <strong>Multidimensional Education</strong> that nurtures communication, strengthens character, and develops clarity of thought.
                 </p>
                 <p>
-                  Through transparent practices and value-based learning, we create an environment where every student grows with confidence, integrity, and responsibility, ready to contribute meaningfully to society and the nation.
+                  We strive to create a transparent, supportive, and value-based learning environment where every student grows with confidence, integrity, and a sense of responsibility. We believe in minimal testing and meaningful learning, encouraging exploration, curiosity, and deeper understanding.
                 </p>
+                <p>
+                  By integrating real-world project-based learning, life skills, and innovative practices, we empower learners to become thoughtful individuals, responsible citizens, and compassionate contributors to society.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Detailed Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {/* Feature 1: Minimal Testing */}
+            <div className="space-y-6 p-8 bg-slate-50 rounded-3xl border border-slate-100">
+              <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-[#00b2a9]">
+                <Compass className="h-8 w-8" />
+              </div>
+              <h3 className="text-2xl font-headline font-bold text-slate-800">Minimal Testing, More Learning</h3>
+              <div className="space-y-4 text-slate-600 leading-relaxed">
+                <p>
+                  We believe excessive testing often limits creativity. Instead, we emphasize learning through experience, exploration, and practical application.
+                </p>
+                <ul className="grid grid-cols-1 gap-3">
+                  <li className="flex items-start gap-3 text-sm">
+                    <Coins className="h-4 w-4 text-[#00b2a9] shrink-0 mt-1" />
+                    <span><strong>Financial Literacy:</strong> Understanding money, budgeting, and responsible decision-making from an early stage.</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-sm">
+                    <CheckCircle2 className="h-4 w-4 text-[#00b2a9] shrink-0 mt-1" />
+                    <span><strong>Aptitude & Kaushal Bodh:</strong> Helping students identify their strengths and build essential life skills.</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-sm">
+                    <Cpu className="h-4 w-4 text-[#00b2a9] shrink-0 mt-1" />
+                    <span><strong>Early Computing:</strong> Computer Education begins at Class II to build technological confidence.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Feature 2: Strong Communication */}
+            <div className="space-y-6 p-8 bg-slate-50 rounded-3xl border border-slate-100">
+              <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-[#00b2a9]">
+                <Mic2 className="h-8 w-8" />
+              </div>
+              <h3 className="text-2xl font-headline font-bold text-slate-800">Strong Communication Skill</h3>
+              <div className="space-y-4 text-slate-600 leading-relaxed">
+                <p>
+                  Communication is our cornerstone. We dedicate a specific period every morning after assembly for discussions, presentations, and interactive sessions.
+                </p>
+                <ul className="grid grid-cols-1 gap-3">
+                  <li className="flex items-start gap-3 text-sm">
+                    <CheckCircle2 className="h-4 w-4 text-[#00b2a9] shrink-0 mt-1" />
+                    <span><strong>65 cm Podium:</strong> Innovative primary classroom podiums to nurture public speaking from the start.</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-sm">
+                    <CheckCircle2 className="h-4 w-4 text-[#00b2a9] shrink-0 mt-1" />
+                    <span><strong>Poetry & Public Speaking:</strong> Sessions judged by renowned poets to cultivate creativity and imagination.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Feature 3: Creativity & Expression */}
+            <div className="space-y-6 p-8 bg-slate-50 rounded-3xl border border-slate-100">
+              <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-[#00b2a9]">
+                <Palette className="h-8 w-8" />
+              </div>
+              <h3 className="text-2xl font-headline font-bold text-slate-800">Creativity, Individuality and Expression</h3>
+              <div className="space-y-4 text-slate-600 leading-relaxed">
+                <p>
+                  Every child possesses unique talent. Our events are sub-categorized class-wise to ensure maximum participation and healthy confidence-building.
+                </p>
+                <ul className="grid grid-cols-1 gap-3">
+                  <li className="flex items-start gap-3 text-sm">
+                    <CheckCircle2 className="h-4 w-4 text-[#00b2a9] shrink-0 mt-1" />
+                    <span><strong>Pottery Festival:</strong> Encouraging patience and hands-on artistic expression.</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-sm">
+                    <BookOpen className="h-4 w-4 text-[#00b2a9] shrink-0 mt-1" />
+                    <span><strong>Book Fair:</strong> Creating excitement around reading and nurturing lifelong learners.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Feature 4: Real-World Projects */}
+            <div className="space-y-6 p-8 bg-slate-50 rounded-3xl border border-slate-100">
+              <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-[#00b2a9]">
+                <Cpu className="h-8 w-8" />
+              </div>
+              <h3 className="text-2xl font-headline font-bold text-slate-800">Real-World Project-Based Learning</h3>
+              <div className="space-y-4 text-slate-600 leading-relaxed">
+                <p>
+                  Learning moves beyond theory as students engage in projects that develop innovation and collaboration.
+                </p>
+                <ul className="grid grid-cols-1 gap-3">
+                  <li className="flex items-start gap-3 text-sm">
+                    <CheckCircle2 className="h-4 w-4 text-[#00b2a9] shrink-0 mt-1" />
+                    <span><strong>"Janswarah":</strong> A foolproof Electronic Voting Machine developed by students for school elections.</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-sm">
+                    <CheckCircle2 className="h-4 w-4 text-[#00b2a9] shrink-0 mt-1" />
+                    <span><strong>"JIVA":</strong> An AI Chatbot created by students for teacher training and technological advancement.</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Guiding Pillars Section */}
+        {/* Guiding Pillars Section (Quick Icons) */}
         <section className="py-24 bg-slate-50 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#00b2a9]/20 to-transparent" />
           <div className="max-w-screen-xl mx-auto px-6">
