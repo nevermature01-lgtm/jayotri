@@ -40,6 +40,14 @@ export default function OurSchoolPage() {
           <div className="flex flex-col lg:flex-row gap-16 items-start">
             <div className="lg:w-1/2">
               <span className="text-[10px] font-bold tracking-[0.3em] text-[#00b2a9] uppercase mb-4 block">Founded in 2015</span>
+              
+              {/* Affiliation Information */}
+              <div className="flex flex-wrap gap-x-4 gap-y-2 mb-6 text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                <span>Affiliation No.: 2132244</span>
+                <span>School No.: 70358</span>
+                <span>Society Registration No.: 1313/ 2014-15</span>
+              </div>
+
               <h2 className="font-headline text-3xl md:text-4xl font-bold text-slate-800 mb-8 leading-tight">
                 A Journey of <br />Multidimensional Education
               </h2>
