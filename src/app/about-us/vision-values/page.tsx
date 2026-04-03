@@ -14,7 +14,8 @@ import {
   Mic2, 
   Cpu, 
   BookOpen, 
-  Coins 
+  Coins,
+  History
 } from 'lucide-react';
 
 export default function VisionValuesPage() {
@@ -53,7 +54,7 @@ export default function VisionValuesPage() {
           
           <div className="relative z-10 max-w-screen-xl mx-auto px-6 text-center">
             <h1 className="font-headline text-5xl md:text-6xl text-slate-800 font-bold mb-4">
-              Vision & Values
+              Vision and Mission
             </h1>
             <p className="text-xl text-slate-500 font-medium italic">
               Multidimensional Education at Jayotri Academy
@@ -68,7 +69,7 @@ export default function VisionValuesPage() {
             <div className="bg-primary p-12 rounded-3xl text-white relative overflow-hidden group shadow-2xl">
               <div className="absolute -right-8 -top-8 w-32 h-32 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700" />
               <Target className="h-12 w-12 text-accent mb-8" />
-              <h2 className="font-headline text-3xl md:text-4xl font-bold mb-6">Our Vision</h2>
+              <h2 className="font-headline text-3xl md:text-4xl font-bold mb-6">Vision</h2>
               <div className="space-y-4 text-white/90 leading-relaxed text-lg">
                 <p>
                   Our vision is to nurture young minds with strong communication skills, sound character, and clarity of thought. We aim to develop confident individuals who think independently and act responsibly.
@@ -85,7 +86,7 @@ export default function VisionValuesPage() {
                 <Lightbulb className="h-4 w-4" />
                 Our Commitment
               </div>
-              <h2 className="font-headline text-4xl font-bold text-slate-800 mb-8">Our Mission</h2>
+              <h2 className="font-headline text-4xl font-bold text-slate-800 mb-8">Mission</h2>
               <div className="space-y-6 text-slate-600 leading-relaxed text-lg">
                 <p>
                   At Jayotri Academy, our mission is to provide <strong>Multidimensional Education</strong> that nurtures communication, strengthens character, and develops clarity of thought.
@@ -94,7 +95,7 @@ export default function VisionValuesPage() {
                   We strive to create a transparent, supportive, and value-based learning environment where every student grows with confidence, integrity, and a sense of responsibility. We believe in minimal testing and meaningful learning, encouraging exploration, curiosity, and deeper understanding.
                 </p>
                 <p>
-                  By integrating real-world project-based learning, life skills, and innovative practices, we empower learners to become thoughtful individuals, responsible citizens, and compassionate contributors to society.
+                  Through strong art, design, and creative programs, we celebrate individuality and give every child the freedom to express their unique potential. By integrating real-world project-based learning, life skills, and innovative practices, we prepare students not only with knowledge but also with creativity, resilience, and leadership qualities. Our mission is to empower learners to become thoughtful individuals, responsible citizens, and compassionate contributors to society and the nation.
                 </p>
               </div>
             </div>
@@ -110,22 +111,23 @@ export default function VisionValuesPage() {
               <h3 className="text-2xl font-headline font-bold text-slate-800">Minimal Testing, More Learning</h3>
               <div className="space-y-4 text-slate-600 leading-relaxed">
                 <p>
-                  We believe excessive testing often limits creativity. Instead, we emphasize learning through experience, exploration, and practical application.
+                  Jayotri Academy believes that excessive testing often limits creativity and meaningful understanding. Instead of focusing only on examinations, the school emphasizes learning through experience, exploration, and practical application.
                 </p>
                 <ul className="grid grid-cols-1 gap-3">
                   <li className="flex items-start gap-3 text-sm">
                     <Coins className="h-4 w-4 text-[#00b2a9] shrink-0 mt-1" />
-                    <span><strong>Financial Literacy:</strong> Understanding money, budgeting, and responsible decision-making from an early stage.</span>
+                    <span><strong>Financial Literacy:</strong> Students are introduced at an early stage to understand the value of money, budgeting, and responsible decision-making.</span>
                   </li>
                   <li className="flex items-start gap-3 text-sm">
                     <CheckCircle2 className="h-4 w-4 text-[#00b2a9] shrink-0 mt-1" />
-                    <span><strong>Aptitude & Kaushal Bodh:</strong> Helping students identify their strengths and build essential life skills.</span>
+                    <span><strong>Aptitude & Kaushal Bodh:</strong> Programs help students identify their strengths and build essential life skills.</span>
                   </li>
                   <li className="flex items-start gap-3 text-sm">
                     <Cpu className="h-4 w-4 text-[#00b2a9] shrink-0 mt-1" />
-                    <span><strong>Early Computing:</strong> Computer Education begins at Class II to build technological confidence.</span>
+                    <span><strong>Early Computing:</strong> Exposure to Computer Education from Class II prepares students for a digital future and builds technological confidence.</span>
                   </li>
                 </ul>
+                <p className="text-sm italic">This approach reduces exam pressure while encouraging curiosity, independent thinking, and deeper understanding. Students learn not just to score marks but to learn for life.</p>
               </div>
             </div>
 
@@ -134,21 +136,22 @@ export default function VisionValuesPage() {
               <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-[#00b2a9]">
                 <Mic2 className="h-8 w-8" />
               </div>
-              <h3 className="text-2xl font-headline font-bold text-slate-800">Strong Communication Skill</h3>
+              <h3 className="text-2xl font-headline font-bold text-slate-800">Strong Communication Skill Designed Programs</h3>
               <div className="space-y-4 text-slate-600 leading-relaxed">
                 <p>
-                  Communication is our cornerstone. We dedicate a specific period every morning after assembly for discussions, presentations, and interactive sessions.
+                  Communication is considered a cornerstone of success at Jayotri Academy. To nurture confident speakers and thoughtful communicators, the school conducts a Dedicated Communication Period every morning after assembly.
                 </p>
                 <ul className="grid grid-cols-1 gap-3">
                   <li className="flex items-start gap-3 text-sm">
                     <CheckCircle2 className="h-4 w-4 text-[#00b2a9] shrink-0 mt-1" />
-                    <span><strong>65 cm Podium:</strong> Innovative primary classroom podiums to nurture public speaking from the start.</span>
+                    <span><strong>65 cm Podium:</strong> Introducing unique primary classroom podiums, ensuring that public speaking begins at an early stage.</span>
                   </li>
                   <li className="flex items-start gap-3 text-sm">
                     <CheckCircle2 className="h-4 w-4 text-[#00b2a9] shrink-0 mt-1" />
-                    <span><strong>Poetry & Public Speaking:</strong> Sessions judged by renowned poets to cultivate creativity and imagination.</span>
+                    <span><strong>Poetry & Public Speaking:</strong> Sessions judged by renowned poets, giving students exposure to real literary evaluation and guidance.</span>
                   </li>
                 </ul>
+                <p className="text-sm italic">Through these consistent efforts, students gradually transform into confident communicators who can express their ideas effectively in any situation.</p>
               </div>
             </div>
 
@@ -160,16 +163,16 @@ export default function VisionValuesPage() {
               <h3 className="text-2xl font-headline font-bold text-slate-800">Creativity, Individuality and Expression</h3>
               <div className="space-y-4 text-slate-600 leading-relaxed">
                 <p>
-                  Every child possesses unique talent. Our events are sub-categorized class-wise to ensure maximum participation and healthy confidence-building.
+                  Jayotri Academy strongly believes that every child possesses unique talent. Major competitions and events are thoughtfully sub-categorized class-wise to ensure maximum participation.
                 </p>
                 <ul className="grid grid-cols-1 gap-3">
                   <li className="flex items-start gap-3 text-sm">
-                    <CheckCircle2 className="h-4 w-4 text-[#00b2a9] shrink-0 mt-1" />
-                    <span><strong>Pottery Festival:</strong> Encouraging patience and hands-on artistic expression.</span>
+                    <History className="h-4 w-4 text-[#00b2a9] shrink-0 mt-1" />
+                    <span><strong>Pottery Festival:</strong> Encourages creativity, patience, and hands-on artistic expression, connecting students with traditional crafts.</span>
                   </li>
                   <li className="flex items-start gap-3 text-sm">
                     <BookOpen className="h-4 w-4 text-[#00b2a9] shrink-0 mt-1" />
-                    <span><strong>Book Fair:</strong> Creating excitement around reading and nurturing lifelong learners.</span>
+                    <span><strong>Book Fair:</strong> Promotes reading habits and creates excitement around books, nurturing lifelong readers.</span>
                   </li>
                 </ul>
               </div>
@@ -183,7 +186,7 @@ export default function VisionValuesPage() {
               <h3 className="text-2xl font-headline font-bold text-slate-800">Real-World Project-Based Learning</h3>
               <div className="space-y-4 text-slate-600 leading-relaxed">
                 <p>
-                  Learning moves beyond theory as students engage in projects that develop innovation and collaboration.
+                  Learning moves beyond theory as students engage in real-world projects that develop innovation, collaboration, and problem-solving skills.
                 </p>
                 <ul className="grid grid-cols-1 gap-3">
                   <li className="flex items-start gap-3 text-sm">
@@ -192,9 +195,10 @@ export default function VisionValuesPage() {
                   </li>
                   <li className="flex items-start gap-3 text-sm">
                     <CheckCircle2 className="h-4 w-4 text-[#00b2a9] shrink-0 mt-1" />
-                    <span><strong>"JIVA":</strong> An AI Chatbot created by students for teacher training and technological advancement.</span>
+                    <span><strong>"JIVA":</strong> An AI Chatbot developed by students for Teacher training and technological advancement.</span>
                   </li>
                 </ul>
+                <p className="text-sm italic">Such projects empower students to think independently, experiment confidently, and create solutions that connect learning with real life.</p>
               </div>
             </div>
           </div>
